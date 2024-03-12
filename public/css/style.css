@@ -64,12 +64,12 @@ html, body {
 	align-self: center;
 }
 
-.user_img_box {
+.user-img-box {
 	flex-grow: 1;
 	align-content: center;
 }
 
-.user_img {
+.user-img {
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -78,14 +78,14 @@ html, body {
     height: 90px;
 }
 
-.user_info {
+.user-info {
 	flex-grow: 1;
     display: flex;
     flex-direction: column;
 	margin-left: 30px;
 }
 
-.user_name {
+.user-name {
 	width: 134px;
 	height: 23px;
 
@@ -98,7 +98,7 @@ html, body {
 	color: #000000;
 }
 
-.user_playtime{
+.user-playtime{
 
 	width: 73px;
 	height: 15px;
@@ -113,7 +113,7 @@ html, body {
 	color: #000000;
 }
 
-.user_now_play {
+.user-now-play {
 	width: 108px;
 	height: 24px;
 	margin-bottom: 5px;
@@ -130,13 +130,13 @@ html, body {
 }
 
 
-.content_tabs {
+.content-tabs {
     display: flex;
     width: 100%;
 	border-bottom: 0.5px solid black;
 }
 
-.content_tab {
+.content-tab {
     flex-grow: 1;
 	height: 40px;
 	display: flex;
@@ -144,12 +144,12 @@ html, body {
 	justify-content: center;
 }
 
-.content_lists {
+.content-lists {
 	flex-grow: 1;
     overflow-y: auto;
 }
 
-.content_element {
+.content-element {
 	border-bottom:0.7px solid black;
     background-color: #ffffff;
 	padding-left: 3.5vw;
@@ -159,7 +159,7 @@ html, body {
 	align-items: center;
 }
 
-.content_time {
+.content-time {
 	font-size: 14px;
 	margin-left : 6vw;
 	height: 100%;
@@ -167,7 +167,7 @@ html, body {
 	align-items: center;
 }
 
-.content_value {
+.content-value {
 	font-size: 20px;
 	font-weight: bold;
 	display: flex;
