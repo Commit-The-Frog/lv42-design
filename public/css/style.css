@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-	/* border:1px solid red; */
 }
 
 p {
@@ -22,8 +21,8 @@ html, body {
 	display: flex;
 	height: 15%;
 	flex-direction: row;
-	justify-content: space-between; /* 로고와 햄버거를 양쪽으로 정렬 */
-	align-items: center; /* 수직 정렬 */
+	justify-content: space-between;
+	align-items: center;
 	color: #fff;
 	padding: 2ch 20px 2ch 20px;
 }
@@ -36,7 +35,7 @@ html, body {
     height: 85%;
 }
 
-.logo img {
+.main-logo img {
 	width: 50px;
 }
 
@@ -50,11 +49,25 @@ html, body {
     flex-direction: column;
     background-color: #ffffff;
     width: 80%;
-	height: 80%;
+	height: 55%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 	margin-top: 10px;
 }
+
+.button-style {
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+@media (hover: none) { /* when supported */
+	button-style:hover {
+	  color: white;
+	  background: black;
+	}
+  }
 
 /* .user {
 	width: 100%;
@@ -137,11 +150,29 @@ html, body {
 }
 
 .content-tab {
-    flex-grow: 1;
+	flex-grow: 1;
+	max-width: 33.3333333333%;
 	height: 40px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+	color: black;
+	padding: 0px;
+}
+
+#xbox-tab {
+	border-top-left-radius: 10px;
+	background-color: #95D184;
+}
+#nintendo-tab {
+	background-color: #f84c46;
+}
+#ps5-tab {
+	background-color: #3f89f9;
+	border-top-right-radius: 10px;
 }
 
 .content-lists {
@@ -152,8 +183,8 @@ html, body {
 .content-element {
 	border-bottom:0.7px solid black;
     background-color: #ffffff;
-	padding-left: 3.5vw;
-	padding-right: 3.5vw;
+	/* padding-left: 3.5vw;
+	padding-right: 3.5vw; */
 	height: 67px;
 	display: flex;
 	align-items: center;
