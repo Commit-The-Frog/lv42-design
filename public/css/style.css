@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+	border:1px solid red;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.head {
+	width: 100%;
+	display: flex;
+	height: 15%;
+	flex-direction: row;
+	justify-content: space-between; /* 로고와 햄버거를 양쪽으로 정렬 */
+	align-items: center; /* 수직 정렬 */
+	color: #fff;
+	padding: 2ch 20px 2ch 20px;
+}
+
+.container {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    height: 85%;
+}
+
+.logo img {
+	width: 50px;
+}
+
+.menu-toggle img {
+	width: 30px;
+	cursor: pointer;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 80%;
+	height: 80%;
+    overflow-y: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+	margin-top: 10px;
+}
+
+/* .user {
+	width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+	align-self: center;
+}
+
+.user_img_box {
+	flex-grow: 1;
+	align-content: center;
+}
+
+.user_img {
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin: 20px;
+    width: 90px;
+    height: 90px;
+}
+
+.user_info {
+	flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+	margin-left: 30px;
+}
+
+.user_name {
+	width: 134px;
+	height: 23px;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 23px;
+	line-height: 28px;
+
+	color: #000000;
+}
+
+.user_playtime{
+
+	width: 73px;
+	height: 15px;
+
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 15px;
+	margin-bottom: 10px;
+
+	color: #000000;
+}
+
+.user_now_play {
+	width: 108px;
+	height: 24px;
+	margin-bottom: 5px;
+	color: #333333;
+	background: #B5B5B5;
+	border-radius: 12px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content_tabs {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.content_tab {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.content_tab:hover {
+    background-color: #dddddd;
+}
+
+.content_lists {
+    overflow-y: auto;
+}
+
+.content_element {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+} */
+
