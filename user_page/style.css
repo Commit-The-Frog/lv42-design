@@ -10,6 +10,12 @@ body {
     background-color: #f0f0f0;
 }
 
+p {
+    margin: 0; /* 기본 여백 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+}
+
+
 .container {
 	display: flex;
     flex-direction: column;
@@ -25,11 +31,11 @@ body {
 	justify-content: space-between; /* 로고와 햄버거를 양쪽으로 정렬 */
 	align-items: center; /* 수직 정렬 */
 	color: #fff;
-	padding: 10px 20px;
+	padding: 2ch 20px 2ch 20px;
 }
 
 .logo img {
-	width: 100px; /* 로고 이미지 너비 조절 */
+	width: 70px; /* 로고 이미지 너비 조절 */
 }
 
 .menu-toggle img {
@@ -66,8 +72,8 @@ body {
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	margin: 20px;
-    width: 50px; /* 이미지 너비 조절 */
-    height: 50px; /* 이미지 높이 조절 */
+    width: 90px; /* 이미지 너비 조절 */
+    height: 90px; /* 이미지 높이 조절 */
 }
 
 .user_info {
