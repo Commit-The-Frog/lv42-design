@@ -159,9 +159,19 @@ html, body {
 	align-items: center;
 }
 
-.content-element:active {
-	background-color: #F37A6E;
+.button-style {
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
 }
+
+@media (hover: none) { /* when supported */
+	button-style:hover {
+	  color: white;
+	  background: black;
+	}
+  }
 
 .content-time {
 	font-size: 14px;
