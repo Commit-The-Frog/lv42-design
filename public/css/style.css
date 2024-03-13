@@ -160,8 +160,6 @@ html, body {
 }
 
 .button-style {
-    border: none;
-    background: none;
     cursor: pointer;
     text-align: left;
 }
