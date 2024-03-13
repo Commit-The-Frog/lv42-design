@@ -4,6 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -21,68 +27,200 @@
 		<div class="main">
 			<div class="content">
 				<div class="content-tabs">
-					<button class="content-tab" id="xbox-tab"><p>xbox</p></button>
-					<button class="content-tab" id="nintendo-tab"><p>nintendo</p></button>
-					<button class="content-tab" id="ps5-tab"><p>ps5</p></button>
+					<span class="content-tab" id="xbox-tab" onclick="changeTab('xbox')"><p>xbox</p></span>
+					<span class="content-tab" id="nintendo-tab" onclick="changeTab('nintendo')"><p>nintendo</p></span>
+					<span class="content-tab" id="ps5-tab" onclick="changeTab('ps5')"><p>ps5</p></span>
 				</div>
-				<div class="content-lists">
-					<button class="content-element">
+				<div class="content-lists" id="xbox-content">
+					<span class="content-element reserved" onclick="showModal('cancelModal')">
 						<div class="content-time">20:30 ~</div>
 						<div class="content-value">minjacho</div>
-					</button>
-					<button class="content-element">
+					</span>
+					<span class="content-element" onclick="showModal('reservationModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">-</div>
+					</span>
+					<span class="content-element reserved" onclick="showModal('missingModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">missing</div>
+					</span>
+					<span class="content-element reserved" onclick="showModal('cancelModal')">
 						<div class="content-time">20:30 ~</div>
 						<div class="content-value">minjacho</div>
-					</button>
-					<button class="content-element">
+					</span>
+					<span class="content-element" onclick="showModal('reservationModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">-</div>
+					</span>
+					<span class="content-element" onclick="showModal('reservationModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">-</div>
+					</span>
+					<span class="content-element reserved" onclick="showModal('cancelModal')">
 						<div class="content-time">20:30 ~</div>
 						<div class="content-value">minjacho</div>
-					</button>
-					<button class="content-element">
+					</span>
+					<span class="content-element reserved" onclick="showModal('cancelModal')">
 						<div class="content-time">20:30 ~</div>
 						<div class="content-value">minjacho</div>
-					</button>
-					<button class="content-element">
+					</span>
+					<span class="content-element reserved" onclick="showModal('cancelModal')">
 						<div class="content-time">20:30 ~</div>
 						<div class="content-value">minjacho</div>
-					</button>
-					<button class="content-element">
+					</span>
+					<span class="content-element reserved" onclick="showModal('cancelModal')">
 						<div class="content-time">20:30 ~</div>
 						<div class="content-value">minjacho</div>
-					</button>
-					<button class="content-element">
+					</span>
+					<span class="content-element reserved" onclick="showModal('cancelModal')">
 						<div class="content-time">20:30 ~</div>
 						<div class="content-value">minjacho</div>
-					</button>
-					<button class="content-element">
+					</span>
+				</div>
+				<div class="content-lists" id="nintendo-content">
+					<span class="content-element" onclick="showModal('cancelModal')">
 						<div class="content-time">20:30 ~</div>
-						<div class="content-value">minjacho</div>
-					</button>
-					<button class="content-element">
+						<div class="content-value">junkim2</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
 						<div class="content-time">20:30 ~</div>
-						<div class="content-value">minjacho</div>
-					</button>
-					<button class="content-element">
+						<div class="content-value">junkim2</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
 						<div class="content-time">20:30 ~</div>
-						<div class="content-value">minjacho</div>
-					</button>
-					<button class="content-element">
+						<div class="content-value">junkim2</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
 						<div class="content-time">20:30 ~</div>
-						<div class="content-value">minjacho</div>
-					</button>
+						<div class="content-value">junkim2</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">junkim2</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">junkim2</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">junkim2</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">junkim2</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">junkim2</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">junkim2</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">junkim2</div>
+					</span>
+				</div>
+				<div class="content-lists" id="ps5-content">
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">yeondcho</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">yeondcho</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">yeondcho</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">yeondcho</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">yeondcho</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">yeondcho</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">yeondcho</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">yeondcho</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">yeondcho</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">yeondcho</div>
+					</span>
+					<span class="content-element" onclick="showModal('cancelModal')">
+						<div class="content-time">20:30 ~</div>
+						<div class="content-value">yeondcho</div>
+					</span>
 				</div>
 			</div>
 		</div>
 		<div class="sub">
-			<button class="content">
+			<span class="content">
 				<div class="content-div">
-
+					<div class="time-wrap">
+						<p>19:30~20:30</p>
+					</div>
 				</div>
 				<div class="content-div">
-
+					<div class="comment-wrap">
+						<p>예약하기</p>
+					</div>
 				</div>
-			</button>
+			</span>
 		</div>
 	</div>
+
+	<div class="modal" id="cancelModal">
+		<div class="modal-content">
+			<div class="time-wrap">
+				<p>19:30~20:30</p>
+			</div>
+			<div class="comment-wrap">
+				<p>취소하시겠습니까?</p>
+			</div>
+			<div class="select-wrap">
+				<span class="yes">예</span>
+				<span class="no" onClick="closeModal('cancelModal')">아니요</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="missingModal">
+		<div class="modal-content">
+			<div class="time-wrap">
+				<p>19:30~20:30</p>
+			</div>
+			<div class="comment-wrap">
+				<p>예약자가 오지않았습니까?</p>
+			</div>
+			<div class="select-wrap">
+				<span class="yes" id="report">🚨신고하기</span>
+				<span class="no" onClick="closeModal('missingModal')">닫기</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="reservationModal">
+		<div class="modal-content">
+		</div>
+	</div>
+	<script src="script.js"></script>
 </body>
 </html>

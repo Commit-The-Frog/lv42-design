@@ -66,14 +66,13 @@ html, body {
     flex-direction: column;
     background-color: #ffffff;
     width: 80%;
-	height: 55%;
+	height: 70%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 	margin-top: 10px;
 }
 
 .content {
-	border: 1px solid red;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -82,6 +81,7 @@ html, body {
 .main .content {
 	flex-direction: column;
 	padding-bottom: 10px;
+    background-color: #0000000a;
 }
 
 .content-tabs {
@@ -102,6 +102,11 @@ html, body {
     cursor: pointer;
 	color: black;
 	padding: 0px;
+	opacity: 0.7;
+}
+
+.content-tab-active {
+	opacity: 1;
 }
 
 #xbox-tab {
@@ -119,17 +124,25 @@ html, body {
 .content-lists {
 	flex-grow: 1;
     overflow-y: auto;
+	display: none;
+}
+
+.content-list-active {
+	display: block !important;
 }
 
 .content-element {
 	border-bottom:0.5px solid black;
-    background-color: #ffffff;
 	padding-left: 3.5vw;
 	padding-right: 3.5vw;
 	width: 100%;
 	height: 67px;
 	display: flex;
 	align-items: center;
+}
+
+.reserved {
+	background-color: #ffffff;
 }
 
 .content-time {
@@ -156,6 +169,7 @@ html, body {
     background-color: #ffffff;
     width: 80%;
 	height: 15%;
+	max-height: 87px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 	margin-top: 6vw;
@@ -163,11 +177,105 @@ html, body {
 
 .sub .content {
 	flex-direction: column;
+    border-radius: 10px;
 }
 
 .content-div {
-	border:1px solid blue;
 	height: 50%;
 	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
+.content-div .time-wrap {
+	width: 80%;
+	height: 100%;
+	font-size: 26px;
+	font-weight: bold;
+	font-family: "Inria Sans", sans-serif;
+	font-weight: 700;
+	display: flex;
+	justify-content: center;
+	align-items:end;
+}
+
+.content-div .comment-wrap {
+	width: 80%;
+	height: 100%;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	font-family: "Inter", sans-serif;
+	font-weight: 400;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+	background-color: #ffffff;
+	margin: 70% auto;
+	padding: 2%;
+	width: 81%;
+	height: 25%;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.modal-content .time-wrap, .comment-wrap, .select-wrap{
+	height: 33.3333333%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-content .time-wrap {
+	font-family: "Inria Sans", sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+.modal-content .comment-wrap {
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
+	font-size: 30px;
+}
+
+.modal-content .select-wrap {
+	padding-right : 10%;
+	padding-left: 10%;
+	font-family: "Inter", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.yes, .no {
+	display: flex;
+	flex-grow: 1;
+	width: 50%;
+	justify-content: center;
+	align-items: center;
+}
+
+#reservationModal .modal-content{
+	margin : 20% auto; 
+	height: 80%;
+}
+
+#missingModal .comment-wrap {
+	font-size : 25px;
+}
+
+#report {
+	color: red;
+}
