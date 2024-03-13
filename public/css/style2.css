@@ -22,8 +22,8 @@ html, body {
 	display: flex;
 	height: 15%;
 	flex-direction: row;
-	justify-content: space-between; /* 로고와 햄버거를 양쪽으로 정렬 */
-	align-items: center; /* 수직 정렬 */
+	justify-content: space-between;
+	align-items: center;
 	color: #fff;
 	padding: 2ch 20px 2ch 20px;
 }
