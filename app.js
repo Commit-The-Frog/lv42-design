@@ -4,9 +4,11 @@ var app = express();
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
-	console.log(req);
-	// res.send('fuck')
 	res.sendFile('index.html');
+})
+
+app.get('/user', function (req, res) {
+	res.sendFile(__dirname + '/public/user_page.html');
 })
 
 // 3000 포트로 서버 오픈
