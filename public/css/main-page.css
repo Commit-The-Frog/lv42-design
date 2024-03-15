@@ -119,11 +119,23 @@
 	background-color: #527FD8;
 }
 .finished-xbox {
+	color: white;
 	background-color: #036e24;
 }
 .finished-nintendo {
+	color: white;
 	background-color: #901921;
 }
 .finished-ps5 {
+	color: white;
 	background-color: #2f497e;
+}
+.finished-nintendo .time-wrap {
+	color: black;
+}
+.finished-xbox .time-wrap {
+	color: black;
+}
+.finished-ps5 .time-wrap {
+	color: black;
 }

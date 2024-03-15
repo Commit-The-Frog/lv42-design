@@ -88,8 +88,12 @@ function setFinished() {
 	if (t.className === "sub-content-wrapper") {
 		t.className = "sub-content-wrapper finished-" + curTab.id.slice(0, -4);
 		t.querySelector(".sub-content").className = "sub-content finished-" + curTab.id.slice(0, -4);
+		t.querySelector(".time-wrap").querySelector("p").innerHTML = "13:00~14:00";
+		t.querySelector(".comment-wrap").querySelector("p").innerHTML = "예약하기";
 	} else {
 		t.className = "sub-content-wrapper";
 		t.querySelector(".sub-content").className = "sub-content";
+		t.querySelector(".time-wrap").querySelector("p").innerHTML = "~";
+		t.querySelector(".comment-wrap").querySelector("p").innerHTML = "원하는 시간대 슬롯을 선택하세요";
 	}
 }
