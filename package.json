@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-	"start": "nodemon --exec node app.js"
+	  "test": "nodemon --exec node app.js",
+    "start" : "forever start -c nodemon -a ./app.js"
   },
   "author": "",
   "license": "ISC",

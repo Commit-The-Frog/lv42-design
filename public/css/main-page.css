@@ -118,6 +118,11 @@
 .sub-content-wrapper .finished-ps5 {
 	background-color: #527FD8;
 }
+@media (min-width : 390px) {
+	.sub-content-wrapper {
+		width: 312px;
+	}
+}
 .finished-xbox {
 	color: white;
 	background-color: #036e24;

@@ -30,13 +30,13 @@ var mainMenu = document.getElementById("sidebar-menu-main");
 
 function showModal(modal) {
 	if (modal === "cancelModal")
-		cancelModal.style.display = "block";
+		cancelModal.style.display = "flex";
 	else if (modal === "reservationModal")
-		reservationModal.style.display = "block";
+		reservationModal.style.display = "flex";
 	else if (modal === "missingModal")
-		missingModal.style.display = "block";
+		missingModal.style.display = "flex";
 	else if (modal === "searchModal")
-		searchModal.style.display = "block";
+		searchModal.style.display = "flex";
 }
 
 function closeModal(modal) {
