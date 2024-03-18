@@ -23,20 +23,20 @@ function changeTab(tabId) {
 }
 
 var cancelModal = document.getElementById("cancel-modal");
-var reservationModal = document.getElementById("reservation-modal");
 var missingModal = document.getElementById("missing-modal");
+var loginModal = document.getElementById("login-modal");
 var searchModal = document.getElementById("search-modal");
-var mainMenu = document.getElementById("sidebar-menu-main");
+var sidebar = document.getElementById("sidebar-menu");
 
 function showModal(modal) {
 	if (modal === "cancelModal")
 		cancelModal.style.display = "flex";
-	else if (modal === "reservationModal")
-		reservationModal.style.display = "flex";
 	else if (modal === "missingModal")
 		missingModal.style.display = "flex";
 	else if (modal === "searchModal")
 		searchModal.style.display = "flex";
+	else if (modal === "loginModal")
+		loginModal.style.display = "flex";
 }
 
 function closeModal(modal) {
@@ -44,25 +44,31 @@ function closeModal(modal) {
 		cancelModal.style.display = "none";
 	else if (modal === "missingModal")
 		missingModal.style.display = "none";
+	else if (modal === "loginModal")
+		loginModal.style.display = "none";
 }
 
 window.onclick = function(event) {
 	if (event.target == cancelModal)
 		cancelModal.style.display = "none";
-	else if (event.target == reservationModal)
-		reservationModal.style.display = "none";
 	else if (event.target == missingModal)
 		missingModal.style.display = "none";
 	else if (event.target == searchModal)
 		searchModal.style.display = "none";
+	else if (event.target == loginModal)
+		loginModal.style.display = "none";
+	// else if (sidebar.classList[1] === "open" && event.target != sidebar) {
+	// 	console.log(sidebar.classList[1]);
+	// 	closeMenu();
+	// }
 }
 
 function openMenu() {
-	mainMenu.style.display = "block";
+	sidebar.classList.add("open");
 }
 
 function closeMenu() {
-	mainMenu.style.display = "none";
+	sidebar.className = "sidebar-menu";
 }
 
 function setSelected(event) {
@@ -97,3 +103,23 @@ function setFinished() {
 		t.querySelector(".comment-wrap").querySelector("p").innerHTML = "원하는 시간대 슬롯을 선택하세요";
 	}
 }
+
+let touchStart, touchEnd;
+
+// sidebar.addEventListener(
+// 	'touchstart',
+// 	e => {touchStart = e.targetTouches[0].clientX}
+// );
+
+// sidebar.addEventListener(
+// 	'touchmove',
+// 	e => {touchEnd = e.targetTouches[0].clientX}
+// );
+
+// sidebar.addEventListener(
+// 	'touchend',
+// 	e => {
+// 		if (touchStart - touchEnd > 45)
+// 			sidebar.style.left = "0px";
+// 	}
+// )

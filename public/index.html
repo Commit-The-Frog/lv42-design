@@ -5,14 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Dongle&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@600&family=Outfit:wght@500&display=swap" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@600&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/main-page.css">
@@ -39,16 +36,13 @@
 		<div class="content" id="main-content">
 			<div class="tabs">
 				<span class="tab" id="xbox-tab" onclick="changeTab('xbox')">
-					<p>xbox</p>
-					<div class="shadow"></div>
+					<p>XBox</p>
 				</span>
 				<span class="tab" id="nintendo-tab" onclick="changeTab('nintendo')">
-					<p>nintendo</p>
-					<div class="shadow"></div>
+					<p>Nintendo</p>
 				</span>
 				<span class="tab" id="ps5-tab" onclick="changeTab('ps5')">
-					<p>ps5</p>
-					<div class="shadow"></div>
+					<p>PS5</p>
 				</span>
 			</div>
 			<div class="slot-list" id="xbox-slot-list">
@@ -57,77 +51,66 @@
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">minjacho</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
-				<span class="slot" onclick="showModal('reservationModal')">
+				<span class="slot" onclick="showModal('loginModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">guest</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('missingModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">???</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">minjacho</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot" onclick="setSelected(event)">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">-</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot" onclick="setSelected(event)">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">-</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">minjacho</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">minjacho</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">minjacho</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">minjacho</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">minjacho</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 			</div>
 			<div class="slot-list" id="nintendo-slot-list">
@@ -136,77 +119,66 @@
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">-</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot" onclick="setSelected(event)">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">-</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot" onclick="setSelected(event)">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">-</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">junkim2</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">junkim2</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">junkim2</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot" onclick="setSelected(event)">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">-</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">junkim2</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">junkim2</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">junkim2</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">junkim2</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 			</div>
 			<div class="slot-list" id="ps5-slot-list">
@@ -215,77 +187,66 @@
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">-</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">yeondcho</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot" onclick="setSelected(event)">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">-</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot" onclick="setSelected(event)">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">-</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">yeondcho</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">yeondcho</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">yeondcho</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">yeondcho</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">yeondcho</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">yeondcho</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
 						<div class="slot-value">yeondcho</div>
 					</div>
-					<div class="shadow"></div>
 				</span>
 			</div>
 		</div>
@@ -308,67 +269,124 @@
 	</div>
 	<div class="modal" id="cancel-modal">
 		<div class="modal-content">
-			<div class="time-wrap">
+			<div class="time-wrap red">
 				<p>19:30~20:30</p>
 			</div>
 			<div class="comment-wrap">
 				<p>취소하시겠습니까?</p>
 			</div>
 			<div class="select-wrap">
-				<span class="yes">예</span>
-				<span class="no" onClick="closeModal('cancelModal')">아니요</span>
+				<div class="left red" onClick="closeModal('cancelModal')">
+					<span class="material-symbols-outlined">
+						cancel
+					</span>
+					<span>예</span>
+				</div>
+				<div class="right" onClick="closeModal('cancelModal')">
+					<span>아니요</span>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="modal" id="missing-modal">
 		<div class="modal-content">
-			<div class="time-wrap">
+			<div class="time-wrap red">
 				<p>19:30~20:30</p>
 			</div>
 			<div class="comment-wrap">
 				<p>예약자가 오지않았습니까?</p>
 			</div>
 			<div class="select-wrap">
-				<span class="yes" id="report">🚨신고하기</span>
-				<span class="no" onClick="closeModal('missingModal')">닫기</span>
+				<div class="left red" onClick="closeModal('missingModal')">
+					<span class="material-symbols-outlined">
+						gpp_maybe
+					</span>
+					<span>신고하기</span>
+				</div>
+				<div class="right" onClick="closeModal('missingModal')">
+					<span>닫기</span>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="modal" id="reservation-modal">
+	<div class="modal" id="login-modal">
 		<div class="modal-content">
-		</div>
-	</div>
-
-	<div class="sidebar-menu" id="sidebar-menu-main">
-		<div class="header">
-			<div class="menu-toggle" id="menu-close">
-				<span class="material-symbols-outlined" onclick="closeMenu()">
-					close
-				</span>
+			<div class="time-wrap red">
+				<p>!</p>
 			</div>
-			<div class="menu-toggle"></div>
-			<div class="menu-toggle"></div>
-		</div>
-		<div class="container">
-			<ul class="menu-list">
-				<li class="menu-item">
-					<a href="/user">로그인</a>
-				</li>
-				<li class="menu-item">
-					<a href="/">홈화면</a>
-				</li>
-				<li class="menu-item">
-					<a>-</a>
-				</li>
-				<li class="menu-item">
-					<a>-</a>
-				</li>
-			</ul>
+			<div class="comment-wrap">
+				로그인이 필요합니다
+			</div>
+			<div class="select-wrap">
+				<div class="left" onClick="closeModal('loginModal')">
+					<img src="42logo.svg" alt="42logo" id="logo-42">
+					<span>로그인</span>
+				</div>
+				<div class="right" onClick="closeModal('loginModal')">
+					<span>닫기</span>
+				</div>
+			</div>
 		</div>
 	</div>
 
+		<div class="sidebar-menu" id="sidebar-menu">
+			<div class="header">
+				<div class="section" id="left-section">
+					<span class="material-symbols-outlined" onclick="closeMenu()">
+						close
+					</span>
+				</div>
+				<div class="section" id="center-section">
+					<div class="wrapper" id="empty-wrapper"></div>
+					<div class="wrapper" id="profile-img-wrapper">
+						<div id="profile-img">
+							<img src="https://cdn.intra.42.fr/users/de563dec5217d29e672547181e703a97/small_tajeong.jpg" alt="profileImg">
+						</div>
+					</div>
+					<div class="wrapper" id="description-wrapper">
+						<div class="username">
+							<p>junkim2</p>
+						</div>
+						<div class="name">
+							<p>Junho</p>
+						</div>
+					</div>
+				</div>
+				<div class="section" id="right-section">
+					<span class="material-symbols-outlined">
+						settings
+					</span>
+				</div>
+			</div>
+			<div class="container">
+				<ul class="menu-list">
+					<li class="menu-item">
+						<a href="/">홈화면</a>
+					</li>
+					<li class="menu-item">
+						<a href="/">내정보</a>
+					</li>
+					<li class="menu-item">
+						<a href="/">로그인</a>
+					</li>
+				</ul>
+			</div>
+			<div class="empty-space"></div>
+			<div class="footer">
+				<div class="section" id="info">
+					<div class="contact-wrap">
+						<p>contact us</p>
+					</div>
+					<div class="email-wrap">
+						<p>junkim2@student.42seoul.kr</p>
+					</div>
+				</div>
+				<div class="section"></div>
+			</div>
+		</div>
+		
 	<div class="modal" id="search-modal">
 		<div class="modal-content">
 			<div class="search-box">
