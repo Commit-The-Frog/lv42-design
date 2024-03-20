@@ -129,3 +129,13 @@ function nextDate() {
 	cur.className = "list";
 	next.classList.add("now");
 }
+
+function search() {
+	var searchModalContent = searchModal.querySelector(".modal-content");
+	if (searchModalContent.className === "modal-content") {
+		searchModalContent.classList.add("searching");
+	} else {
+		searchModalContent.className = "modal-content";
+	}
+
+}

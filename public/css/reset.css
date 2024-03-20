@@ -54,3 +54,9 @@ a:visited, a:active {
 p{
 	display: inline;
 }
+
+input {
+	appearance: none;
+	margin: 0;
+	outline: 0;
+}
