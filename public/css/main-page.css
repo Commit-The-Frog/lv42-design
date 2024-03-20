@@ -1,19 +1,7 @@
-/* header */
-#menu {
-	justify-content: right;
-	align-items: center;
-}
-#search {
-	visibility: hidden;
-	justify-content: left;
-	align-items: center;
-}
-
 /* main content */
 #main-content {
 	flex-direction: column;
 	padding-bottom: 10px;
-	border: 1px solid black;
 }
 
 /* tab */
@@ -59,7 +47,6 @@
 	color : white;
 	background-color: #527FD8;
 }
-
 
 /* sub content */
 .sub-content-wrapper {

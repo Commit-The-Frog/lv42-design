@@ -104,22 +104,28 @@ function setFinished() {
 	}
 }
 
-let touchStart, touchEnd;
+function previousDate() {
+	var cur = document.querySelector(".list.now");
+	var prev = cur.previousElementSibling;
+	var week = document.querySelector("#week p");
 
-// sidebar.addEventListener(
-// 	'touchstart',
-// 	e => {touchStart = e.targetTouches[0].clientX}
-// );
+	if (!prev)
+		return;
+	if ((parseInt(week.innerHTML.charAt(5)) - 1) == 0)
+		return;
+	week.innerHTML = "WEEK " + (parseInt(week.innerHTML.charAt(5)) - 1);
+	cur.className = "list";
+	prev.classList.add("now");
+}
 
-// sidebar.addEventListener(
-// 	'touchmove',
-// 	e => {touchEnd = e.targetTouches[0].clientX}
-// );
+function nextDate() {
+	var cur = document.querySelector(".list.now");
+	var next = cur.nextElementSibling;
+	var week = document.querySelector("#week p");
 
-// sidebar.addEventListener(
-// 	'touchend',
-// 	e => {
-// 		if (touchStart - touchEnd > 45)
-// 			sidebar.style.left = "0px";
-// 	}
-// )
+	if (!next)
+		return;
+	week.innerHTML = "WEEK " + (parseInt(week.innerHTML.charAt(5)) + 1);
+	cur.className = "list";
+	next.classList.add("now");
+}

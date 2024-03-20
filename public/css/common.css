@@ -11,6 +11,7 @@ html, body {
 body {
 	background-image: url('../background.svg');
 	background-repeat: no-repeat;
+	background-size: cover;
 	background-position-y: center;
 	background-position-x: center;
 }
@@ -64,6 +65,15 @@ body {
 #logo a {
 	height: 80px;
 }
+#search {
+	visibility: hidden;
+	justify-content: left;
+	align-items: center;
+}
+#menu {
+	justify-content: right;
+	align-items: center;
+}
 
 /* main */
 .main {
@@ -81,6 +91,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 	margin-top: 10px;
+	border: 1px solid black;
 }
 
 /* tab */
@@ -88,10 +99,10 @@ body {
     display: flex;
     width: 100%;
 	border-bottom: 1px solid black;
-	font-family: "Bowlby One", sans-serif;
+	font-family: "Bowlby One SC", sans-serif;
 	font-size: 15px;
 	color: white;
-	box-shadow: inset 0px -4px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0px -4px rgba(0, 0, 0, 0.1);
 }
 .tabs p {
 	height: 36px;
@@ -109,7 +120,7 @@ body {
     border: none;
     cursor: pointer;
 	padding: 0px;
-	opacity: 0.6;
+	opacity: 0.3;
 }
 .tab-active {
 	flex-grow: 1;
@@ -125,14 +136,8 @@ body {
 	padding: 0px;
 	opacity: 1;
 	font-weight: 600;
-}
+	box-shadow: inset 0px -4px rgba(0, 0, 0, 0.1);
 
-/* shadow */
-.shadow {
-	width: 100%;
-	height: 4px;
-	background-color: inherit;
-	filter:brightness(80%);
 }
 
 /* slot */
@@ -313,16 +318,16 @@ body {
 	position: fixed;
 	display: flex;
 	flex-direction: column;
-	top : 0;
-	left: -360px;
+	top : 0px;
+	left: -110vw;
 	width: 91%;
 	height: 100%;
 	background-color: #E9EDF1;
 	border-radius: 0;
-	transition: left 0.5s;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 	border: 1px solid black;
+	transition: left 0.5s;
 }
 .open {
 	left: 0px;
@@ -376,15 +381,15 @@ body {
 	align-items: center;
 }
 #profile-img{
-	width: 73px;
-	height: 73px;
+	width: 70px;
+	height: 70px;
 	overflow: hidden;
 	border-radius: 100%;
 }
 #profile-img img {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit:cover;
 }
 #description-wrapper {
 	display: flex;
@@ -495,5 +500,12 @@ body {
 	.modal-content {
 		width: 312px;
 		height: 170px;
+	}
+	.sidebar-menu {
+		width: 360px;
+		left: -360px;
+	}
+	.open {
+		left: 0px;
 	}
 }
