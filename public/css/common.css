@@ -112,6 +112,7 @@ body {
 /* tab */
 .tabs {
     display: flex;
+	height: 41px;
     width: 100%;
 	border-bottom: 1px solid black;
 	font-family: "Bowlby One SC", sans-serif;
@@ -146,13 +147,11 @@ body {
 	justify-content: center;
 	font-size: 16px;
     background: none;
-    border: none;
     cursor: pointer;
 	padding: 0px;
 	opacity: 1;
 	font-weight: 600;
 	box-shadow: inset 0px -4px rgba(0, 0, 0, 0.1);
-
 }
 
 /* slot */
@@ -555,7 +554,7 @@ body {
 }
 .active {
 	opacity: 1;
-	top: 40px;
+	top: 30px;
 }
 #warning-alert .warning {
 	width: 100%;
@@ -601,8 +600,8 @@ body {
 		width: 312px;
 		height: 170px;
 	}
-	#warning-modal .modal-content{
-		height: 100px;
+	.alert{
+		width: 312px;
 	}
 	.search-result-list {
 		width: 312px;
@@ -613,5 +612,11 @@ body {
 	}
 	.open {
 		left: 0px;
+	}
+	.error-background-404 {
+		background-image: url('../error-background-404-desktop.svg');
+	}
+	#search-modal .modal-content {
+		margin-top: 30px;
 	}
 }

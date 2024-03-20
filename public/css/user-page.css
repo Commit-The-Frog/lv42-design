@@ -194,14 +194,14 @@
 /* history slot list */
 #history-slot-list {
 	background-color: #ffffff;
-	overflow-y:hidden;
+	width: 100%;
 	flex-grow: 1;
 }
 .list {
 	display: none;
 	width: 100%;
 	height: 90%;
-	flex-grow: 1;
+	flex: 0 0 90%;
     overflow-y: scroll;
 }
 .now {
