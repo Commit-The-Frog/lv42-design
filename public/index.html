@@ -67,10 +67,10 @@
 						<div class="slot-value">???</div>
 					</div>
 				</span>
-				<span class="slot reserved" onclick="showModal('cancelModal')">
+				<span class="slot reserved" onclick="location.href='/404'">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
-						<div class="slot-value">minjacho</div>
+						<div class="slot-value">error</div>
 					</div>
 				</span>
 				<span class="slot" onclick="setSelected(event)">
@@ -85,10 +85,10 @@
 						<div class="slot-value">-</div>
 					</div>
 				</span>
-				<span class="slot reserved" onclick="showModal('cancelModal')">
+				<span class="slot reserved" onclick="showAlert('warningAlert')">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
-						<div class="slot-value">minjacho</div>
+						<div class="slot-value">warning</div>
 					</div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
@@ -345,7 +345,7 @@
 				<div class="wrapper" id="empty-wrapper"></div>
 				<div class="wrapper" id="profile-img-wrapper">
 					<div id="profile-img">
-						<img src="https://cdn.intra.42.fr/users/de563dec5217d29e672547181e703a97/small_tajeong.jpg" alt="profileImg">
+						<img src="https://cdn.intra.42.fr/users/0154e7622e9aed55ecbc3c1a1ca71b84/minjchoi.jpg" alt="profileImg">
 					</div>
 				</div>
 				<div class="wrapper" id="description-wrapper">
@@ -417,6 +417,14 @@
 		</div>
 	</div>
 
+	<div class="alert" id="warning-alert">
+		<div class="warning red">
+			<p>! WARNING</p>
+		</div>
+		<div class="warning-message">
+			<p>뭐요뭐요뭐요뭐요뭐요뭐요뭐요뭐요뭐요뭐요뭐요뭐요뭐요뭐요</p>
+		</div>
+	</div>
 	
 	<script src="script.js"></script>
 </body>

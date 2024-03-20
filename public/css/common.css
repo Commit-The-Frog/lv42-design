@@ -16,6 +16,20 @@ body {
 	background-position-x: center;
 }
 
+/* error-background */
+.error-background-404 {
+	position: fixed;
+	left: 0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background-image: url('../error-background-404.svg');
+	background-position-y: center;
+	background-position-x: center;
+	background-size: cover;
+}
+
 /* font */
 @font-face {
     font-family: 'Wemakeprice-Regular';
@@ -216,8 +230,8 @@ body {
 	height: 20%;
 	border-radius: 10px;
 	display: flex;
-	justify-content: space-between;
 	flex-direction: column;
+	justify-content: space-between;
 	border: 1px solid black;
 	font-family: "Dongle", sans-serif;
 	font-weight: 400;
@@ -519,6 +533,49 @@ body {
 	padding-top: 5px;
 }
 
+/* alert */
+.alert {
+	background-color: #ffffff;
+	width: 80%;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: -100px;
+	left: 50%;
+	opacity: 0;
+	transform: translateX(-50%);
+	border-radius: 10px;
+	border: 1px solid black;
+	padding-left: 15px;
+	padding-right: 15px;
+	transition: all 1s ease-in-out;
+}
+.active {
+	opacity: 1;
+	top: 40px;
+}
+#warning-alert .warning {
+	width: 100%;
+	height: 35%;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	font-family: 'Bowlby One SC', sans-serif;
+	font-size: 18px;
+}
+#warning-alert .warning-message {
+	width: 100%;
+	height: 65%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Wemakeprice-Regular';
+	font-size: 18px;
+}
+
 @media (min-width: 390px), (min-height: 844px) {
 	body {
 		background-image: url('../background-desktop.svg');
@@ -543,6 +600,9 @@ body {
 	.modal-content {
 		width: 312px;
 		height: 170px;
+	}
+	#warning-modal .modal-content{
+		height: 100px;
 	}
 	.search-result-list {
 		width: 312px;

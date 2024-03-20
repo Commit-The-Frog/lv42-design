@@ -27,6 +27,7 @@ var missingModal = document.getElementById("missing-modal");
 var loginModal = document.getElementById("login-modal");
 var searchModal = document.getElementById("search-modal");
 var sidebar = document.getElementById("sidebar-menu");
+var warningAlert = document.getElementById("warning-alert");
 
 function showModal(modal) {
 	if (modal === "cancelModal")
@@ -137,5 +138,11 @@ function search() {
 	} else {
 		searchModalContent.className = "modal-content";
 	}
+}
 
+function showAlert(alert) {
+	warningAlert.classList.add("active");
+	setTimeout(function() {
+		warningAlert.classList.remove("active");
+	}, 2000)
 }
