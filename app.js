@@ -23,6 +23,10 @@ app.get('/404', function (req, res) {
 	res.sendFile(__dirname + '/public/error404.html');
 })
 
+app.get('/loading', function (req, res) {
+	res.sendFile(__dirname + '/public/loading.html');
+})
+
 
 // 3000 포트로 서버 오픈
 app.listen(3000, function() {

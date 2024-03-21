@@ -1,4 +1,9 @@
 window.onload = function() {
+	if (document.title === "loading") {
+		var loading = document.querySelector(".loading");
+		loading.classList.add('animate');
+		return;
+	}
 	var pageType = document.querySelector(".header");
 	if (pageType.id === "main-page") {
 		document.getElementById("xbox-slot-list").className += " slot-list-active";
