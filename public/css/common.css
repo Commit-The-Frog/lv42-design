@@ -228,7 +228,7 @@ body {
 	position: relative;
 	flex-grow: 0;
 	margin-left: 40px;
-	width: 150px;
+	width: 50%;
 	height: 20px;
 	background-color: #E9EDF1;
 	border-radius: 5px;
@@ -252,7 +252,7 @@ body {
 		left: -100px;
 	}
 	to {
-		left: calc(100% + 100px);
+		left: calc(100% + 40px);
 	}
 }
 
@@ -622,7 +622,7 @@ body {
 	font-size: 18px;
 }
 
-@media (min-width: 390px), (min-height: 844px) {
+@media (min-width: 430px), (min-height: 844px) {
 	body {
 		background-image: url('../background-desktop.svg');
 		background-repeat: no-repeat;

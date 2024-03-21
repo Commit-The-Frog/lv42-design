@@ -12,7 +12,7 @@ app.get('/skeleton', function (req, res) {
 })
 
 app.get('/user', function (req, res) {
-	res.sendFile(__dirname + '/public/user_page.html');
+	res.sendFile(__dirname + '/public/user-page.html');
 })
 
 app.get('/user-skeleton', function (req, res) {
