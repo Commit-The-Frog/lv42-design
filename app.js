@@ -7,6 +7,10 @@ app.get('/', function(req, res){
 	res.sendFile('index.html');
 })
 
+app.get('/skeleton', function (req, res) {
+	res.sendFile(__dirname + '/public/main-page-skeleton.html');
+})
+
 app.get('/user', function (req, res) {
 	res.sendFile(__dirname + '/public/user_page.html');
 })
@@ -14,6 +18,7 @@ app.get('/user', function (req, res) {
 app.get('/404', function (req, res) {
 	res.sendFile(__dirname + '/public/error404.html');
 })
+
 
 // 3000 포트로 서버 오픈
 app.listen(3000, function() {
