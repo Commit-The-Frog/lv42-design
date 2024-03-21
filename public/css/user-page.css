@@ -302,6 +302,3 @@
 	height: 15px;
 	flex-grow: 0;
 }
-.slot-date .skeleton-bar {
-	animation: skeletonMove 1s infinite ease-in-out;
-}

@@ -61,6 +61,108 @@
 					<span class="tab" id="status-tab" onclick="changeTab('status')"><p>예약현황</p></span>
 					<span class="tab" id="history-tab" onclick="changeTab('history')"><p>예약기록</p></span>
 				</div>
+				<div class="slot-list skeleton" id="status-slot-list">
+					<span class="slot">
+						<div class="slot-wrapper">
+							<div class="slot-time">
+								<div class="skeleton-bar"></div>
+							</div>
+							<div class="slot-value">
+								<div class="skeleton-bar"></div>
+							</div>
+						</div>
+					</span>
+					<span class="slot" onclick="showModal('missingModal')">
+						<div class="slot-wrapper">
+							<div class="slot-time">
+								<div class="skeleton-bar"></div>
+							</div>
+							<div class="slot-value">
+								<div class="skeleton-bar"></div>
+							</div>
+						</div>
+					</span>
+					<span class="slot" onclick="location.href='/404'">
+						<div class="slot-wrapper">
+							<div class="slot-time">
+								<div class="skeleton-bar"></div>
+							</div>
+							<div class="slot-value">
+								<div class="skeleton-bar"></div>
+							</div>
+						</div>
+					</span>
+					<span class="slot" onclick="setSelected(event)">
+						<div class="slot-wrapper">
+							<div class="slot-time">
+								<div class="skeleton-bar"></div>
+							</div>
+							<div class="slot-value">
+								<div class="skeleton-bar"></div>
+							</div>
+						</div>
+					</span>
+					<span class="slot" onclick="setSelected(event)">
+						<div class="slot-wrapper">
+							<div class="slot-time">
+								<div class="skeleton-bar"></div>
+							</div>
+							<div class="slot-value">
+								<div class="skeleton-bar"></div>
+							</div>
+						</div>
+					</span>
+					<span class="slot" onclick="showAlert('warningAlert')">
+						<div class="slot-wrapper">
+							<div class="slot-time">
+								<div class="skeleton-bar"></div>
+							</div>
+							<div class="slot-value">
+								<div class="skeleton-bar"></div>
+							</div>
+						</div>
+					</span>
+					<span class="slot" onclick="showModal('cancelModal')">
+						<div class="slot-wrapper">
+							<div class="slot-time">
+								<div class="skeleton-bar"></div>
+							</div>
+							<div class="slot-value">
+								<div class="skeleton-bar"></div>
+							</div>
+						</div>
+					</span>
+					<span class="slot" onclick="showModal('cancelModal')">
+						<div class="slot-wrapper">
+							<div class="slot-time">
+								<div class="skeleton-bar"></div>
+							</div>
+							<div class="slot-value">
+								<div class="skeleton-bar"></div>
+							</div>
+						</div>
+					</span>
+					<span class="slot" onclick="showModal('cancelModal')">
+						<div class="slot-wrapper">
+							<div class="slot-time">
+								<div class="skeleton-bar"></div>
+							</div>
+							<div class="slot-value">
+								<div class="skeleton-bar"></div>
+							</div>
+						</div>
+					</span>
+					<span class="slot" onclick="showModal('cancelModal')">
+						<div class="slot-wrapper">
+							<div class="slot-time">
+								<div class="skeleton-bar"></div>
+							</div>
+							<div class="slot-value">
+								<div class="skeleton-bar"></div>
+							</div>
+						</div>
+					</span>
+				</div>
 				<div class="slot-list" id="history-slot-list">
 					<div class="date-wrapper">
 						<div class="button" id="left-button" onclick="previousDate()">
@@ -397,218 +499,6 @@
 							</div>
 						</span>
 					</div>
-				</div>
-				<div class="slot-list skeleton" id="status-slot-list">
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>	
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>	
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>	
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>	
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>	
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>	
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>	
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>
-							</div>
-						</div>
-					</span>
-					<span class="slot" onclick="showModal('cancelModal')">
-						<div class="slot-wrapper">
-							<div class="slot-time">
-								<div class="skeleton-bar"></div>
-							</div>
-							<div class="slot-value">
-								<div class="skeleton-bar"></div>
-							</div>
-						</div>
-					</span>
 				</div>
 			</div>
 		</div>
