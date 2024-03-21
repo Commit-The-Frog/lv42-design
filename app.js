@@ -15,6 +15,10 @@ app.get('/user', function (req, res) {
 	res.sendFile(__dirname + '/public/user_page.html');
 })
 
+app.get('/user-skeleton', function (req, res) {
+	res.sendFile(__dirname + '/public/user-page-skeleton.html')
+})
+
 app.get('/404', function (req, res) {
 	res.sendFile(__dirname + '/public/error404.html');
 })
