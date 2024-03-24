@@ -91,22 +91,22 @@
 						<div class="slot-value">warning</div>
 					</div>
 				</span>
-				<span class="slot reserved" onclick="showModal('cancelModal')">
+				<span class="slot reserved" onclick="location.href='/loading'">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
-						<div class="slot-value">minjacho</div>
+						<div class="slot-value">loading</div>
 					</div>
 				</span>
-				<span class="slot reserved" onclick="showModal('cancelModal')">
+				<span class="slot reserved" onclick="location.href='/skeleton'">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
-						<div class="slot-value">minjacho</div>
+						<div class="slot-value">main skeleton</div>
 					</div>
 				</span>
-				<span class="slot reserved" onclick="showModal('cancelModal')">
+				<span class="slot reserved" onclick="location.href='/user-skeleton'">
 					<div class="slot-wrapper">
 						<div class="slot-time">20:30 ~</div>
-						<div class="slot-value">minjacho</div>
+						<div class="slot-value">user skeleton</div>
 					</div>
 				</span>
 				<span class="slot reserved" onclick="showModal('cancelModal')">
@@ -374,6 +374,9 @@
 				<li class="menu-item">
 					<a href="/">로그인</a>
 				</li>
+				<li class="menu-item">
+					<a href="/">문의하기</a>
+				</li>
 			</ul>
 		</div>
 		<div class="empty-space"></div>
@@ -386,7 +389,11 @@
 					<p>junkim2@student.42seoul.kr</p>
 				</div>
 			</div>
-			<div class="section"></div>
+			<div class="section" id="github">
+				<div class="github-icon" onclick="location='//github.com/orgs/Team-LV42/repositories'">
+					<img src="github-mark.svg" alt="github">
+				</div>
+			</div>
 		</div>
 	</div>
 		
