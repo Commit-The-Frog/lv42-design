@@ -27,6 +27,10 @@ app.get('/loading', function (req, res) {
 	res.sendFile(__dirname + '/public/loading.html');
 })
 
+app.get('/tournament', function (req, res) {
+	res.sendFile(__dirname + '/public/tournament-page.html');
+});
+
 
 // 3000 포트로 서버 오픈
 app.listen(3000, function() {
