@@ -17,20 +17,20 @@
 <body>
   <!-- header -->
   <div class="header">
-    <div class="section left flexbox-row-center">
+    <div class="section left flex-row-center">
       <span class="material-symbols-outlined home">
         home
       </span>
     </div>
-    <div class="section center flexbox-row-center">
+    <div class="section center flex-row-center">
       <img src="./lfc-logo.svg" alt="lfc-logo">
     </div>
     <div class="section right">
-      <span class="material-symbols-outlined signed-out none">
+      <span class="material-symbols-outlined signed-out">
         account_circle
         </span>
-      <span class="signed-in border-black">
-
+      <span class="signed-in border-black none">
+        <img src="https://cdn.intra.42.fr/users/0154e7622e9aed55ecbc3c1a1ca71b84/minjchoi.jpg" alt="user-img">
       </span>
     </div>
   </div>
@@ -38,36 +38,36 @@
   <!-- main -->
   <div class="main">
     <div class="tournament grid">
-      <div class="p1 flexbox-column-end">
-        <div class="l-player flexbox-row-center border-black">
-          <div class="vote flexbox-row-center" onclick="showModal('test')">
+      <div class="p1 flex-column-end">
+        <div class="l-player flex-row-center border-black">
+          <div class="vote flex-column-center">
             <p class="check">✔️</p>
             <p class="text">VOTE</p>
           </div>
-          <div class="profile flexbox-column-center">
-            <div class="team-logo flexbox-column-center">
+          <div class="profile flex-column-center" onclick="showModal('playerInfoModal')">
+            <div class="team-logo flex-column-center">
               <img src="./manu-logo.svg" alt="team-logo">
             </div>
-            <div class="team-name flexbox-column-center">
+            <div class="team-name flex-column-center">
               <p>junkim2</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="p2 flexbox-column-end">
-        <div class="l-player flexbox-row-center border-black">
+      <div class="p2 flex-column-end">
+        <div class="l-player flex-row-center border-black">
           <!-- <div class="vote"></div> -->
           <div class="profile"></div>
         </div>
       </div>
-      <div class="p3 flexbox-column-end">
-        <div class="l-player flexbox-row-center border-black">
+      <div class="p3 flex-column-end">
+        <div class="l-player flex-row-center border-black">
           <div class="vote"></div>
           <div class="profile"></div>
         </div>
       </div>
-      <div class="p4 flexbox-column-end">
-        <div class="l-player flexbox-row-center border-black">
+      <div class="p4 flex-column-end">
+        <div class="l-player flex-row-center border-black">
           <div class="vote"></div>
           <div class="profile"></div>
         </div>
@@ -102,29 +102,29 @@
       <div class="f1 border-bottom"></div>
       <div class="f2"></div>
 
-      <div class="p5 flexbox-column-start">
-        <div class="r-player flexbox-row-center border-black">
+      <div class="p5 flex-column-start">
+        <div class="r-player flex-row-center border-black">
           <div class="profile"></div>
-          <div class="vote flexbox-row-center">
+          <div class="vote flex-column-center">
             <p class="text">VOTE</p>
             <p class="check">✔️</p>
           </div>
         </div>
       </div>
-      <div class="p6 flexbox-column-start">
-        <div class="r-player flexbox-row-center border-black">
+      <div class="p6 flex-column-start">
+        <div class="r-player flex-row-center border-black">
           <div class="profile"></div>
           <div class="vote"></div>
         </div>
       </div>
-      <div class="p7 flexbox-column-start">
-        <div class="r-player flexbox-row-center border-black">
+      <div class="p7 flex-column-start">
+        <div class="r-player flex-row-center border-black">
           <div class="profile"></div>
           <div class="vote"></div>
         </div>
       </div>
-      <div class="p8 flexbox-column-start">
-        <div class="r-player flexbox-row-center border-black">
+      <div class="p8 flex-column-start">
+        <div class="r-player flex-row-center border-black">
           <div class="profile"></div>
           <div class="vote"></div>
         </div>
@@ -132,12 +132,53 @@
     </div>
   </div>
 
+
   <!-- footer -->
-  <div class="footer flexbox-column-center">
+  <div class="footer flex-column-center">
     <img src="./logo-contact.svg" alt="">
   </div>
 
-<script type="text/javascript" src="./script.js"></script>
+  
+  <div class="modal" id="player-info-modal" onclick="close">
+    <div class="modal-content">
+      <!-- section top -->
+      <div class="section top flex-row-center">
+        <div class="section left"></div>
+        <div class="section center">
+          <div class="team-name flex-column-center">
+            <p>리버풀 우승 기원</p>
+          </div>
+          <div class="profile-img flex-column-center">
+            <span id="profile-img">
+              <img src="https://cdn.intra.42.fr/users/0154e7622e9aed55ecbc3c1a1ca71b84/minjchoi.jpg" alt="profile-img">
+            </span>
+          </div>
+          <div class="intra-id flex-column-center">
+            <p>minjacho</p>
+          </div>  
+        </div>
+        <div class="section right flex-column-start">
+          <span class="material-symbols-outlined">
+            close
+            </span>
+        </div>
+         </div>
+      <!-- section middle -->
+      <div class="section middle grid">
+        <div class="rank-title"></div>
+        <div class="rank"></div>
+        <div class="formation-title"></div>
+        <div class="formation"></div>
+        <div class="coach-title"></div>
+        <div class="coach"></div>
+        <div class="career-title"></div>
+        <div class="career"></div>
+      </div>
+      <!-- section bottom -->
+      <div class="section bottom border-black"></div>
+    </div>
+  </div>
 
+  <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>

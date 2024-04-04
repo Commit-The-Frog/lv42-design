@@ -33,6 +33,7 @@ var loginModal = document.getElementById("login-modal");
 var searchModal = document.getElementById("search-modal");
 var sidebar = document.getElementById("sidebar-menu");
 var warningAlert = document.getElementById("warning-alert");
+var playerInfoModal = document.getElementById('player-info-modal');
 
 function showModal(modal) {
 	if (modal === "cancelModal")
@@ -43,8 +44,8 @@ function showModal(modal) {
 		searchModal.style.display = "flex";
 	else if (modal === "loginModal")
 		loginModal.style.display = "flex";
-	else
-		console.log("test");
+	else if (modal === "playerInfoModal")
+		playerInfoModal.style.display = "flex";
 }
 
 function closeModal(modal) {
@@ -54,6 +55,8 @@ function closeModal(modal) {
 		missingModal.style.display = "none";
 	else if (modal === "loginModal")
 		loginModal.style.display = "none";
+	else if (modal === "playerInfoModal")
+		playerInfoModal.style.display = "none";
 }
 
 window.onclick = function(event) {
@@ -65,6 +68,8 @@ window.onclick = function(event) {
 		searchModal.style.display = "none";
 	else if (event.target == loginModal)
 		loginModal.style.display = "none";
+	else if (event.target == playerInfoModal)
+		playerInfoModal.style.display = "none";
 	// else if (sidebar.classList[1] === "open" && event.target != sidebar) {
 	// 	console.log(sidebar.classList[1]);
 	// 	closeMenu();
