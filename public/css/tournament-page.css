@@ -124,6 +124,10 @@ html, body {
 .section.center {
 	flex-grow: 1;
 }
+.section.center img {
+	width: 75%;
+	height: 66%;
+}
 .material-symbols-outlined.home, .material-symbols-outlined.signed-out {
 	font-size: 38px;
 	margin: 0px;
@@ -239,9 +243,6 @@ html, body {
 }
 
 /* modal */
-.modal {
-	display: flex;
-}
 #player-info-modal .modal-content{
 	font-family: "Outfit", sans-serif;
 	font-optical-sizing: auto;
@@ -303,14 +304,22 @@ html, body {
 	height: 100%;
 	align-items: end;
 }
-.section.right .material-symbols-outlined {
+#player-info-modal .material-symbols-outlined {
 	margin-top: 15px;
 	margin-right: 15px;
 	font-size: 30px;
 }
 
 /* section middle */
-.section.middle .rank-title { 
+.section.middle div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.title {
+	background-color: #E9EDF1;
+}
+.section.middle .rank.title { 
 	grid-area: rt;
 	border-bottom: 1px solid black;
 	border-right: 1px solid black;
@@ -320,7 +329,7 @@ html, body {
 	border-bottom: 1px solid black;
 	border-right: 1px solid black;
 }
-.section.middle .formation-title { 
+.section.middle .formation.title { 
 	grid-area: ft;
 	border-bottom: 1px solid black;
 }
@@ -328,7 +337,7 @@ html, body {
 	grid-area: f;
 	border-bottom: 1px solid black;
 }
-.section.middle .coach-title { 
+.section.middle .coach.title { 
 	grid-area: cot;
 	border-bottom: 1px solid black;
 	border-right: 1px solid black;
@@ -337,13 +346,14 @@ html, body {
 	grid-area: co;
 	border-right: 1px solid black;
 }
-.section.middle .career-title {
+.section.middle .career.title {
 	grid-area: cat;
 	border-bottom: 1px solid black;
 }
 .section.middle .career { grid-area: ca;}
 .section.middle {
 	border-top : 1px solid black;
+	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 2fr 1fr 2fr;
 	grid-template-areas:
 	'rt ft'
@@ -351,4 +361,27 @@ html, body {
 	'cot cat'
 	'co ca'
 	;
+}
+
+/* section bottom */
+.section.bottom .comment.title {
+	grid-area: comt;
+	border-top : 1px solid black;
+	border-bottom: 1px solid black;
+}
+.section.bottom .comment {
+	grid-area: com;
+}
+.section.bottom {
+	grid-template-rows: 1fr 2fr;
+	grid-template-areas: 
+	'comt'
+	'com'
+	;
+}
+.section.bottom div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
