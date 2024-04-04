@@ -43,6 +43,8 @@ function showModal(modal) {
 		searchModal.style.display = "flex";
 	else if (modal === "loginModal")
 		loginModal.style.display = "flex";
+	else
+		console.log("test");
 }
 
 function closeModal(modal) {
