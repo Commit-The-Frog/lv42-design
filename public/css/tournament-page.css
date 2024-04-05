@@ -125,12 +125,12 @@ html, body {
 	flex-grow: 1;
 }
 .section.center img {
-	width: 45vw;
+	width: 190px;
 }
 .material-symbols-outlined.home, .material-symbols-outlined.signed-out {
-	font-size: 38px;
+	font-size: 50px;
 	margin: 0px;
-	margin-bottom: 100%;
+	margin-bottom: 76px;
 }
 .signed-in {
 	width: 35px;
@@ -150,10 +150,10 @@ html, body {
 	height: 76%;
 }
 .tournament {
-	width: 100%;
+	max-width: 390px;
 	height: calc(100% - 88px);
 	grid-template-columns: 7.5fr 1fr 1fr 1fr 1fr 1fr 7.5fr;
-	grid-template-areas: 
+	grid-template-areas:
 		'p1 q1 sf1 f1 sf5 q9 p5'
 		'p1 q2 sf1 f1 sf5 q10 p5'
 		'p2 q3 sf2 f1 sf6 q11 p6'
@@ -162,7 +162,7 @@ html, body {
 		'p3 q6 sf3 f2 sf7 q14 p7'
 		'p4 q7 sf4 f2 sf8 q15 p8'
 		'p4 q8 sf4 f2 sf8 q16 p8'
-		;
+	;
 }
 
 /* player */
@@ -242,8 +242,7 @@ html, body {
 	width: 100%;
 }
 .footer img {
-	width: 83px;
-	height: 42px;
+	width: 18%;
 }
 
 /* modal */
@@ -252,7 +251,8 @@ html, body {
 	font-optical-sizing: auto;
 	font-weight: 700;
 	font-style: normal;
-	height: 66%;
+	width: 80vw;
+	height: 66vh;
 	background-image: url('../real-logo-background.svg');
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -393,4 +393,55 @@ html, body {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+}
+
+@media (min-width:786px) {
+	.section.center img {
+		width: 270px;
+	}
+	.profile {
+		width: 120px;
+	}
+	.profile .team-name {
+		font-size: 145%;
+	}
+	.header .material-symbols-outlined {
+		font-size: 50px;
+	}
+	.vote {
+		font-size: 17px;
+	}
+	#player-info-modal .modal-content {
+		width: 580px;
+		font-size :23px; 
+	}
+	.footer img {
+		width: 100px;
+	}
+}
+@media (min-width:1024px) {
+	.tournament {
+		max-width: 800px;
+	}
+	.profile {
+		width: 180px;
+	}
+	.vote {
+		width: 40px;
+		font-size: 20px;
+	}
+}
+@media (min-width:1280px) {
+	.tournament {
+		max-width: 1000px;
+	}
+	.profile {
+		width: 200px;
+	}
+	.profile .team-name {
+		font-size: 160%;
+	}
+	.header .material-symbols-outlined {
+		font-size : 60px;
+	}
 }
