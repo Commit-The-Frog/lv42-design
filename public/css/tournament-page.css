@@ -96,6 +96,12 @@ html, body {
 	justify-content: center;
 	align-items: start;
 }
+.flex-row-start {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: start;
+}
 
 /* grid */
 .grid {
@@ -125,10 +131,10 @@ html, body {
 	flex-grow: 1;
 }
 .section.center img {
-	width: 190px;
+	width: 160px;
 }
 .material-symbols-outlined.home, .material-symbols-outlined.signed-out {
-	font-size: 50px;
+	font-size: 40px;
 	margin: 0px;
 	margin-bottom: 76px;
 }
@@ -393,6 +399,25 @@ html, body {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+}
+
+#vote-modal .modal-content {
+	height: 20%;
+}
+#vote-modal .name-wrap {
+	font-family: "Bowlby One SC", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
+	font-size: 24px;
+	flex-grow: 1;
+}
+#vote-modal .warn-wrap {
+	height: 15%;
+	align-items: start;
+	font-size: 15px;
+}
+#vote-modal .material-symbols-outlined {
+	font-size: 16px;
 }
 
 @media (min-width:786px) {

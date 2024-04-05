@@ -34,6 +34,7 @@ var searchModal = document.getElementById("search-modal");
 var sidebar = document.getElementById("sidebar-menu");
 var warningAlert = document.getElementById("warning-alert");
 var playerInfoModal = document.getElementById('player-info-modal');
+var voteModal = document.getElementById('vote-modal');
 
 function showModal(modal) {
 	if (modal === "cancelModal")
@@ -46,6 +47,8 @@ function showModal(modal) {
 		loginModal.style.display = "flex";
 	else if (modal === "playerInfoModal")
 		playerInfoModal.style.display = "flex";
+	else if (modal === "voteModal")
+		voteModal.style.display = "flex";
 }
 
 function closeModal(modal) {
@@ -57,6 +60,8 @@ function closeModal(modal) {
 		loginModal.style.display = "none";
 	else if (modal === "playerInfoModal")
 		playerInfoModal.style.display = "none";
+	else if (modal === "voteModal")
+		voteModal.style.display = "none";
 }
 
 window.onclick = function(event) {
@@ -70,10 +75,8 @@ window.onclick = function(event) {
 		loginModal.style.display = "none";
 	else if (event.target == playerInfoModal)
 		playerInfoModal.style.display = "none";
-	// else if (sidebar.classList[1] === "open" && event.target != sidebar) {
-	// 	console.log(sidebar.classList[1]);
-	// 	closeMenu();
-	// }
+	else if (event.target == voteModal)
+		voteModal.style.display = "none";
 }
 
 function openMenu() {

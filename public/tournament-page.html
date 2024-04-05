@@ -36,11 +36,11 @@
   </div>
 
   <!-- main -->
-  <div class="main flex-row-start">
+  <div class="main">
     <div class="tournament grid">
       <div class="p1 flex-column-end">
         <div class="l-player flex-row-center border-black">
-          <div class="vote flex-column-center">
+          <div class="vote flex-column-center" onclick="showModal('voteModal')">
             <p class="check">✔️</p>
             <p class="text">VOTE</p>
           </div>
@@ -200,6 +200,31 @@
       </div>
     </div>
   </div>
+
+  <div class="modal" id="vote-modal">
+	<div class="modal-content">
+		<div class="time-wrap">
+			<p>이 플레이어에게 투표하시겠습니까?</p>
+		</div>
+		<div class="name-wrap flex-row-start">
+			<p>JUNKIM2</p>
+		</div>
+		<div class="warn-wrap flex-row-center red">
+			<span class="material-symbols-outlined">
+				gpp_maybe
+			</span>
+			<p>이후, 수정할 수 없습니다</p>
+		</div>
+		<div class="select-wrap">
+			<div class="left red" onClick="closeModal('voteModal')">
+				<span>투표하기</span>
+			</div>
+			<div class="right" onClick="closeModal('voteModal')">
+				<span>닫기</span>
+			</div>
+		</div>
+	</div>
+</div>
 
   <script type="text/javascript" src="./script.js"></script>
 </body>
