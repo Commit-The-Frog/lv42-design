@@ -249,6 +249,11 @@ html, body {
 	font-weight: 700;
 	font-style: normal;
 	height: 66%;
+	background-image: url('../real-logo.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	z-index: 2;
 }
 .section.top {
 	height: 32%;
