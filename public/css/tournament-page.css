@@ -125,8 +125,7 @@ html, body {
 	flex-grow: 1;
 }
 .section.center img {
-	width: 75%;
-	height: 66%;
+	width: 45vw;
 }
 .material-symbols-outlined.home, .material-symbols-outlined.signed-out {
 	font-size: 38px;
@@ -172,12 +171,12 @@ html, body {
 	background-color: white;
 }
 .vote {
-	height: 102px;
+	height: 12vh;
 	width: 32px;
 	font-family: "Bowlby One SC", sans-serif;
   	font-weight: 400;
   	font-style: normal;
-	font-size: 15px;
+	font-size: 84%;
 	color: #EA2A36;
 }
 .check { 
@@ -211,22 +210,27 @@ html, body {
 	-ms-transform: rotate(-180deg);
 }
 .profile {
-	height: 102px;
-	width: 84px;
+	height: 12vh;
+	width: 21vw;
 }
 .profile .team-logo {
 	width: 100%;
-	flex-grow: 1;
+	height: 70%;
+	background-image: url('../real-logo.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
 }
 .profile .team-name {
 	width: 100%;
-	flex-grow: 1;
+	height: 30%;
 	font-family: "Outfit", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 700;
 	font-style: normal;
-	font-size: 14px;
+	font-size: 3.5vw;
 	border-top: 0.2px solid black; 
+	padding: 7%;
 }
 
 /* footer */
@@ -249,7 +253,7 @@ html, body {
 	font-weight: 700;
 	font-style: normal;
 	height: 66%;
-	background-image: url('../real-logo.svg');
+	background-image: url('../real-logo-background.svg');
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
