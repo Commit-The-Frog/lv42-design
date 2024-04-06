@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bowlby+One+SC&family=Outfit&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,18 +21,19 @@
   <!-- header -->
   <div class="header">
     <div class="section left flex-row-center">
-      <span class="material-symbols-outlined home">
-        home
-      </span>
+      <img src="./FC24 LOGO white.png" alt="fc24-logo">
     </div>
-    <div class="section center flex-row-center">
-      <img src="./lfc-logo.svg" alt="lfc-logo">
+    <div class="section center flex-column-center">
+      <p id="lv42">LV42</p>
+      <p id="fifa-cup">FIFA CUP</p>
     </div>
     <div class="section right">
-      <span class="material-symbols-outlined signed-out">
-        account_circle
-        </span>
-      <span class="signed-in border-black none">
+      <div class="signed-out flex-column-center">
+        <span class="material-symbols-outlined">
+          login
+          </span>
+      </div>
+      <span class="none signed-in flex-column-center border-black">
         <img src="https://cdn.intra.42.fr/users/0154e7622e9aed55ecbc3c1a1ca71b84/minjchoi.jpg" alt="user-img">
       </span>
     </div>
@@ -39,13 +43,13 @@
   <div class="main">
     <div class="tournament grid">
       <div class="p1 flex-column-end">
-        <div class="l-player flex-row-center border-black">
+        <div class="l-player flex-row-center">
           <div class="vote flex-column-center" onclick="showModal('voteModal')">
             <p class="check">✔️</p>
             <p class="text">VOTE</p>
           </div>
           <div class="profile flex-column-center" onclick="showModal('playerInfoModal')">
-            <span class="team-logo">
+            <span class="team-logo team-mun">
             </span>
             <div class="team-name flex-column-center">
               <p>junkim2</p>
@@ -54,21 +58,44 @@
         </div>
       </div>
       <div class="p2 flex-column-end">
-        <div class="l-player flex-row-center border-black">
-          <!-- <div class="vote"></div> -->
-          <div class="profile"></div>
+        <div class="l-player flex-row-center">
+          <div class="profile flex-column-center" onclick="showModal('playerInfoModal')">
+            <span class="team-logo team-rma">
+            </span>
+            <div class="team-name flex-column-center">
+              <p>junkim2</p>
+            </div>
+          </div>
         </div>
-      </div>
+		  </div>
       <div class="p3 flex-column-end">
-        <div class="l-player flex-row-center border-black">
-          <div class="vote"></div>
-          <div class="profile"></div>
+        <div class="l-player flex-row-center">
+          <div class="vote flex-column-center" onclick="showModal('voteModal')">
+            <p class="check">✔️</p>
+            <p class="text">VOTE</p>
+          </div>
+          <div class="profile flex-column-center" onclick="showModal('playerInfoModal')">
+            <span class="team-logo team-mil">
+            </span>
+            <div class="team-name flex-column-center">
+              <p>junkim2</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="p4 flex-column-end">
-        <div class="l-player flex-row-center border-black">
-          <div class="vote"></div>
-          <div class="profile"></div>
+        <div class="l-player flex-row-center">
+          <div class="vote flex-column-center" onclick="showModal('voteModal')">
+            <p class="check">✔️</p>
+            <p class="text">VOTE</p>
+          </div>
+          <div class="profile flex-column-center" onclick="showModal('playerInfoModal')">
+            <span class="team-logo team-liv">
+            </span>
+            <div class="team-name flex-column-center">
+              <p>junkim2</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -102,8 +129,14 @@
       <div class="f2"></div>
 
       <div class="p5 flex-column-start">
-        <div class="r-player flex-row-center border-black">
-          <div class="profile"></div>
+        <div class="r-player flex-row-center">
+          <div class="profile flex-column-center" onclick="showModal('playerInfoModal')">
+            <span class="team-logo team-mci">
+            </span>
+            <div class="team-name flex-column-center">
+              <p>junkim2</p>
+            </div>
+          </div>
           <div class="vote flex-column-center">
             <p class="text">VOTE</p>
             <p class="check">✔️</p>
@@ -111,21 +144,48 @@
         </div>
       </div>
       <div class="p6 flex-column-start">
-        <div class="r-player flex-row-center border-black">
-          <div class="profile"></div>
-          <div class="vote"></div>
+        <div class="r-player flex-row-center">
+          <div class="profile flex-column-center" onclick="showModal('playerInfoModal')">
+            <span class="team-logo team-psg">
+            </span>
+            <div class="team-name flex-column-center">
+              <p>junkim2</p>
+            </div>
+          </div>
+          <div class="vote flex-column-center">
+            <p class="text">VOTE</p>
+            <p class="check">✔️</p>
+          </div>
         </div>
       </div>
       <div class="p7 flex-column-start">
-        <div class="r-player flex-row-center border-black">
-          <div class="profile"></div>
-          <div class="vote"></div>
+        <div class="r-player flex-row-center">
+          <div class="profile flex-column-center" onclick="showModal('playerInfoModal')">
+            <span class="team-logo team-atm">
+            </span>
+            <div class="team-name flex-column-center">
+              <p>junkim2</p>
+            </div>
+          </div>
+          <div class="vote flex-column-center">
+            <p class="text">VOTE</p>
+            <p class="check">✔️</p>
+          </div>
         </div>
       </div>
       <div class="p8 flex-column-start">
-        <div class="r-player flex-row-center border-black">
-          <div class="profile"></div>
-          <div class="vote"></div>
+        <div class="r-player flex-row-center">
+          <div class="profile flex-column-center" onclick="showModal('playerInfoModal')">
+            <span class="team-logo team-int">
+            </span>
+            <div class="team-name flex-column-center">
+              <p>junkim2</p>
+            </div>
+          </div>
+          <div class="vote flex-column-center">
+            <p class="text">VOTE</p>
+            <p class="check">✔️</p>
+          </div>
         </div>
       </div>
     </div>
@@ -134,7 +194,7 @@
 
   <!-- footer -->
   <div class="footer flex-column-center">
-    <img src="./logo-contact.svg" alt="">
+    <p>sponsored by JAEM'S 25</p>
   </div>
 
   
