@@ -130,10 +130,12 @@ body {
 }
 .section.left, .section.right {
 	width: 25%;
-	padding-bottom: 76px;
+	justify-content: start;
+	padding-top: 10%;
 }
 .section.left {
-	justify-content: end;
+	padding-left: 5%;
+	align-items: start;
 }
 .section.left img {
 	width: 69px;
@@ -152,6 +154,12 @@ body {
 }
 #fifa-cup {
 	color: #E3D5AC;
+}
+.section.right {
+	justify-content: end;
+	align-items: start;
+	padding-right: 5%;
+	padding-top: calc(10% - 10px);
 }
 .signed-out, .signed-in {
 	width: 40px;
@@ -210,6 +218,7 @@ body {
   	font-weight: 400;
   	font-style: normal;
 	font-size: 15px;
+	cursor: pointer;
 }
 .check { 
 	color: black;
@@ -242,6 +251,7 @@ body {
 	-ms-transform: rotate(-180deg);
 }
 .profile {
+	cursor: pointer;
 	height: 100%;
 	flex-grow: 1;
 	justify-content: space-between;
@@ -256,7 +266,7 @@ body {
 .profile .team-name {
 	width: 100%;
 	height: 30%;
-	font-size: 3.5vw;
+	font-size: 17px;
 	border-top: 0.2px solid black; 
 	padding: 7%;
 }
@@ -312,10 +322,6 @@ body {
 	font-weight: 700;
 	width: 80vw;
 	height: 66vh;
-	background-image: url('../real-logo-background.svg');
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
 	z-index: 2;
 }
 .section.top {
@@ -385,8 +391,16 @@ body {
 	font-size: 30px;
 }
 
+/* team-logo-background */
+.bg {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
 /* section middle */
 .section.middle div {
+	font-size: 16px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -425,7 +439,10 @@ body {
 	grid-area: cat;
 	border-bottom: 1px solid black;
 }
-.section.middle .career { grid-area: ca;}
+.section.middle .career { 
+	grid-area: ca;
+	padding: 3px;
+}
 .section.middle {
 	border-top : 1px solid black;
 	grid-template-columns: 1fr 1fr;
@@ -459,6 +476,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	font-size:16px;
 }
 
 #vote-modal .modal-content {
@@ -481,29 +499,24 @@ body {
 }
 
 @media (min-width:786px) {
-	.section.center img {
-		width: 270px;
+	body { background-size: contain; }
+	.section.left {padding-top: 70px;}
+	.section.right { padding-top: 55px;}
+	.section.left img {width: 130px;}
+	.signed-out,.signed-in {
+		width: 60px;
+		height: 60px;
 	}
-	.profile {
-		width: 120px;
+	.header .material-symbols-outlined{font-size: 50px;}
+	.section.center img {width: 270px;}
+	.profile {width: 120px;}
+	.profile .team-name {font-size: 20px;}
+	.vote {font-size: 15px;}
+	.modal-content {
+		width: 390px;
+		font-size :23px;
 	}
-	.profile .team-name {
-		font-size: 145%;
-	}
-	.header .material-symbols-outlined{
-		font-size: 50px;
-	}
-	.signed-in {
-		width: 50px;
-		height: 50px;
-	}
-	.vote {
-		font-size: 17px;
-	}
-	#player-info-modal .modal-content {
-		width: 580px;
-		font-size :23px; 
-	}
+	#player-info-modal .modal-content {width: 390px;}
 	.footer img {
 		width: 100px;
 	}
@@ -516,8 +529,7 @@ body {
 		width: 180px;
 	}
 	.vote {
-		width: 40px;
-		font-size: 20px;
+		width: 50px;
 	}
 }
 @media (min-width:1280px) {
@@ -527,14 +539,11 @@ body {
 	.profile {
 		width: 200px;
 	}
-	.profile .team-name {
-		font-size: 160%;
-	}
-	.header .material-symbols-outlined {
-		font-size : 60px;
-	}
-	.signed-in {
+	.signed-in, .signed-out {
 		width: 60px;
 		height: 60px;
+	}
+	.vote {
+		width: 70px;
 	}
 }
