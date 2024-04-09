@@ -7,7 +7,7 @@ body {
 	background-image: linear-gradient(
 		rgba(0, 0, 0, 0.3),
 		rgba(0, 0, 0, 0.5)
-	), url('../lfc-background.svg');
+	), url('../img/lfc-background.svg');
 	font-family: "Outfit", sans-serif;
 	font-optical-sizing: auto;
 	font-style: normal;
@@ -291,35 +291,42 @@ body {
 	left:-15px;
 	width: 30px;
 	height: 30px;
-	background-image: url('../voted-img.svg');
+	background-image: url('../img/voted-img.svg');
 	border-radius: 100%;
 }
 
 /* teams */
-.team-mun {background-image: url('../manchester-united.svg');}
-.team-rma {background-image: url('../real-madrid.svg');}
-.team-mil {background-image: url('../ac-milan.svg');}
-.team-liv {background-image: url('../liverpool.svg');}
-.team-mci {background-image: url('../manchester-city.svg');}
-.team-psg {background-image: url('../psg.svg');}
-.team-atm {background-image: url('../atletico-madrid.svg');}
-.team-int {background-image: url('../internazionale-milano.svg');}
-.team-dor {background-image: url('../Borussia_Dortmund-O9DpWngdg_brandlogos.net.svg');}
-.team-bay {background-image: url('../bayern-munchen.svg');}
-.team-cph {background-image: url('../kobenhavn.svg');}
-.team-tot {background-image: url('../Tottenham_Hotspur.svg');}
-.team-ars {background-image: url('../arsenal.svg');}
+.team-mun {background-image: url('../img/team-logo/manchester-united.svg');}
+.team-rma {background-image: url('../img/team-logo/real-madrid.svg');}
+.team-mil {background-image: url('../img/team-logo/ac-milan.svg');}
+.team-liv {background-image: url('../img/team-logo/liverpool.svg');}
+.team-mci {background-image: url('../img/team-logo/manchester-city.svg');}
+.team-psg {background-image: url('../img/team-logo/psg.svg');}
+.team-atm {background-image: url('../img/team-logo/atletico-madrid.svg');}
+.team-int {background-image: url('../img/team-logo/internazionale-milano.svg');}
+.team-dor {background-image: url('../img/team-logo/Borussia_Dortmund-O9DpWngdg_brandlogos.net.svg');}
+.team-bay {background-image: url('../img/team-logo/bayern-munchen.svg');}
+.team-cph {background-image: url('../img/team-logo/kobenhavn.svg');}
+.team-tot {background-image: url('../img/team-logo/Tottenham_Hotspur.svg');}
+.team-ars {background-image: url('../img/team-logo/arsenal.svg');}
+.team-lev {background-image: url('../img/team-logo/Bayer_Leverkusen_Logo.svg');}
 
 /* team-bg */
-.team-mun-bg {background-image: url('../manchester-united-bg.svg');}
-.team-rma-bg {background-image: url('../real-madrid-bg.svg');}
-.team-mil-bg {background-image: url('../ac-milan-bg.svg');}
-.team-liv-bg {background-image: url('../liverpool-bg.svg');}
-.team-mci-bg {background-image: url('../manchester-city-bg.svg');}
-.team-psg-bg {background-image: url('../psg-bg.svg');}
-.team-atm-bg {background-image: url('../atletico-madrid-bg.svg');}
-.team-int-bg {background-image: url('../internazionale-milano-bg.svg');}
-.team-dor-bg {background-image: url('../Borussia_Dortmund-O9DpWngdg_brandlogos.net-bg.svg');}
+.team-acm-bg {background-image: url('../img/team-logo/background/ac-milan-bg.svg');}
+.team-mun-bg {background-image: url('../img/team-logo/background/manchester-united-bg.svg');}
+.team-rma-bg {background-image: url('../img/team-logo/background/real-madrid-bg.svg');}
+.team-mil-bg {background-image: url('../img/team-logo/background/ac-milan-bg.svg');}
+.team-liv-bg {background-image: url('../img/team-logo/background/liverpool-bg.svg');}
+.team-mci-bg {background-image: url('../img/team-logo/background/manchester-city-bg.svg');}
+.team-psg-bg {background-image: url('../img/team-logo/background/psg-bg.svg');}
+.team-atm-bg {background-image: url('../img/team-logo/background/atletico-madrid-bg.svg');}
+.team-int-bg {background-image: url('../img/team-logo/background/internazionale-milano-bg.svg');}
+.team-dor-bg {background-image: url('../img/team-logo/background/Borussia_Dortmund-O9DpWngdg_brandlogos.net-bg.svg');}
+.team-ars-bg {background-image: url('../img/team-logo/background/arsenal-bg.svg');}
+.team-bay-bg {background-image: url('../img/team-logo/background/bayern-munchen-bg.svg');}
+.team-cph-bg {background-image: url('../img/team-logo/background/kobenhavn-bg.svg');}
+.team-tot-bg {background-image: url('../img/team-logo/background/Tottenham_Hotspur-bg.svg');}
+.team-lev-bg {background-image: url('../img/team-logo/background/Bayer_Leverkusen_Logo-bg.svg');}
 
 /* team-logo-background */
 .bg {
