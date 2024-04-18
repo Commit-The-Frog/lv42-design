@@ -3,9 +3,16 @@ module.exports = {
   content: ["./public/*.html"],
   theme: {
     fontFamily: {
-      "noto" : ['Noto Sans KR', 'sans-serif']
+      "noto" : ['Noto Sans KR', 'sans-serif'],
+      "outfit" : ['Outfit', 'sans-serif']
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'logo': "url('../img/logo/logo.svg')",
+        'logo-hazy': "url('../img/logo/logo-darkened.svg')",
+        'default': "url('../img/background.svg')"
+      }
+    },
   },
   plugins: [],
 }

@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="css/reset.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,13 +13,56 @@
 	<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-	<link rel="stylesheet" href="./css/common.css">
-	<link rel="stylesheet" href="./css/common-media.css">
+	<link rel="stylesheet" href="./css/output.css">
 </head>
-<body class="flex-column">
-	<div class="logo-darkened flex-column">
-		<p>다른 서비스로</p>
-		<p>돌아오겠습니다</p>
+<body>
+	<!-- 전체 컨테이너 -->
+	<div class="w-screen h-screen flex items-center justify-center relative bg-basic bg-cover bg-default">
+		<!-- 헤더 -->
+		<header class="absolute flex flex-row items-center justify-between p-4 top-0 left-0 w-full h-12">
+			<div id="menu-button" class="flex" onclick="openMenu()">
+				<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+				</svg>
+			</div>
+			<div class="h-8 w-8 hidden bg-basic bg-logo"></div>
+		</header>
+		<!-- 로고 + 멘트 -->
+		<div class= "flex flex-col justify-center items-center bg-basic w-80 h-40 bg-logo-hazy font-outfit font-bold text-2xl">
+			<p>서비스</p>
+			<p>준비중입니다</p>
+		</div>
+		<!-- 사이드바 -->
+		<div id="sidebar-menu" class="side-hidden peer w-64 h-screen bg-gray-100 rounded-r-md transition-all z-20">
+			<header class="absolute flex flex-row items-center justify-between p-4 top-0 left-0 w-full h-12">
+				<div id="menu-close-button" class="hidden" onclick="closeMenu()">
+					<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</div>
+			</header>
+		</div>
+		<!-- 사이드바 아래의 어두운 레이어 -->
+		<div id="sidebar-bg" class="invisible peer-[.side-shown]:visible backdrop-brightness-50 w-full h-full absolute top-0 left-0 z-10"></div>
 	</div>
+
+	<!-- script -->
+	<script>
+		const sidebarBg = document.getElementById('sidebar-bg');
+		function openMenu() {
+			document.getElementById('menu-button').className="hidden";
+			document.getElementById('menu-close-button').className="flex";
+			document.getElementById('sidebar-menu').classList.replace('side-hidden', 'side-shown');
+		}
+		function closeMenu() {
+			document.getElementById('menu-button').className="flex";
+			document.getElementById('menu-close-button').className="hidden";
+			document.getElementById('sidebar-menu').classList.replace('side-shown', 'side-hidden');
+		}
+		window.onclick = function(event) {
+			if (event.target == sidebarBg)
+				closeMenu();
+		}
+	</script>
 </body>
 </html>
