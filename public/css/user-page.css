@@ -84,13 +84,13 @@
 	height: 15px;
 }
 #username-wrapper #inactive {
-	content: url('../active-green.svg');
+	content: url('../img/active-green.svg');
 }
 #username-wrapper #xbox {
-	content: url('../active-green.svg');
+	content: url('../img/active-green.svg');
 }
 #username-wrapper #nintendo  {
-	content: url('../active-red.svg');
+	content: url('../img/active-red.svg');
 }
 #username-wrapper #ps5{
 	content: url('../active-blue.svg');
