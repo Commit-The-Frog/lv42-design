@@ -12,4 +12,10 @@
 	.side-shown {
 		@apply absolute top-0 left-0
 	}
+	.btn-inactive {
+		@apply opacity-45
+	}
+	.btn-actvie {
+		@apply opacity-100
+	}
 }

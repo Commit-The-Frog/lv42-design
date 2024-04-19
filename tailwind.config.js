@@ -11,7 +11,9 @@ module.exports = {
         'logo': "url('../img/logo/logo.svg')",
         'logo-hazy': "url('../img/logo/logo-darkened.svg')",
         'default': "url('../img/background.svg')",
-        'xbox': "url('../img/xbox.svg')"
+        'xbox': "url('../img/xbox.png')",
+        'switch': "url('../img/switch.png')",
+        'ps5': "url('../img/ps5.png')"
       }
     },
   },
