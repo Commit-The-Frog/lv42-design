@@ -13,7 +13,8 @@ module.exports = {
         'default': "url('../img/background.svg')",
         'xbox': "url('../img/xbox.png')",
         'switch': "url('../img/switch.png')",
-        'ps5': "url('../img/ps5.png')"
+        'ps5': "url('../img/ps5.png')",
+        'controller-icon': "url('../img/controller-icon.svg')"
       }
     },
   },
