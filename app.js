@@ -31,6 +31,14 @@ app.get('/tournament', function (req, res) {
 	res.sendFile(__dirname + '/public/tournament-page.html');
 });
 
+app.get('/report', function(req, res) {
+	res.sendFile(__dirname + '/public/report-page.html');
+});
+
+app.get('/service-prepairing', function(req, res) {
+	res.sendFile(__dirname + '/public/coming-soon.html');
+});
+
 
 // 3000 포트로 서버 오픈
 app.listen(3000, function() {

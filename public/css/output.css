@@ -708,6 +708,10 @@ video {
   height: 100vh;
 }
 
+.h-svh {
+  height: 100svh;
+}
+
 .min-h-16 {
   min-height: 4rem;
 }
