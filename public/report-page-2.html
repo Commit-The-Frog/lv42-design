@@ -64,32 +64,55 @@
 				<!-- 버튼 리스트 -->
 				<div class="w-full flex flex-col items-around justify-around text-sm">
 					<!-- 버튼 세트 (이미 입력된 경우) -->
-					<div class="flex flex-row items-center justify-center w-full h-10 button-active">
+					<div class="relative flex flex-row items-center justify-center w-full h-10 button-active">
 						<!-- 부위 선택 버튼 -->
-						<button class="flex flex-row items-center justify-around text-center w-12 mx-1 h-9 border border-black rounded p-2">
+						<button class="group flex flex-row items-center justify-around text-center w-12 mx-1 h-9 border border-black rounded p-2">
 							<p class="inline">A</p>
+							<!-- 버튼목록 모달 -->
+							<div class="invisible group-hover:visible grid gap-2 grid-rows-3 grid-cols-8 p-4 absolute top-11 left-0 w-full h-36 bg-white border border-black rounded-md z-50 shadow-md">
+								<span class="w-8 h-8 rounded-md border border-gray-500 flex items-center justify-center">L1</span>
+								<span class="w-8 h-8 rounded-md border border-gray-500 flex items-center justify-center">R1</span>
+								<span class="w-8 h-8 rounded-md border border-gray-500 flex items-center justify-center">H</span>
+								<span class="w-8 h-8 rounded-md border border-gray-500 flex items-center justify-center">L2</span>
+								<span class="w-8 h-8 rounded-md border border-gray-500 flex items-center justify-center">R2</span>
+								<span class="w-8 h-8 rounded-md border border-gray-500 flex items-center justify-center">X</span>
+								<span class="w-8 h-8 rounded-md border border-gray-500 flex items-center justify-center">O</span>
+								<span class="w-8 h-8 rounded-md border border-gray-500 flex items-center justify-center">Y</span>
+								<span class="w-8 h-8 rounded-md border border-gray-500 flex items-center justify-center">A</span>
+								<span class="w-8 h-8 rounded-md border border-gray-500 flex items-center justify-center">B</span>
+								<span class="w-8 h-8 rounded-md border border-gray-500 flex items-center justify-center">L1</span>
+								<span class="w-8 h-8 rounded-md border border-gray-500 flex items-center justify-center">L1</span>
+								<span class="w-8 h-8 rounded-md border border-gray-500 flex items-center justify-center">L1</span>
+								<span class="w-8 h-8 rounded-md border border-gray-500 flex items-center justify-center">L1</span>
+							</div>
 						</button>
 						<!-- 증상 선택 버튼 -->
-						<button class="flex flex-row items-center justify-around text-center w-60 mx-1 h-9 border border-black rounded p-2">
+						<button class="group flex flex-row items-center justify-around grow mx-1 h-9 border border-black rounded p-2">
 							<p class="inline">의도하지 않은 방향으로 움직임</p>
+							<!-- 증상목록 모달 -->
+							<div class="hidden group-hover:flex flex-col items-center justify-center p-4 absolute top-11 left-0 w-full bg-white border border-black rounded-md z-50 shadow-md">
+								<span class="w-full my-1 h-8 rounded-md border border-gray-500 flex items-center justify-start px-2">버튼 안눌림</span>
+								<span class="w-full my-1 h-8 rounded-md border border-gray-500 flex items-center justify-start px-2">더블클릭</span>
+								<span class="w-full my-1 h-8 rounded-md border border-gray-500 flex items-center justify-start px-2">이물감</span>
+								<span class="w-full my-1 h-8 rounded-md border border-gray-500 flex items-center justify-start px-2">의도하지 않은 방향으로 이동</span>
+								<span class="w-full my-1 h-8 rounded-md border border-gray-500 flex items-center justify-start px-2">뻑뻑함</span>
+								<input class="w-full my-1 h-8 rounded-md border border-gray-500 flex items-center justify-start px-2" placeholder="직접입력"></input>
+							</div>
 						</button>
 					</div>
 					<!-- 버튼 세트 (새로 추가하기) -->
 					<div class="flex flex-row items-center justify-center w-full h-10">
-						<button class="flex flex-row items-center justify-around text-center w-12 mx-1 h-9 border border-black button-inactive rounded p-2">
-							<p class="inline">+</p>
-						</button>
-						<button class="flex flex-row items-center justify-around text-center w-60 mx-1 h-9 border border-black button-inactive rounded p-2">
-							<p class="inline">+</p>
+						<button class="flex flex-row items-center justify-around text-center w-full mx-1 h-9 border border-black button-inactive rounded p-2">
+							<p class="text-lg inline">+</p>
 						</button>
 					</div>
 				</div>
 			</div>
 
-			<!-- next 버튼 -->
-			<div class="flex flex-row items-end justify-end w-full min-h-32 z-30 py-6">
+			<!-- submit 버튼 -->
+			<div class="flex flex-row items-end justify-end w-full min-h-32 z-20 py-6">
 				<button onclick="location.href='./report2'" class="flex items-center justify-around p-3 rounded-3xl w-32 h-12 bg-gray-300">
-					<p class="text-lg">Next</p>
+					<p class="text-lg">Submit</p>
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
 					  </svg>					  

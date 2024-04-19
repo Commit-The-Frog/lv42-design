@@ -651,6 +651,58 @@ video {
   top: 0px;
 }
 
+.left-full {
+  left: 100%;
+}
+
+.top-full {
+  top: 100%;
+}
+
+.left-0\.5 {
+  left: 0.125rem;
+}
+
+.-left-0 {
+  left: -0px;
+}
+
+.-left-0\.5 {
+  left: -0.125rem;
+}
+
+.-left-2 {
+  left: -0.5rem;
+}
+
+.-left-4 {
+  left: -1rem;
+}
+
+.-left-3 {
+  left: -0.75rem;
+}
+
+.top-5 {
+  top: 1.25rem;
+}
+
+.top-52 {
+  top: 13rem;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
+.top-12 {
+  top: 3rem;
+}
+
+.top-11 {
+  top: 2.75rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -669,6 +721,10 @@ video {
 
 .z-50 {
   z-index: 50;
+}
+
+.z-\[100\] {
+  z-index: 100;
 }
 
 .mx-1 {
@@ -710,6 +766,10 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .inline {
@@ -786,6 +846,14 @@ video {
 
 .h-10 {
   height: 2.5rem;
+}
+
+.h-44 {
+  height: 11rem;
+}
+
+.h-36 {
+  height: 9rem;
 }
 
 .min-h-16 {
@@ -876,6 +944,42 @@ video {
   cursor: pointer;
 }
 
+.grid-flow-row {
+  grid-auto-flow: row;
+}
+
+.auto-rows-max {
+  grid-auto-rows: max-content;
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-8 {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-rows-6 {
+  grid-template-rows: repeat(6, minmax(0, 1fr));
+}
+
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -920,8 +1024,28 @@ video {
   justify-content: space-around;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .overflow-auto {
   overflow: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
 }
 
 .rounded {
@@ -972,6 +1096,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-controller-icon {
@@ -1093,6 +1222,10 @@ video {
   text-align: start;
 }
 
+.align-middle {
+  vertical-align: middle;
+}
+
 .font-outfit {
   font-family: Outfit, sans-serif;
 }
@@ -1164,6 +1297,26 @@ video {
   --tw-backdrop-brightness: brightness(.5);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.group:hover .group-hover\:visible {
+  visibility: visible;
+}
+
+.group:hover .group-hover\:flex {
+  display: flex;
+}
+
+.group:focus .group-focus\:visible {
+  visibility: visible;
+}
+
+.group:active .group-active\:visible {
+  visibility: visible;
+}
+
+.group:enabled .group-enabled\:visible {
+  visibility: visible;
 }
 
 .peer.side-shown ~ .peer-\[\.side-shown\]\:visible {
