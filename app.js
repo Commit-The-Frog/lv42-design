@@ -35,6 +35,10 @@ app.get('/report', function(req, res) {
 	res.sendFile(__dirname + '/public/report-page.html');
 });
 
+app.get('/report2', function(req, res) {
+	res.sendFile(__dirname + '/public/report-page-2.html');
+})
+
 app.get('/service-prepairing', function(req, res) {
 	res.sendFile(__dirname + '/public/coming-soon.html');
 });
