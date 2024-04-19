@@ -14,7 +14,8 @@ module.exports = {
         'xbox': "url('../img/xbox.png')",
         'switch': "url('../img/switch.png')",
         'ps5': "url('../img/ps5.png')",
-        'controller-icon': "url('../img/controller-icon.svg')"
+        'controller-icon': "url('../img/controller-icon.svg')",
+        'ps5-btn-info': "url('../img/ps5-button-info.png')"
       }
     },
   },
