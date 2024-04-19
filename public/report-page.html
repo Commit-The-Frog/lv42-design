@@ -10,9 +10,9 @@
 </head>
 <body>
   <!-- 전체 컨테이너 -->
-	<div class="overflow-auto font-outfit w-screen flex flex-col items-center justify-center relative">
+	<div class="overflow-auto font-outfit w-screen min-h-dvh flex flex-col items-center justify-center relative">
 		<!-- 헤더 -->
-		<header class="fixed flex flex-row items-center justify-between p-4 top-0 left-0 w-full h-12">
+		<header class="fixed flex flex-row items-center justify-between p-4 top-0 left-0 w-full h-12 z-30 bg-white">
 			<!-- 사이드바 열기 버튼 -->
 			<button id="menu-button" class="flex" onclick="openMenu()">
 				<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -144,11 +144,11 @@
 			</div>
 		</div>
 		<!-- 사이드바 -->
-		<div id="sidebar-menu" class="side-hidden peer flex items-center justify-center w-72 h-full bg-gray-100 rounded-r-md transition-all z-20">
+		<div id="sidebar-menu" class="side-hidden peer flex items-center justify-center w-72 h-full bg-gray-100 rounded-r-md transition-all z-50">
 			<!-- 사이드바 내부 헤더 -->
 			<header class="absolute flex flex-row items-center justify-between p-4 top-0 left-0 w-full h-12">
 				<!-- 사이드바 닫기 버튼 -->
-				<button id="menu-close-button" class="hidden" onclick="closeMenu()">
+				<button id="menu-close-button" class="hidden z-40" onclick="closeMenu()">
 					<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
 					</svg>
@@ -168,7 +168,7 @@
 			</ul>
 		</div>
 		<!-- 사이드바 아래의 어두운 레이어 -->
-		<div id="sidebar-bg" class="invisible peer-[.side-shown]:visible backdrop-brightness-50 w-full h-full absolute top-0 left-0 z-10"></div>
+		<div id="sidebar-bg" class="invisible peer-[.side-shown]:visible backdrop-brightness-50 w-full h-full absolute top-0 left-0 z-40"></div>
 	</div>
 
 	<!-- script -->
