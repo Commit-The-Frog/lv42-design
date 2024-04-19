@@ -18,4 +18,10 @@
 	.button-actvie {
 		@apply opacity-100
 	}
+	.tip-hidden {
+		@apply h-0 invisible
+	}
+	.tip-shown {
+		@apply w-52 h-5 visible
+	}
 }
