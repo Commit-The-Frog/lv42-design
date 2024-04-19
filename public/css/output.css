@@ -856,6 +856,26 @@ video {
   height: 9rem;
 }
 
+.h-60 {
+  height: 15rem;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+.h-72 {
+  height: 18rem;
+}
+
+.h-2\/4 {
+  height: 50%;
+}
+
+.h-48 {
+  height: 12rem;
+}
+
 .min-h-16 {
   min-height: 4rem;
 }
@@ -936,12 +956,20 @@ video {
   width: 14rem;
 }
 
+.w-4\/5 {
+  width: 80%;
+}
+
 .grow {
   flex-grow: 1;
 }
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.resize-y {
+  resize: vertical;
 }
 
 .grid-flow-row {
@@ -1291,6 +1319,54 @@ video {
   visibility: visible;
   height: 1.25rem;
   width: 13rem;
+}
+
+.placeholder\:flex::-moz-placeholder {
+  display: flex;
+}
+
+.placeholder\:flex::placeholder {
+  display: flex;
+}
+
+.placeholder\:items-start::-moz-placeholder {
+  align-items: flex-start;
+}
+
+.placeholder\:items-start::placeholder {
+  align-items: flex-start;
+}
+
+.placeholder\:justify-center::-moz-placeholder {
+  justify-content: center;
+}
+
+.placeholder\:justify-center::placeholder {
+  justify-content: center;
+}
+
+.placeholder\:text-start::-moz-placeholder {
+  text-align: start;
+}
+
+.placeholder\:text-start::placeholder {
+  text-align: start;
+}
+
+.placeholder\:align-top::-moz-placeholder {
+  vertical-align: top;
+}
+
+.placeholder\:align-top::placeholder {
+  vertical-align: top;
+}
+
+.placeholder\:align-text-top::-moz-placeholder {
+  vertical-align: text-top;
+}
+
+.placeholder\:align-text-top::placeholder {
+  vertical-align: text-top;
 }
 
 .hover\:backdrop-brightness-50:hover {
