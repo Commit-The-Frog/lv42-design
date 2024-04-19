@@ -10,7 +10,8 @@ module.exports = {
       backgroundImage: {
         'logo': "url('../img/logo/logo.svg')",
         'logo-hazy': "url('../img/logo/logo-darkened.svg')",
-        'default': "url('../img/background.svg')"
+        'default': "url('../img/background.svg')",
+        'xbox': "url('../img/xbox.svg')"
       }
     },
   },

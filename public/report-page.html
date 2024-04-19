@@ -8,25 +8,92 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">  <link href="./css/output.css" rel="stylesheet">
 </head>
-<body class="font-noto flex flex-col items-center justify-center h-dvh w-dvwx">
-  <div class="flex flex-row items-end justify-between p-10 w-screen h-1/5 border-b border-black">
-	<div>
-		<p class="text-2xl font-medium">기기 고장 신고</p>
-	</div>
-	<div class="w-1/3">
-		<img src="./img/logo/logo.svg" alt="logo">
-	</div>
-  </div>
-  <div class="flex flex-col items-center justify-start p-6 w-screen grow h-1 relative z-10">
-	<div class="absolute left-0 top-0 w-full h-1/3 bg-gradient-to-b from-gray-200 z-20"></div>
-	<div class="w-full min-h-16 border border-black z-30">
-		<div class="p-3 flex flex-col items-start justify-around">
-			<p class="text-start text-lg font-medium w-full">게임 선택</p>
-			<button class="text-center border border-black rounded p-2">
-				XBOX
+<body>
+  <!-- 전체 컨테이너 -->
+	<div class="font-outfit w-screen h-screen flex flex-col items-center justify-center relative">
+		<!-- 헤더 -->
+		<header class="absolute flex flex-row items-center justify-between p-4 top-0 left-0 w-full h-12">
+			<!-- 사이드바 열기 버튼 -->
+			<button id="menu-button" class="flex" onclick="openMenu()">
+				<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+				</svg>
 			</button>
+			<!-- 오른쪽 끝의 로고 (현재 비활성화) -->
+			<div class="h-8 w-8 hidden bg-basic bg-logo"></div>
+		</header>
+		<!-- 상단 정보(기기 고장 신고) -->
+		<div class="flex flex-row items-end justify-between p-10 w-screen h-1/5 border-b border-black">
+			<p class="text-2xl font-medium">기기 고장 신고</p>
+			<span class="w-24 h-14 bg-basic bg-logo"></span>
 		</div>
+		<!-- 내용 컨테이너 -->
+		<div class="flex flex-col items-center justify-start p-6 w-screen grow relative z-10">
+			<!-- 배경 그라디언트 -->
+			<div class="absolute left-0 top-0 w-full h-1/3 bg-gradient-to-b from-gray-200 z-20"></div>
+			<!-- [게임 선택] 컨테이너 -->
+			<div class="flex flex-row items-center justify-center w-full min-h-16 z-30">
+				<!-- [게임 선택] -->
+				<p class="text-start text-lg font-semibold w-full my-2 px-2">게임 선택</p>
+				<!-- [버튼 리스트] -->
+				<div class=""></div>
+				<button class="text-center w-24 h-9 border border-black rounded p-2">
+					<p class="w-4 h-4 bg-xbox"></p>
+					<p>XBOX</p>
+				</button>
+				<button class="text-center border border-black rounded p-2">
+					Nintendo
+				</button>
+				<button class="text-center border border-black rounded p-2">
+					PS5
+				</button>
+			</div>
+		</div>
+		<!-- 사이드바 -->
+		<div id="sidebar-menu" class="side-hidden peer flex items-center justify-center w-72 h-full bg-gray-100 rounded-r-md transition-all z-20">
+			<!-- 사이드바 내부 헤더 -->
+			<header class="absolute flex flex-row items-center justify-between p-4 top-0 left-0 w-full h-12">
+				<!-- 사이드바 닫기 버튼 -->
+				<button id="menu-close-button" class="hidden" onclick="closeMenu()">
+					<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</button>
+			</header>
+			<!-- 사이드바 리스트 -->
+			<ul class="flex flex-col items-start justify-start w-full h-4/5 font-bold text-xl">
+				<!-- <li class="flex flex-row items-center justify-start w-full h-14 my-1 p-5 hover:backdrop-brightness-50 cursor-pointer">
+					<button></button>
+				</li> -->
+				<li onclick="location.href='./report-page.html'" class="flex flex-row items-center justify-start w-full h-14 my-1 p-5 hover:backdrop-brightness-50 cursor-pointer">
+					<button>고장수리 신고하기</button>
+				</li>
+				<li class="flex flex-row items-center justify-start w-full h-14 my-1 p-5 hover:backdrop-brightness-50 cursor-pointer">
+					<button>문의하기</button>
+				</li>
+			</ul>
+		</div>
+		<!-- 사이드바 아래의 어두운 레이어 -->
+		<div id="sidebar-bg" class="invisible peer-[.side-shown]:visible backdrop-brightness-50 w-full h-full absolute top-0 left-0 z-10"></div>
 	</div>
-  </div>
+
+	<!-- script -->
+	<script>
+		const sidebarBg = document.getElementById('sidebar-bg');
+		function openMenu() {
+			document.getElementById('menu-button').className="hidden";
+			document.getElementById('menu-close-button').className="flex";
+			document.getElementById('sidebar-menu').classList.replace('side-hidden', 'side-shown');
+		}
+		function closeMenu() {
+			document.getElementById('menu-button').className="flex";
+			document.getElementById('menu-close-button').className="hidden";
+			document.getElementById('sidebar-menu').classList.replace('side-shown', 'side-hidden');
+		}
+		window.onclick = function(event) {
+			if (event.target == sidebarBg)
+				closeMenu();
+		}
+	</script>
 </body>
 </html>
