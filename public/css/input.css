@@ -19,9 +19,9 @@
 		@apply opacity-100
 	}
 	.tip-hidden {
-		@apply h-0 invisible
+		@apply invisible
 	}
 	.tip-shown {
-		@apply w-52 h-5 visible
+		@apply md:w-72 w-52 visible
 	}
 }

@@ -10,85 +10,83 @@
 </head>
 <body>
   <!-- 전체 컨테이너 -->
-	<div class="overflow-auto font-outfit w-screen min-h-dvh flex flex-col items-center justify-center relative">
+	<div class="overflow-auto font-outfit w-full min-h-dvh flex flex-col items-center justify-center">
 		<!-- 헤더 -->
-		<header class="fixed flex flex-row items-center justify-between p-4 top-0 left-0 w-full h-12 z-30 bg-white">
+		<header class="fixed flex flex-row items-center justify-start p-4 top-0 left-0 w-30 h-12 z-30 bg-white">
 			<!-- 사이드바 열기 버튼 -->
 			<button id="menu-button" class="flex" onclick="openMenu()">
 				<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 				</svg>
 			</button>
-			<!-- 헤더 오른쪽 끝의 로고 (현재 비활성화) -->
-			<div class="h-8 w-8 hidden bg-basic bg-logo"></div>
 		</header>
 		<!-- 상단 정보(기기 고장 신고) -->
-		<div class="flex flex-row items-end justify-between px-9 py-5 pt-10 w-screen h-32 border-b border-black">
-			<p class="text-2xl font-bold">기기 고장 신고</p>
-			<span class="w-24 h-14 bg-basic bg-logo cursor-pointer" onclick="location.href='./coming-soon.html'"></span>
+		<div class="flex flex-row items-end justify-between md:p-10 md:px-12 px-9 py-5 pt-10 w-full md:h-44 h-32 border-b border-black">
+			<p class="md:text-3xl text-2xl font-bold">기기 고장 신고</p>
+			<span class="md:w-32 md:h-20 w-24 h-14 bg-basic bg-logo cursor-pointer" onclick="location.href='./coming-soon.html'"></span>
 		</div>
 		<!-- 내용 컨테이너 -->
-		<div class="flex flex-col items-center justify-start px-6 w-screen grow relative z-10">
+		<div class="overflow-hidden flex flex-col items-center justify-start px-6 w-full grow relative z-10">
 			<!-- 배경 그라디언트 -->
 			<div class="absolute left-0 top-0 w-full h-1/3 bg-gradient-to-b from-gray-200 z-20"></div>
 			<!-- [게임 선택] 컨테이너 -->
-			<div class="flex flex-col items-center my-5 justify-around w-full min-h-16 z-30">
+			<div class="flex flex-col items-center my-5 justify-around lg:w-[980px] w-full min-h-16 z-30">
 				<!-- 게임 선택 텍스트 -->
-				<p class="text-start text-lg font-semibold w-full my-2 px-2">게임 선택</p>
+				<p class="text-start md:text-2xl text-lg font-semibold w-full my-2 px-2">게임 선택</p>
 				<!-- 버튼 리스트 -->
 				<div class="w-full flex flex-row items-around justify-around text-sm">
 					<!-- XBOX 버튼 -->
-					<button class="flex flex-row items-center justify-around text-center w-24 h-9 border border-black button-active rounded p-2">
-						<p class="w-4 h-4 bg-basic bg-xbox"></p>
-						<p class="inline">XBOX</p>
+					<button class="flex flex-row items-center justify-center text-center mx-2 grow md:h-14 h-9 md:text-lg border border-black button-active rounded p-2">
+						<p class="mx-1 w-4 h-4 bg-basic bg-xbox"></p>
+						<p class="mx-1 inline">XBOX</p>
 					</button>
 					<!-- Switch 버튼 -->
-					<button class="flex flex-row items-center justify-around text-center w-24 h-9 border border-black button-inactive rounded p-2">
-						<p class="w-5 h-5 bg-basic bg-cover bg-switch"></p>
-						<p class="inline">Switch</p>
+					<button class="flex flex-row items-center justify-center text-center mx-2 grow md:h-14 h-9 md:text-lg border border-black button-inactive rounded p-2">
+						<p class="mx-1 w-5 h-5 bg-basic bg-cover bg-switch"></p>
+						<p class="mx-1 inline">Switch</p>
 					</button>
 					<!-- PS5 버튼 -->
-					<button class="flex flex-row items-center justify-around text-center w-24 h-9 border border-black button-inactive rounded p-2">
-						<p class="w-6 h-4 bg-basic bg-cover bg-ps5"></p>
-						<p class="inline">PS5</p>
+					<button class="flex flex-row items-center justify-center text-center mx-2 grow md:h-14 h-9 md:text-lg border border-black button-inactive rounded p-2">
+						<p class="mx-1 w-6 h-4 bg-basic bg-cover bg-ps5"></p>
+						<p class="mx-1 inline">PS5</p>
 					</button>
 				</div>
 			</div>
 			<!-- [기기 선택] 컨테이너 -->
-			<div class="flex flex-col items-center my-5 justify-around w-full min-h-16 z-30">
+			<div class="flex flex-col items-center my-5 justify-around lg:w-[980px] w-full min-h-16 z-30">
 				<!-- 기기 선택 텍스트 -->
-				<p class="text-start text-lg font-semibold w-full my-2 px-2">기기 선택</p>
+				<p class="text-start md:text-2xl text-lg font-semibold w-full my-2 px-2">기기 선택</p>
 				<!-- 버튼 리스트 -->
 				<div class="w-full flex flex-row items-around justify-around text-sm">
 					<!-- 본체 버튼 -->
-					<button class="flex flex-row items-center justify-around text-center w-24 h-9 border border-black button-inactive rounded p-2">
+					<button class="flex flex-row items-center justify-around text-center grow mx-2 md:h-14 h-9 md:text-lg border border-black button-inactive rounded p-2">
 						<p class="inline">본체</p>
 					</button>
 					<!-- 컨트롤러 버튼 -->
-					<button class="flex flex-row items-center justify-around text-center w-24 h-9 border border-black button-active rounded p-2">
+					<button class="flex flex-row items-center justify-around text-center grow mx-2 md:h-14 h-9 md:text-lg border border-black button-active rounded p-2">
 						<p class="inline">컨트롤러</p>
 					</button>
 					<!-- 기타 버튼 -->
-					<button class="flex flex-row items-center justify-around text-center w-24 h-9 border border-black button-inactive rounded p-2">
+					<button class="flex flex-row items-center justify-around text-center grow mx-2 md:h-14 h-9 md:text-lg border border-black button-inactive rounded p-2">
 						<p class="inline">기타</p>
 					</button>
 				</div>
 			</div>
 			<!-- [컨트롤러 선택] 컨테이너 -->
-			<div class="flex flex-col items-start my-5 justify-around w-full min-h-16 z-30">
+			<div class="flex flex-col items-start my-5 justify-around lg:w-[980px] w-full min-h-16 z-30">
 				<!-- 컨트롤러 선택 텍스트 + 도움말 버튼 -->
 				<div class="flex flex-row items-center justify-start">
 					<!-- 컨트롤러 선택 텍스트 -->
-					<p class="text-start text-lg flex flex-row items-center justify-start font-semibold w-full my-2 px-2">
+					<p class="text-start md:text-2xl text-lg flex flex-row items-center justify-start font-semibold w-full my-2 px-2">
 						컨트롤러 선택
 					</p>
 					<!-- 컨트롤러 도움말 버튼 -->
-					<div class="w-4 h-4 cursor-pointer relative group">
-						<p class="flex flex-wrap h-5 rounded-md items-center justify-center text-center text-xs tip-hidden absolute -top-0.5 left-6 border border-gray-500 group-hover:tip-shown">
+					<div class="cursor-pointer relative group">
+						<p class="flex flex-wrap h-5 rounded-md items-center justify-center text-center md:text-[1rem] text-xs tip-hidden absolute md:top-0.5 md:left-8 -top-0.5 left-6 border border-gray-500 group-hover:tip-shown">
 							컨트롤러 앞/뒷면의 번호를 참고해주세요
 						</p>
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
-							class="w-4 h-4">
+							class="md:w-6 md:h-6 w-4 h-4 ">
 							<path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
 						</svg>
 					</div>
@@ -96,45 +94,45 @@
 				<!-- 버튼 리스트 -->
 				<div class="w-full flex flex-row flex-wrap items-around justify-around text-sm">
 					<!-- 컨트롤러 1 버튼 -->
-					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center w-24 h-16 border border-black button-inactive rounded p-2">
-						<p class="text-center w-full text-sm">1</p>
-						<p class="inline mx-1 text-xs">x</p>
-						<p class="inline mx-1 text-xs">수리중</p>
+					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black button-inactive rounded p-2">
+						<p class="text-center w-full md:text-lg text-sm">1</p>
+						<p class="inline mx-1 md:text-sm text-xs">x</p>
+						<p class="inline mx-1 md:text-sm text-xs">수리중</p>
 					</button>
 					<!-- 컨트롤러 2 버튼 -->
-					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center w-24 h-16 border border-black button-active rounded p-2">
-						<p class="text-center w-full text-sm">2</p>
-						<p class="inline mx-1 text-xs">o</p>
-						<p class="inline mx-1 text-xs">정상</p>
+					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black button-active rounded p-2">
+						<p class="text-center w-full md:text-lg text-sm">2</p>
+						<p class="inline mx-1 md:text-sm text-xs">o</p>
+						<p class="inline mx-1 md:text-sm text-xs">정상</p>
 					</button>
 					<!-- 컨트롤러 3 버튼 -->
-					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center w-24 h-16 border border-black button-inactive rounded p-2">
-						<p class="text-center w-full text-sm">3</p>
-						<p class="inline mx-1 text-xs">o</p>
-						<p class="inline mx-1 text-xs">정상</p>
+					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black button-inactive rounded p-2">
+						<p class="text-center w-full md:text-lg text-sm">3</p>
+						<p class="inline mx-1 md:text-sm text-xs">o</p>
+						<p class="inline mx-1 md:text-sm text-xs">정상</p>
 					</button>
 					<!-- 컨트롤러 4 버튼 -->
-					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center w-24 h-16 border border-black button-inactive rounded p-2">
-						<p class="text-center w-full text-sm">4</p>
-						<p class="inline mx-1 text-xs">o</p>
-						<p class="inline mx-1 text-xs">정상</p>
+					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black button-inactive rounded p-2">
+						<p class="text-center w-full md:text-lg text-sm">4</p>
+						<p class="inline mx-1 md:text-sm text-xs">o</p>
+						<p class="inline mx-1 md:text-sm text-xs">정상</p>
 					</button>
 					<!-- 컨트롤러 5 버튼 -->
-					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center w-24 h-16 border border-black button-inactive rounded p-2">
-						<p class="text-center w-full text-sm">5</p>
-						<p class="inline mx-1 text-xs">o</p>
-						<p class="inline mx-1 text-xs">정상</p>
+					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black button-inactive rounded p-2">
+						<p class="text-center w-full md:text-lg text-sm">5</p>
+						<p class="inline mx-1 md:text-sm text-xs">o</p>
+						<p class="inline mx-1 md:text-sm text-xs">정상</p>
 					</button>
 					<!-- 컨트롤러 6 버튼 -->
-					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center w-24 h-16 border border-black button-inactive rounded p-2">
-						<p class="text-center w-full text-sm">6</p>
-						<p class="inline mx-1 text-xs">o</p>
-						<p class="inline mx-1 text-xs">정상</p>
+					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black button-inactive rounded p-2">
+						<p class="text-center w-full md:text-lg text-sm">6</p>
+						<p class="inline mx-1 md:text-sm text-xs">o</p>
+						<p class="inline mx-1 md:text-sm text-xs">정상</p>
 					</button>
 				</div>
 			</div>
 			<!-- next 버튼 -->
-			<div class="flex flex-row items-end justify-end w-full min-h-32 z-30 py-6">
+			<div class="flex flex-row items-end justify-end lg:w-[980px] w-full min-h-32 z-30 py-6">
 				<button onclick="location.href='./report2'" class="flex items-center justify-around p-3 rounded-3xl w-32 h-12 bg-gray-300">
 					<p class="text-lg">Next</p>
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -144,7 +142,7 @@
 			</div>
 		</div>
 		<!-- 사이드바 -->
-		<div id="sidebar-menu" class="side-hidden peer flex items-center justify-center w-72 h-full bg-gray-100 rounded-r-md transition-all z-50">
+		<div id="sidebar-menu" class="side-hidden peer flex items-center justify-center w-72 h-full bg-gray-100 rounded-r-md transition-all ease-in-out z-50">
 			<!-- 사이드바 내부 헤더 -->
 			<header class="absolute flex flex-row items-center justify-between p-4 top-0 left-0 w-full h-12">
 				<!-- 사이드바 닫기 버튼 -->
