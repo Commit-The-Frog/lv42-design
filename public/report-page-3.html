@@ -4,9 +4,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="stylesheet" href="./css/output.css">
 </head>
 <body>
 	<!-- 전체 컨테이너 -->
-	<div class=""></div>
+	<div class="overflow-auto font-outfit w-[calc(100dvw)] h-[calc(100dvh)]">
+		<!-- 내용 컨테이너 -->
+		<div class="w-full h-full flex flex-col items-center justify-center">
+			<!-- 로고 -->
+			<span class="bg-basic bg-logo w-20 h-12"></span>
+			<!-- 멘트1 -->
+			<div class="text-4xl leading-tight font-bold text-center my-4">
+				<p>고장 신고가</p>
+				<p>접수되었습니다</p>
+			</div>
+			<!-- 멘트2 -->
+			<div class="text-xl leading-tight font-normal text-center">
+				<p>수리된 내용은</p>
+				<p>매월 1일 슬랙 채널에서</p>
+				<p>확인하실 수 있습니다</p>
+			</div>
+			<!-- 고장신고 홈 버튼 -->
+			<button onclick="location.href='./report'" class="w-[210px] h-[46px] mt-16 rounded-3xl bg-gray-300 pointerhover:hover:bg-gray-400 font-semibold text-[17px]">
+				<p>고장신고 홈으로 돌아가기</p>
+			</button>
+			<button class="w-[210px] h-[46px] mt-7 rounded-3xl bg-gray-300 pointerhover:hover:bg-gray-400 font-semibold text-[17px]">
+				<p>서비스 관련 문의하기</p>
+			</button>
+		</div>
+	</div>
 </body>
 </html>
