@@ -24,4 +24,7 @@
 	.tip-shown {
 		@apply visible
 	}
+	.controller-under-repair {
+		@apply cursor-not-allowed
+	}
 }
