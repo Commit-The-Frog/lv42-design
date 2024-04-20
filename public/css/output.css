@@ -1033,20 +1033,20 @@ video {
   background-image: url('../img/ps5.png');
 }
 
-.bg-ps5-btn-info {
-  background-image: url('../img/ps5-button-info2.png');
-}
-
 .bg-switch {
   background-image: url('../img/switch.png');
+}
+
+.bg-switch-btn-info {
+  background-image: url('../img/switch-button-info.png');
 }
 
 .bg-xbox {
   background-image: url('../img/xbox.png');
 }
 
-.bg-switch-btn-info {
-  background-image: url('../img/switch-button-info.png');
+.bg-xbox-btn-info {
+  background-image: url('../img/xbox-button-info.png');
 }
 
 .from-gray-200 {
