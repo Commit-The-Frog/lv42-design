@@ -12,7 +12,7 @@
   <!-- 전체 컨테이너 -->
 	<div class="overflow-auto font-outfit w-full min-h-dvh flex flex-col items-center justify-center">
 		<!-- 헤더 -->
-		<header class="fixed flex flex-row items-center justify-start p-4 top-0 left-0 w-30 h-12 z-30 bg-white">
+		<header class="fixed flex flex-row items-center justify-start p-4 top-0 left-0 w-full h-12 z-30 bg-white">
 			<!-- 사이드바 열기 버튼 -->
 			<button id="menu-button" class="flex" onclick="openMenu()">
 				<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -36,17 +36,17 @@
 				<!-- 버튼 리스트 -->
 				<div class="w-full flex flex-row items-around justify-around text-sm">
 					<!-- XBOX 버튼 -->
-					<button class="flex flex-row items-center justify-center text-center mx-2 grow md:h-14 h-9 md:text-lg border border-black button-active rounded p-2">
+					<button class="flex flex-row items-center justify-center text-center mx-2 grow md:h-14 h-9 md:text-lg border border-black button-inactive pointerhover:hover:bg-gray-300 rounded p-2">
 						<p class="mx-1 w-4 h-4 bg-basic bg-xbox"></p>
 						<p class="mx-1 inline">XBOX</p>
 					</button>
 					<!-- Switch 버튼 -->
-					<button class="flex flex-row items-center justify-center text-center mx-2 grow md:h-14 h-9 md:text-lg border border-black button-inactive rounded p-2">
+					<button class="flex flex-row items-center justify-center text-center mx-2 grow md:h-14 h-9 md:text-lg border border-black button-active pointerhover:hover:bg-gray-300 rounded p-2">
 						<p class="mx-1 w-5 h-5 bg-basic bg-cover bg-switch"></p>
 						<p class="mx-1 inline">Switch</p>
 					</button>
 					<!-- PS5 버튼 -->
-					<button class="flex flex-row items-center justify-center text-center mx-2 grow md:h-14 h-9 md:text-lg border border-black button-inactive rounded p-2">
+					<button class="flex flex-row items-center justify-center text-center mx-2 grow md:h-14 h-9 md:text-lg border border-black button-inactive pointerhover:hover:bg-gray-300 rounded p-2">
 						<p class="mx-1 w-6 h-4 bg-basic bg-cover bg-ps5"></p>
 						<p class="mx-1 inline">PS5</p>
 					</button>
@@ -59,15 +59,15 @@
 				<!-- 버튼 리스트 -->
 				<div class="w-full flex flex-row items-around justify-around text-sm">
 					<!-- 본체 버튼 -->
-					<button class="flex flex-row items-center justify-around text-center grow mx-2 md:h-14 h-9 md:text-lg border border-black button-inactive rounded p-2">
+					<button class="flex flex-row items-center justify-around text-center grow mx-2 md:h-14 h-9 md:text-lg border border-black button-inactive pointerhover:hover:bg-gray-300 rounded p-2">
 						<p class="inline">본체</p>
 					</button>
 					<!-- 컨트롤러 버튼 -->
-					<button class="flex flex-row items-center justify-around text-center grow mx-2 md:h-14 h-9 md:text-lg border border-black button-active rounded p-2">
+					<button class="flex flex-row items-center justify-around text-center grow mx-2 md:h-14 h-9 md:text-lg border border-black button-active pointerhover:hover:bg-gray-300 rounded p-2">
 						<p class="inline">컨트롤러</p>
 					</button>
 					<!-- 기타 버튼 -->
-					<button class="flex flex-row items-center justify-around text-center grow mx-2 md:h-14 h-9 md:text-lg border border-black button-inactive rounded p-2">
+					<button class="flex flex-row items-center justify-around text-center grow mx-2 md:h-14 h-9 md:text-lg border border-black button-inactive pointerhover:hover:bg-gray-300 rounded p-2">
 						<p class="inline">기타</p>
 					</button>
 				</div>
@@ -94,37 +94,37 @@
 				<!-- 버튼 리스트 -->
 				<div class="w-full flex flex-row flex-wrap items-around justify-around text-sm">
 					<!-- 컨트롤러 1 버튼 -->
-					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black button-inactive rounded p-2">
+					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black pointerhover:hover:bg-gray-300 button-inactive rounded p-2">
 						<p class="text-center w-full md:text-lg text-sm">1</p>
 						<p class="inline mx-1 md:text-sm text-xs">x</p>
 						<p class="inline mx-1 md:text-sm text-xs">수리중</p>
 					</button>
 					<!-- 컨트롤러 2 버튼 -->
-					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black button-active rounded p-2">
+					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black pointerhover:hover:bg-gray-300 button-active rounded p-2">
 						<p class="text-center w-full md:text-lg text-sm">2</p>
 						<p class="inline mx-1 md:text-sm text-xs">o</p>
 						<p class="inline mx-1 md:text-sm text-xs">정상</p>
 					</button>
 					<!-- 컨트롤러 3 버튼 -->
-					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black button-inactive rounded p-2">
+					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black pointerhover:hover:bg-gray-300 button-inactive rounded p-2">
 						<p class="text-center w-full md:text-lg text-sm">3</p>
 						<p class="inline mx-1 md:text-sm text-xs">o</p>
 						<p class="inline mx-1 md:text-sm text-xs">정상</p>
 					</button>
 					<!-- 컨트롤러 4 버튼 -->
-					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black button-inactive rounded p-2">
+					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black pointerhover:hover:bg-gray-300 button-inactive rounded p-2">
 						<p class="text-center w-full md:text-lg text-sm">4</p>
 						<p class="inline mx-1 md:text-sm text-xs">o</p>
 						<p class="inline mx-1 md:text-sm text-xs">정상</p>
 					</button>
 					<!-- 컨트롤러 5 버튼 -->
-					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black button-inactive rounded p-2">
+					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black pointerhover:hover:bg-gray-300 button-inactive rounded p-2">
 						<p class="text-center w-full md:text-lg text-sm">5</p>
 						<p class="inline mx-1 md:text-sm text-xs">o</p>
 						<p class="inline mx-1 md:text-sm text-xs">정상</p>
 					</button>
 					<!-- 컨트롤러 6 버튼 -->
-					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black button-inactive rounded p-2">
+					<button class="bg-basic bg-controller-icon flex flex-row flex-wrap my-1 items-center justify-center text-center grow mx-2 md:h-20 h-16 border border-black pointerhover:hover:bg-gray-300 button-inactive rounded p-2">
 						<p class="text-center w-full md:text-lg text-sm">6</p>
 						<p class="inline mx-1 md:text-sm text-xs">o</p>
 						<p class="inline mx-1 md:text-sm text-xs">정상</p>

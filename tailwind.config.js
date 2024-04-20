@@ -7,6 +7,11 @@ module.exports = {
       "outfit" : ['Outfit', 'sans-serif']
     },
     extend: {
+      screens: {
+        'pointerhover': {
+          'raw': "(hover:hover) and (pointer:fine)"
+        }
+      },
       backgroundImage: {
         'logo': "url('../img/logo/logo.svg')",
         'logo-hazy': "url('../img/logo/logo-darkened.svg')",
