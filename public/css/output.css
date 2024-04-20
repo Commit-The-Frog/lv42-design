@@ -875,6 +875,43 @@ video {
   flex-grow: 1;
 }
 
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -1159,6 +1196,17 @@ video {
   visibility: visible;
 }
 
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.hover\:animate-ping:hover {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
 .hover\:backdrop-brightness-50:hover {
   --tw-backdrop-brightness: brightness(.5);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -1181,6 +1229,53 @@ video {
   display: flex;
 }
 
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.group:hover .group-hover\:animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.group:hover .group-hover\:animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.group:hover .group-hover\:animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.group:hover .group-hover\:animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 .peer.side-shown ~ .peer-\[\.side-shown\]\:visible {
   visibility: visible;
 }
@@ -1196,6 +1291,42 @@ video {
 
   .md\:top-0\.5 {
     top: 0.125rem;
+  }
+
+  .md\:top-20 {
+    top: 5rem;
+  }
+
+  .md\:-top-16 {
+    top: -4rem;
+  }
+
+  .md\:top-16 {
+    top: 4rem;
+  }
+
+  .md\:top-\[50px\] {
+    top: 50px;
+  }
+
+  .md\:top-\[55px\] {
+    top: 55px;
+  }
+
+  .md\:top-\[3rem\] {
+    top: 3rem;
+  }
+
+  .md\:top-\[3\.2rem\] {
+    top: 3.2rem;
+  }
+
+  .md\:top-\[3\.5rem\] {
+    top: 3.5rem;
+  }
+
+  .md\:top-\[3\.6rem\] {
+    top: 3.6rem;
   }
 
   .md\:h-12 {
@@ -1287,6 +1418,10 @@ video {
 @media (min-width: 1024px) {
   .lg\:w-\[980px\] {
     width: 980px;
+  }
+
+  .lg\:w-\[800px\] {
+    width: 800px;
   }
 }
 
