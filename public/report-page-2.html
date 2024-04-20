@@ -32,7 +32,9 @@
 			<!-- [상태 선택] 컨테이너 -->
 			<div class="flex flex-col items-center my-5 justify-around lg:w-[800px] w-full min-h-16 z-20">
 				<!-- 상태 선택 텍스트 -->
-				<p class="md:text-2xl text-start text-lg font-semibold w-full my-2 px-2">상태 선택</p>
+				<p class="md:text-2xl text-start text-lg font-semibold w-full my-2 px-2">
+					어떤 상태인가요?
+				</p>
 				<!-- 버튼 리스트 -->
 				<div class="w-full flex flex-wrap flex-row items-around justify-around text-sm">
 					<!-- 충전 문제 버튼 -->
@@ -56,9 +58,15 @@
 			<!-- [버튼 선택] 컨테이너 -->
 			<div class="flex flex-col items-center my-5 justify-around lg:w-[800px] w-full min-h-16 z-30">
 				<!-- 버튼 선택 텍스트 -->
-				<p class="md:text-2xl text-start text-lg font-semibold w-full my-2 px-2">버튼 선택</p>
+				<p class="md:text-2xl text-start text-lg font-semibold w-full my-2 px-2">
+					고장 위치와 문제를 선택해주세요
+				</p>
 				<!-- 컨트롤러 버튼 설명 이미지 -->
-				<span class="bg-basic bg-ps5-btn-info bg-white md:w-96 w-72 h-44 border border-black rounded-md shadow-md mt-2 mb-3"></span>
+				<span onclick="openModal('bigImgModal')" class="cursor-pointer relative bg-basic bg-ps5-btn-info bg-white md:w-96 md:h-80 w-72 h-44 border border-black rounded-md shadow-md mt-2 mb-3">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="absolute top-3 left-3 w-4 h-4">
+						<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM10.5 7.5v6m3-3h-6" />
+					</svg>
+				</span>
 				<!-- 버튼 리스트 -->
 				<div id="btn-malf-list" class="w-full flex flex-col items-around justify-around text-sm">
 					<!-- 버튼 세트 (이미 입력된 경우) -->
@@ -155,6 +163,13 @@
 		</div>
 		<!-- 사이드바 아래의 어두운 레이어 -->
 		<div id="sidebar-bg" class="invisible peer-[.side-shown]:visible backdrop-brightness-50 w-full h-full absolute top-0 left-0 z-40"></div>
+
+		<!-- 큰 이미지 모달 -->
+		<div id="big-img-modal" class="invisible absolute top-0 left-0 flex items-center justify-center pb-24 w-full h-full backdrop-brightness-50 z-50">
+			<!-- 이미지 확대 시 나오는 큰 이미지 -->
+			<span class="bg-basic bg-ps5-btn-info bg-white md:h-[600px] md:w-[700px] w-full h-80 border border-black rounded-md shadow-md mt-2 mb-3 z-50">
+			</span>
+		</div>
 	</div>
 
 	<!-- script -->
@@ -162,6 +177,7 @@
 		const sidebarBg = document.getElementById('sidebar-bg');
 		const btnMalfList = document.getElementById('btn-malf-list');
 		const addMalfBtn = document.getElementById('add-malf');
+		const bigImgModal = document.getElementById('big-img-modal');
 		function openMenu() {
 			document.getElementById('menu-button').className="hidden";
 			document.getElementById('menu-close-button').className="flex";
@@ -172,9 +188,19 @@
 			document.getElementById('menu-close-button').className="hidden";
 			document.getElementById('sidebar-menu').classList.replace('side-shown', 'side-hidden');
 		}
+		function openModal(modal) {
+			if (modal === 'bigImgModal')
+				bigImgModal.classList.replace('invisible', 'visible');
+		}
+		function closeModal(modal) {
+			if (modal === 'bigImgModal')
+				bigImgModal.classList.replace('visible', 'invisible');
+		}
 		window.onclick = function(event) {
 			if (event.target == sidebarBg)
 				closeMenu();
+			if (event.target == bigImgModal)
+				closeModal('bigImgModal');
 		}
 		async function addMalf() {
 			const newMalf = await document.createElement('div');
