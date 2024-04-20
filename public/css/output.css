@@ -1037,16 +1037,16 @@ video {
   background-image: url('../img/switch.png');
 }
 
-.bg-switch-btn-info {
-  background-image: url('../img/switch-button-info.png');
-}
-
 .bg-xbox {
   background-image: url('../img/xbox.png');
 }
 
 .bg-xbox-btn-info {
   background-image: url('../img/xbox-button-info.png');
+}
+
+.bg-switch-pro-btn-info {
+  background-image: url('../img/switch-pro-button-info.png');
 }
 
 .from-gray-200 {
