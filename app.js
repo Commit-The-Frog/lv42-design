@@ -47,6 +47,10 @@ app.get('/service-prepairing', function(req, res) {
 	res.sendFile(__dirname + '/public/coming-soon.html');
 });
 
+app.get('/button', function(req, res) {
+	res.sendFile(__dirname + '/public/button.html');
+});
+
 
 // 3000 포트로 서버 오픈
 app.listen(3000, function() {
