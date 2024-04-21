@@ -79,7 +79,7 @@
 			<!-- [버튼 선택] 컨테이너 -->
 			<div id="btn-malf-list-container" class="flex flex-col items-center my-5 justify-around lg:w-[800px] w-full min-h-16 z-30">
 				<!-- 버튼 선택 텍스트 -->
-				<p id="malf-btn-select" class="is-required md:text-2xl text-start text-lg font-semibold w-full my-2 px-2">
+				<p class="is-required md:text-2xl text-start text-lg font-semibold w-full my-2 px-2">
 					고장 위치와 문제를 선택해주세요
 				</p>
 				<!-- 컨트롤러 버튼 설명 이미지 -->
@@ -146,7 +146,7 @@
 				<!-- 상태설명 텍스트 -->
 				<p class="md:text-2xl text-start text-lg font-semibold w-full my-2 px-2">어떤 문제가 발생했는지 알려주세요</p>
 				<!-- 상세설명 입력창 -->
-				<textarea class="md:text-lg text-sm w-full h-48 rounded-md border border-gray-500 p-4 resize-y" maxlength="150" placeholder="ex) 본체의 전원이 켜지지 않아요" required></textarea>
+				<textarea class="md:text-lg text-sm w-full h-48 rounded-md border border-gray-500 p-4 resize-y" maxlength="150" placeholder="ex) 본체의 전원이 켜지지 않아요"></textarea>
 			</div>
 			<!-- submit 버튼 -->
 			<div class="flex flex-row items-end justify-end lg:w-[800px] w-full min-h-32 z-30 py-6">
@@ -221,7 +221,6 @@
 		}
 		function moveFocus(elementId) {
 			const target = document.getElementById(elementId);
-			console.log(target.offsetHeight)
 			if (target) {
 				const offset = 0;
 				const targetOffsetTop = target.offsetTop + offset;
