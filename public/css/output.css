@@ -954,6 +954,10 @@ video {
   width: 100vw;
 }
 
+.w-56 {
+  width: 14rem;
+}
+
 .grow {
   flex-grow: 1;
 }
@@ -1155,12 +1159,16 @@ video {
   background-image: url('../img/switch.png');
 }
 
-.bg-switch-pro-btn-info {
-  background-image: url('../img/switch-pro-button-info.png');
+.bg-switch-btn-info {
+  background-image: url('../img/switch-button-info2.png');
 }
 
 .bg-xbox {
   background-image: url('../img/xbox.png');
+}
+
+.bg-xbox-btn-info {
+  background-image: url('../img/xbox-button-info2.png');
 }
 
 .from-gray-200 {
@@ -1442,6 +1450,10 @@ video {
     width: 100%;
   }
 
+  .md\:w-80 {
+    width: 20rem;
+  }
+
   .md\:bg-default-desktop {
     background-image: url('../img/background-desktop.svg');
   }
@@ -1483,6 +1495,10 @@ video {
 @media (min-width: 1024px) {
   .lg\:w-\[800px\] {
     width: 800px;
+  }
+
+  .lg\:w-80 {
+    width: 20rem;
   }
 
   .lg\:text-sm {
