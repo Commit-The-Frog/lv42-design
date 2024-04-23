@@ -4,9 +4,13 @@ module.exports = {
   theme: {
     fontFamily: {
       "noto" : ['Noto Sans KR', 'sans-serif'],
-      "outfit" : ['Outfit', 'sans-serif']
+      "outfit" : ['Outfit', 'sans-serif'],
+      "Bolwby-One" : ['Bowlby One SC', 'sans-serif']
     },
     extend: {
+      boxShadow: {
+        'basic': 'inset 0px -4px rgba(0, 0, 0, 0.1)'
+      },
       animation: {
         shake: 'shake .5s ease-in-out'
       },
