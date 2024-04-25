@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+     /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+    }
+}
+
 @layer components {
 	.bg-basic {
 		@apply bg-no-repeat bg-contain bg-center
@@ -29,5 +41,44 @@
 	}
 	.is-required {
 		@apply after:content-['*'] after:ml-0.5 after:text-red-500
+	}
+	.bg-color-xbox {
+		@apply bg-[#00C83B]
+	}
+	.bg-color-switch {
+		@apply bg-[#EA2A36]
+	}
+	.bg-color-ps5{
+		@apply bg-[#527FD8]
+	}
+	.tab-selected {
+		@apply shadow-selected
+	}
+	.tab-not-selected {
+		@apply shadow-not-selected opacity-35
+	}
+	.slot-empty {
+		@apply bg-[#F4F6F8] text-xl font-extrabold
+	}
+	.slot-full {
+		@apply bg-white text-xl font-extrabold
+	}
+	.slot-selected-xbox {
+		@apply text-[#00C83B] font-Bolwby-One text-2xl font-normal
+	}
+	.slot-selected-switch {
+		@apply text-[#EA2A36] font-Bolwby-One text-2xl font-normal
+	}
+	.slot-selected-ps5 {
+		@apply text-[#527FD8] font-Bolwby-One text-2xl font-normal
+	}
+	.booking-btn-inactive-xbox {
+		@apply bg-[#00C83B] visible
+	}
+	.booking-btn-inactive-switch {
+		@apply bg-[#EA2A36] visible
+	}
+	.booking-btn-inactive-ps5 {
+		@apply bg-[#527FD8] visible
 	}
 }

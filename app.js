@@ -51,6 +51,10 @@ app.get('/button', function(req, res) {
 	res.sendFile(__dirname + '/public/button.html');
 });
 
+app.get('/renewal', function(req, res) {
+	res.sendFile(__dirname + '/public/renewal/index.html')
+})
+
 
 // 3000 포트로 서버 오픈
 app.listen(3000, function() {

@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="css/reset.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,39 +13,49 @@
 	<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="css/main-page.css">
+	<link rel="stylesheet" href="css/output.css">
 </head>
 <body>
-	<div class="header" id="main-page">
-		<div class="section" id="menu">
-			<span class="material-symbols-outlined" onclick="openMenu()" id="menu-icon">
-				menu
-			</span>
+	<!-- 전체 컨테이너 -->
+	<div class="overflow-auto font-outfit w-full min-h-dvh flex flex-col items-center justify-center bg-default">
+		<!-- 헤더 -->
+		<header class="fixed flex flex-row items-center justify-between p-4 top-0 left-0 w-full h-12 z-30">
+			<!-- 사이드바 열기 버튼 -->
+			<button id="menu-button" class="flex" onclick="openMenu()">
+				<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+				</svg>
+			</button>
+			<!-- 검색 버튼 -->
+			<button id="menu-button" class="flex">
+				<svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+				</svg>
+			</button>
+		</header>
+		<!-- 상단 정보 (로고) -->
+		<div class="flex flex-row items-end justify-center md:p-10 md:px-12 px-9 py-5 pt-10 w-full md:h-44 h-44">
+			<span class="md:w-32 md:h-20 w-32 h-20 bg-basic bg-logo cursor-pointer" onclick="location.href='#'"></span>
 		</div>
-		<div class="section" id="logo">
-			<a href="/">
-				<img src="./img/logo/logo.svg" alt="logo">
-			</a>
-		</div>
-		<div class="section" id="search">
-			<span class="material-symbols-outlined" onclick="showModal('searchModal')" id="search-icon">
-				search
-			</span>
-		</div>
-	</div>
-	<div class="main">
-		<div class="content" id="main-content">
-			<div class="tabs">
-				<span class="tab" id="xbox-tab" onclick="changeTab('xbox')">
-					<p>XBoX</p>
-				</span>
-				<span class="tab" id="nintendo-tab" onclick="changeTab('nintendo')">
-					<p>Nintendo</p>
-				</span>
-				<span class="tab" id="ps5-tab" onclick="changeTab('ps5')">
-					<p>PS5</p>
-				</span>
+		<!-- 내용 컨테이너 -->
+		<div class="overflow-hidden flex flex-col items-center justify-start px-6 w-full grow relative z-10">
+			<!-- 예약 컨테이너 -->
+			<div class="flex flex-col items-center w-72 h-96 bg-[#DAE2E8] rounded-xl border border-black">
+				<!-- 탭 컨테이너 -->
+				<div class="flex w-full h-10 border-b border-black font-Bolwby-One text-sm shadow-basic text-white">
+					<!-- XBOX 탭 -->
+					<span class="flex flex-col items-center justify-center grow h-10 cursor-pointer opacity-30 bg-color-xbox rounded-tl-xl" id="xbox-tab" onclick="changeTab('xbox')">
+						<p class="w-24 text-center">XBoX</p>
+					</span>
+					<!-- Switch 탭 -->
+					<span class="flex flex-col items-center justify-center grow h-10 cursor-pointer opacity-30 bg-color-switch" id="nintendo-tab" onclick="changeTab('nintendo')">
+						<p class="w-24 text-center">Switch</p>
+					</span>
+					<!-- PS5 탭 -->
+					<span class="flex flex-col items-center justify-center grow h-10 cursor-pointer opacity-30 bg-color-ps5 rounded-tr-xl" id="ps5-tab" onclick="changeTab('ps5')">
+						<p class="w-24 text-center">PS5</p>
+					</span>
+				</div>
 			</div>
 			<div class="slot-list" id="xbox-slot-list">
 				<span class="slot reserved" onclick="showModal('cancelModal')">
@@ -430,6 +439,23 @@
 		</div>
 	</div>
 	
-	<script src="script.js"></script>
+	<!-- script -->
+	<script>
+		const sidebarBg = document.getElementById('sidebar-bg');
+		function openMenu() {
+			document.getElementById('menu-button').className="invisible";
+			document.getElementById('menu-close-button').className="flex";
+			document.getElementById('sidebar-menu').classList.replace('side-hidden', 'side-shown');
+		}
+		function closeMenu() {
+			document.getElementById('menu-button').className="flex";
+			document.getElementById('menu-close-button').className="invisible";
+			document.getElementById('sidebar-menu').classList.replace('side-shown', 'side-hidden');
+		}
+		window.onclick = function(event) {
+			if (event.target == sidebarBg)
+				closeMenu();
+		}
+	</script>
 </body>
 </html>
