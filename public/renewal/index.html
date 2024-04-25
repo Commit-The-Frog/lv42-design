@@ -20,17 +20,20 @@
 					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 				</svg>
 			</button>
-			<button id="search-buttom" class="flex">
+			<!-- 검색 버튼 -->
+			<button id="search-buttom" class="flex" onclick="openSearch()">
 				<svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
 				  </svg>				  
 			</button>
 		</header>
+
 		<!-- 상단 정보(예약하기) -->
 		<div class="w-full md:h-44 min-h-40 flex flex-row items-end justify-between md:p-10 md:px-12 px-9 py-5 pt-10">
 			<p class="md:text-3xl text-2xl font-bold">예약하기</p>
 			<span class="md:w-32 md:h-20 w-24 h-14 bg-basic bg-logo cursor-pointer" onclick="location.href='./renewal.html'"></span>
 		</div>
+
 		<!-- 내용 컨테이너 -->
 		<div class="w-full grow flex flex-col items-center justify-start overflow-hidden z-10 rounded-t-3xl bg-white">
 			<!-- 탭 컨테이너 -->
@@ -202,7 +205,6 @@
 			</div>
 		</div>
 
-
 		<!-- 사이드바 -->
 		<div id="sidebar-menu" class="w-72 h-full side-hidden peer flex flex-col items-center justify-center bg-gray-100 rounded-r-xl transition-all ease-in-out z-50">
 			<!-- 사이드바 내부 헤더 -->
@@ -255,6 +257,43 @@
 		</div>
 		<!-- 사이드바 아래의 어두운 레이어 -->
 		<div id="sidebar-bg" class="invisible peer-[.side-shown]:visible backdrop-brightness-50 w-full h-full absolute top-0 left-0 z-40"></div>
+
+		<!-- 검색화면 아코디언 -->
+		<div id="search" class="fixed search-hidden w-full top-0 left-0 flex flex-col items-center justify-start bg-white z-40 transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300 overflow-hidden">
+			<!-- 검색화면 내부 헤더 -->
+			<header class="w-full h-12 flex flex-row items-center justify-end p-4 top-0 left-0">
+				<!-- 검색화면 닫기 버튼 -->
+				<button id="search-close-button" class="z-40" onclick="closeSearch()">
+					<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</button>
+			</header>
+			<!-- 검색창 -->
+			<div class="w-80 h-14 flex items-center justify-between border border-[#848586] mt-10 mb-3 px-4 rounded-2xl">
+				<input class="w-4/5 h-10 focus:outline-none text-lg font-semibold text-[#6E6E73]" type="text" maxlength="15" placeholder="유저 검색">
+				<svg class="w-7 h-7 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#848586">
+					<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+				  </svg>
+			</div>
+			<!-- 검색 결과 목록 -->
+			<ul class="w-72">
+				<!-- 검색결과 -->
+				<li class="w-full h-14 flex flex-row items-center justify-between text-[#6E6E73] cursor-pointer">
+					<p class="font-semibold text-lg">minjacho</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+					  </svg>
+				</li>
+				<!-- 검색결과 -->
+				<li class="w-full h-14 flex flex-row items-center justify-between text-[#6E6E73] cursor-pointer">
+					<p class="font-semibold text-lg">minjcho</p>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+					  </svg>
+				</li>
+			</ul>
+		</div>
 	</div>
 
 	<script>
@@ -268,6 +307,12 @@
 			document.getElementById('menu-button').className="flex";
 			document.getElementById('menu-close-button').className="hidden";
 			document.getElementById('sidebar-menu').classList.replace('side-shown', 'side-hidden');
+		}
+		function openSearch() {
+			document.getElementById('search').classList.replace('search-hidden', 'search-shown');
+		}
+		function closeSearch() {
+			document.getElementById('search').classList.replace('search-shown', 'search-hidden');
 		}
 		window.onclick = function(event) {
 			if (event.target == sidebarBg)

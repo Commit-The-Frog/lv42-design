@@ -81,4 +81,10 @@
 	.booking-btn-inactive-ps5 {
 		@apply bg-[#527FD8] visible
 	}
+	.search-hidden {
+		@apply h-0
+	}
+	.search-shown {
+		@apply h-full
+	}
 }
