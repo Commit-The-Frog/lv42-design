@@ -655,6 +655,68 @@ video {
   background-color: rgb(82 127 216 / var(--tw-bg-opacity));
 }
 
+.tab-selected {
+  --tw-shadow: inset 0px 4px 1px rgba(0, 0, 0, 0.4);
+  --tw-shadow-colored: inset 0px 4px 1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.tab-not-selected {
+  opacity: 0.35;
+  --tw-shadow: inset 0px -4px 1px rgba(0, 0, 0, 0.4);
+  --tw-shadow-colored: inset 0px -4px 1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.slot-empty {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 246 248 / var(--tw-bg-opacity));
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 800;
+}
+
+.slot-full {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 800;
+}
+
+.slot-selected-xbox {
+  font-family: Bowlby One SC, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(0 200 59 / var(--tw-text-opacity));
+}
+
+.slot-selected-switch {
+  font-family: Bowlby One SC, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(234 42 54 / var(--tw-text-opacity));
+}
+
+.slot-selected-ps5 {
+  font-family: Bowlby One SC, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(82 127 216 / var(--tw-text-opacity));
+}
+
+.booking-btn-inactive-ps5 {
+  visibility: visible;
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 127 216 / var(--tw-bg-opacity));
+}
+
 .visible {
   visibility: visible;
 }
@@ -703,6 +765,10 @@ video {
   left: 5rem;
 }
 
+.left-\[calc\(100\%-20rem\)\] {
+  left: calc(100% - 20rem);
+}
+
 .top-0 {
   top: 0px;
 }
@@ -713,6 +779,10 @@ video {
 
 .top-3 {
   top: 0.75rem;
+}
+
+.top-\[calc\(100\%-8rem\)\] {
+  top: calc(100% - 8rem);
 }
 
 .z-10 {
@@ -869,6 +939,10 @@ video {
   height: 1.5rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .h-8 {
   height: 2rem;
 }
@@ -883,6 +957,10 @@ video {
 
 .h-96 {
   height: 24rem;
+}
+
+.h-\[4\.5rem\] {
+  height: 4.5rem;
 }
 
 .h-\[46px\] {
@@ -901,12 +979,28 @@ video {
   height: 100svh;
 }
 
+.h-64 {
+  height: 16rem;
+}
+
+.max-h-full {
+  max-height: 100%;
+}
+
 .min-h-16 {
   min-height: 4rem;
 }
 
+.min-h-24 {
+  min-height: 6rem;
+}
+
 .min-h-32 {
   min-height: 8rem;
+}
+
+.min-h-40 {
+  min-height: 10rem;
 }
 
 .min-h-dvh {
@@ -929,8 +1023,16 @@ video {
   width: 6rem;
 }
 
+.w-28 {
+  width: 7rem;
+}
+
 .w-32 {
   width: 8rem;
+}
+
+.w-36 {
+  width: 9rem;
 }
 
 .w-4 {
@@ -953,6 +1055,10 @@ video {
   width: 16rem;
 }
 
+.w-7 {
+  width: 1.75rem;
+}
+
 .w-72 {
   width: 18rem;
 }
@@ -963,6 +1069,10 @@ video {
 
 .w-80 {
   width: 20rem;
+}
+
+.w-\[16rem\] {
+  width: 16rem;
 }
 
 .w-\[210px\] {
@@ -979,6 +1089,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[4\.5rem\] {
+  width: 4.5rem;
 }
 
 .grow {
@@ -1095,6 +1209,10 @@ video {
   overflow: hidden;
 }
 
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -1103,16 +1221,20 @@ video {
   border-radius: 1.5rem;
 }
 
+.rounded-\[2rem\] {
+  border-radius: 2rem;
+}
+
 .rounded-md {
   border-radius: 0.375rem;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-r-md {
@@ -1120,9 +1242,9 @@ video {
   border-bottom-right-radius: 0.375rem;
 }
 
-.rounded-t-xl {
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
+.rounded-t-3xl {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }
 
 .rounded-tl-xl {
@@ -1143,6 +1265,11 @@ video {
 
 .border-r {
   border-right-width: 1px;
+}
+
+.border-\[\#C1C1C1\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(193 193 193 / var(--tw-border-opacity));
 }
 
 .border-black {
@@ -1220,6 +1347,10 @@ video {
   background-image: url('../img/xbox-button-info2.png');
 }
 
+.bg-\[url\(\'https\:\/\/cdn\.intra\.42\.fr\/users\/0154e7622e9aed55ecbc3c1a1ca71b84\/minjchoi\.jpg\'\)\] {
+  background-image: url('https://cdn.intra.42.fr/users/0154e7622e9aed55ecbc3c1a1ca71b84/minjchoi.jpg');
+}
+
 .from-gray-200 {
   --tw-gradient-from: #e5e7eb var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(229 231 235 / 0) var(--tw-gradient-to-position);
@@ -1251,9 +1382,19 @@ video {
   padding-right: 0.5rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 
 .px-9 {
@@ -1271,12 +1412,26 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .pb-24 {
   padding-bottom: 6rem;
 }
 
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
 }
 
 .text-center {
@@ -1341,6 +1496,10 @@ video {
   font-weight: 600;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .leading-tight {
   line-height: 1.25;
 }
@@ -1353,6 +1512,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\#C8D2DD\] {
+  --tw-text-opacity: 1;
+  color: rgb(200 210 221 / var(--tw-text-opacity));
 }
 
 .opacity-30 {
@@ -1371,6 +1535,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-not-selected {
+  --tw-shadow: inset 0px -4px 1px rgba(0, 0, 0, 0.4);
+  --tw-shadow-colored: inset 0px -4px 1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .backdrop-brightness-50 {
   --tw-backdrop-brightness: brightness(.5);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -1386,6 +1556,10 @@ video {
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+/* Hide scrollbar for IE, Edge and Firefox */
 
 .group:hover .group-hover\:tip-shown {
   visibility: visible;

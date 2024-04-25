@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RENEWAL</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/output.css">
+</head>
+<body>
+	<!-- 전체 컨테이너 -->	
+	<div class="w-[calc(100dvw)] h-[calc(100dvh)] flex flex-col items-center justify-center bg-basic bg-cover bg-default">
+		<!-- 헤더 -->
+		<header class="w-full h-12 fixed flex flex-row items-center justify-between p-4 top-0 bg-white">
+			<!-- 사이드바 열기 버튼 -->
+			<button id="menu-button" class="flex" onclick="openMenu()">
+				<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+				</svg>
+			</button>
+			<button id="search-buttom" class="flex">
+				<svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+				  </svg>				  
+			</button>
+		</header>
+		<!-- 상단 정보(예약하기) -->
+		<div class="w-full md:h-44 min-h-40 flex flex-row items-end justify-between md:p-10 md:px-12 px-9 py-5 pt-10">
+			<p class="md:text-3xl text-2xl font-bold">예약하기</p>
+			<span class="md:w-32 md:h-20 w-24 h-14 bg-basic bg-logo cursor-pointer" onclick="location.href='./renewal.html'"></span>
+		</div>
+		<!-- 내용 컨테이너 -->
+		<div class="w-full grow flex flex-col items-center justify-start overflow-hidden z-10 rounded-t-3xl bg-white">
+			<!-- 탭 컨테이너 -->
+			<div class="w-full min-h-24 top-0 flex flex-row items-center justify-around px-5">
+				<!-- xbox 탭 -->
+				<div class="w-28 h-10 flex items-center justify-center rounded-3xl bg-color-xbox tab-not-selected">
+					<p class="font-Bolwby-One text-white">XBOX</p>
+				</div>
+				<!-- switch 탭 -->
+				<div class="w-28 h-10 flex items-center justify-center rounded-3xl bg-color-switch tab-not-selected">
+					<p class="font-Bolwby-One text-white">Switch</p>
+				</div>
+				<!-- ps5 탭 -->
+				<div class="w-28 h-10 flex items-center justify-center rounded-3xl bg-color-ps5 tab-selected">
+					<p class="font-Bolwby-One text-white">PS5</p>
+				</div>
+			</div>
+
+			<!-- 슬롯 컨테이너 -->
+			<div class="relative w-full max-h-full overflow-y-scroll bg-white">
+				<!-- 예약하기 버튼 -->
+				<div class="booking-btn-inactive-ps5 fixed w-[16rem] h-20 top-[calc(100%-8rem)] left-[calc(100%-20rem)] flex flex-col items-center justify-center rounded-[2rem] shadow-not-selected z-30">
+					<p class="text-white text-sm font-Bolwby-One">18:30 ~ 20:30</p>
+					<p class="text-white text-2xl font-semibold text-start">예약하기</p>
+				</div>
+				<!-- 슬롯 (이미 예약된 경우: slot-full) -->
+				<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-full">
+					<!-- 시간 섹션 -->
+					<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
+						<p>00:00~</p>
+					</div>
+					<!-- 인트라 id 섹션 -->
+					<div class="grow h-full flex items-center justify-center">
+						<p>minjacho</p>
+					</div>
+				</div>
+				<!-- 슬롯(빈 슬롯인 경우) -->
+				<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-empty">
+					<!-- 시간 섹션 -->
+					<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
+						<p>00:30~</p>
+					</div>
+					<!-- 인트라 id 섹션 -->
+					<div class="grow h-full flex items-center justify-center">
+						<p>-</p>
+					</div>
+				</div>
+				<!-- 슬롯(xbox 탭에서 선택된 경우) -->
+				<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-selected-xbox">
+					<!-- 시간 섹션 -->
+					<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
+						<p>00:30~</p>
+					</div>
+					<!-- 인트라 id 섹션 -->
+					<div class="grow h-full flex items-center justify-center">
+						<p>selected</p>
+					</div>
+				</div>
+				<!-- 슬롯(switch 탭에서 선택된 경우) -->
+				<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-selected-switch">
+					<!-- 시간 섹션 -->
+					<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
+						<p>00:30~</p>
+					</div>
+					<!-- 인트라 id 섹션 -->
+					<div class="grow h-full flex items-center justify-center">
+						<p>selected</p>
+					</div>
+				</div>
+				<!-- 슬롯(ps5 탭에서 선택된 경우) -->
+				<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-selected-ps5">
+					<!-- 시간 섹션 -->
+					<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
+						<p>00:30~</p>
+					</div>
+					<!-- 인트라 id 섹션 -->
+					<div class="grow h-full flex items-center justify-center">
+						<p>selected</p>
+					</div>
+				</div>
+				<!-- 슬롯(빈 슬롯인 경우) -->
+				<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-empty">
+					<!-- 시간 섹션 -->
+					<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
+						<p>00:30~</p>
+					</div>
+					<!-- 인트라 id 섹션 -->
+					<div class="grow h-full flex items-center justify-center">
+						<p>-</p>
+					</div>
+				</div>
+				<!-- 슬롯(빈 슬롯인 경우) -->
+				<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-empty">
+					<!-- 시간 섹션 -->
+					<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
+						<p>00:30~</p>
+					</div>
+					<!-- 인트라 id 섹션 -->
+					<div class="grow h-full flex items-center justify-center">
+						<p>-</p>
+					</div>
+				</div>
+				<!-- 슬롯(빈 슬롯인 경우) -->
+				<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-empty">
+					<!-- 시간 섹션 -->
+					<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
+						<p>00:30~</p>
+					</div>
+					<!-- 인트라 id 섹션 -->
+					<div class="grow h-full flex items-center justify-center">
+						<p>-</p>
+					</div>
+				</div>
+				<!-- 슬롯(빈 슬롯인 경우) -->
+				<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-empty">
+					<!-- 시간 섹션 -->
+					<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
+						<p>00:30~</p>
+					</div>
+					<!-- 인트라 id 섹션 -->
+					<div class="grow h-full flex items-center justify-center">
+						<p>-</p>
+					</div>
+				</div>
+				<!-- 슬롯(빈 슬롯인 경우) -->
+				<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-empty">
+					<!-- 시간 섹션 -->
+					<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
+						<p>00:30~</p>
+					</div>
+					<!-- 인트라 id 섹션 -->
+					<div class="grow h-full flex items-center justify-center">
+						<p>-</p>
+					</div>
+				</div>
+				<!-- 슬롯(빈 슬롯인 경우) -->
+				<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-empty">
+					<!-- 시간 섹션 -->
+					<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
+						<p>00:30~</p>
+					</div>
+					<!-- 인트라 id 섹션 -->
+					<div class="grow h-full flex items-center justify-center">
+						<p>-</p>
+					</div>
+				</div>
+				<!-- 슬롯(빈 슬롯인 경우) -->
+				<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-empty">
+					<!-- 시간 섹션 -->
+					<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
+						<p>00:30~</p>
+					</div>
+					<!-- 인트라 id 섹션 -->
+					<div class="grow h-full flex items-center justify-center">
+						<p>-</p>
+					</div>
+				</div>
+				<!-- 슬롯(빈 슬롯인 경우) -->
+				<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-empty">
+					<!-- 시간 섹션 -->
+					<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
+						<p>00:30~</p>
+					</div>
+					<!-- 인트라 id 섹션 -->
+					<div class="grow h-full flex items-center justify-center">
+						<p>-</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- 사이드바 -->
+		<div id="sidebar-menu" class="w-72 h-full side-hidden peer flex flex-col items-center justify-center bg-gray-100 rounded-r-md transition-all ease-in-out z-50">
+			<!-- 사이드바 내부 헤더 -->
+			<header class="absolute w-full h-12 flex flex-row items-center justify-between p-4 top-0 left-0">
+				<!-- 사이드바 닫기 버튼 -->
+				<button id="menu-close-button" class="hidden z-40" onclick="closeMenu()">
+					<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</button>
+			</header>
+			<!-- 사이드바 상단 정보(프로필) -->
+			<div class="w-full h-64 flex flex-col items-center justify-center pt-12">
+				<!-- 프로필 이미지 -->
+				<span class="w-[4.5rem] h-[4.5rem] rounded-full bg-basic bg-cover bg-[url('https://cdn.intra.42.fr/users/0154e7622e9aed55ecbc3c1a1ca71b84/minjchoi.jpg')]"></span>
+				<!-- 인트라 id -->
+				<p class="text-2xl font-bold">minjacho</p>
+				<p class="text-sm text-[#C8D2DD] font-medium">minjae choi</p>
+			</div>
+			<!-- 사이드바 리스트 -->
+			<ul class="flex flex-col items-start justify-start w-full h-4/5 font-bold text-xl">
+				<li onclick="location.href='./'" class="w-full h-14 flex flex-row items-center justify-start my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
+					<button>마이페이지</button>
+				</li>
+				<li onclick="location.href='./report-page.html'" class="w-full h-14 flex flex-row items-center justify-start my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
+					<button>고장수리 신고하기</button>
+				</li>
+				<li onclick="location.href='./'" class="w-full h-14 flex flex-row items-center justify-start my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
+					<button>사용법 알아보기</button>
+				</li>
+				<li class="flex flex-row items-center justify-start w-full h-14 my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
+					<button>문의하기</button>
+				</li>
+			</ul>
+		</div>
+		<!-- 사이드바 아래의 어두운 레이어 -->
+		<div id="sidebar-bg" class="invisible peer-[.side-shown]:visible backdrop-brightness-50 w-full h-full absolute top-0 left-0 z-40"></div>
+	</div>
+
+	<script>
+		const sidebarBg = document.getElementById('sidebar-bg');
+		function openMenu() {
+			document.getElementById('menu-button').className="hidden";
+			document.getElementById('menu-close-button').className="flex";
+			document.getElementById('sidebar-menu').classList.replace('side-hidden', 'side-shown');
+		}
+		function closeMenu() {
+			document.getElementById('menu-button').className="flex";
+			document.getElementById('menu-close-button').className="hidden";
+			document.getElementById('sidebar-menu').classList.replace('side-shown', 'side-hidden');
+		}
+		window.onclick = function(event) {
+			if (event.target == sidebarBg)
+				closeMenu();
+		}
+	</script>
+</body>
+</html>
