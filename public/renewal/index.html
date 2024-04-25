@@ -52,7 +52,7 @@
 			<!-- 슬롯 컨테이너 -->
 			<div class="relative w-full max-h-full overflow-y-scroll bg-white">
 				<!-- 예약하기 버튼 -->
-				<div class="booking-btn-inactive-ps5 fixed w-[16rem] h-20 top-[calc(100%-8rem)] left-[calc(100%-20rem)] flex flex-col items-center justify-center rounded-[2rem] shadow-not-selected z-30">
+				<div class="booking-btn-inactive-ps5 fixed w-[16rem] h-20 top-[calc(100%-8rem)] left-1/2 -translate-x-1/2 flex flex-col items-center justify-center rounded-[2rem] shadow-not-selected z-30">
 					<p class="text-white text-sm font-Bolwby-One">18:30 ~ 20:30</p>
 					<p class="text-white text-2xl font-semibold text-start">예약하기</p>
 				</div>
@@ -204,7 +204,7 @@
 
 
 		<!-- 사이드바 -->
-		<div id="sidebar-menu" class="w-72 h-full side-hidden peer flex flex-col items-center justify-center bg-gray-100 rounded-r-md transition-all ease-in-out z-50">
+		<div id="sidebar-menu" class="w-72 h-full side-hidden peer flex flex-col items-center justify-center bg-gray-100 rounded-r-xl transition-all ease-in-out z-50">
 			<!-- 사이드바 내부 헤더 -->
 			<header class="absolute w-full h-12 flex flex-row items-center justify-between p-4 top-0 left-0">
 				<!-- 사이드바 닫기 버튼 -->
@@ -214,7 +214,16 @@
 					</svg>
 				</button>
 			</header>
-			<!-- 사이드바 상단 정보(프로필) -->
+			<!-- 사이드바 상단 정보(로그인 전) -->
+			<div class="w-full h-64 hidden flex-col items-center justify-center pt-12">
+				<!-- 빈 프로필 이미지 -->
+				<span class="w-[4.5rem] h-[4.5rem] rounded-full bg-[#C8D2DD]"></span>
+				<!-- 로그인 버튼 -->
+				<button class="w-[5.5rem] h-9 flex items-center justify-center rounded-2xl border border-[#C8D2DD] my-3">
+					<p class="text-xl text-[#C8D2DD] font-bold">로그인</p>
+				</button>
+			</div>
+			<!-- 사이드바 상단 정보(로그인 후) -->
 			<div class="w-full h-64 flex flex-col items-center justify-center pt-12">
 				<!-- 프로필 이미지 -->
 				<span class="w-[4.5rem] h-[4.5rem] rounded-full bg-basic bg-cover bg-[url('https://cdn.intra.42.fr/users/0154e7622e9aed55ecbc3c1a1ca71b84/minjchoi.jpg')]"></span>
@@ -227,7 +236,7 @@
 				<li onclick="location.href='./'" class="w-full h-14 flex flex-row items-center justify-start my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
 					<button>마이페이지</button>
 				</li>
-				<li onclick="location.href='./report-page.html'" class="w-full h-14 flex flex-row items-center justify-start my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
+				<li onclick="location.href='/report-page.html'" class="w-full h-14 flex flex-row items-center justify-start my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
 					<button>고장수리 신고하기</button>
 				</li>
 				<li onclick="location.href='./'" class="w-full h-14 flex flex-row items-center justify-start my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
@@ -237,6 +246,12 @@
 					<button>문의하기</button>
 				</li>
 			</ul>
+			<!-- 사이드바 내부 푸터 -->
+			<footer class="absolute w-full h-40 top-[calc(100%-10rem)] left-0 flex flex-col items-center justify-center">
+				<p class="font-medium text-sm text-[#C8D2DD]">contact us</p>
+				<p class="fomt-medium text-bold">teamlv42@gmail.com</p>
+				<span onclick="location.href='//github.com/orgs/Team-LV42/repositories'" class="w-8 h-8 rounded-full bg-basic bg-cover bg-[url('../img/logo/github-mark.svg')] my-3 cursor-pointer"></span>
+			</footer>
 		</div>
 		<!-- 사이드바 아래의 어두운 레이어 -->
 		<div id="sidebar-bg" class="invisible peer-[.side-shown]:visible backdrop-brightness-50 w-full h-full absolute top-0 left-0 z-40"></div>
