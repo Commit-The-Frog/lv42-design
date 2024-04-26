@@ -25,3 +25,6 @@
 - 경고 팝업
   - 팝업 전 : popup-hidden / 팝업 후 : popup-shown
   - popup-shown으로 변경해 팝업 띄우고, setTimeout으로 800ms 뒤에 다시 popup-hidden으로 숨기기
+ 
+- 예약 모달
+  - 메세지 섹션의 시간 p태그에 font-color-xbox / font-color-switch / font-color-ps5 중 하나 선택 (예약 타입에 따라)
