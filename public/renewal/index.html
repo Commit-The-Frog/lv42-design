@@ -367,9 +367,9 @@
 			document.getElementById('search').classList.replace('search-shown', 'search-hidden');
 		}
 		function warningPopup() {
-			bookingModal.classList.replace('popup-hidden', 'popup-shown');
+			document.getElementById('warning').classList.replace('popup-hidden', 'popup-shown');
 			setTimeout(function() {
-				bookingModal.classList.replace('popup-shown', 'popup-hidden')
+				document.getElementById('warning').classList.replace('popup-shown', 'popup-hidden')
 			}, 800);
 		}
 		function showModal(modal) {
