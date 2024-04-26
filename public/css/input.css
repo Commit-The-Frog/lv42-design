@@ -87,4 +87,10 @@
 	.search-shown {
 		@apply h-full
 	}
+	.popup-hidden {
+		@apply opacity-0
+	}
+	.popup-shown {
+		@apply opacity-100
+	}
 }

@@ -725,6 +725,14 @@ video {
   height: 100%;
 }
 
+.popup-hidden {
+  opacity: 0;
+}
+
+.popup-shown {
+  opacity: 1;
+}
+
 .visible {
   visibility: visible;
 }
@@ -779,6 +787,10 @@ video {
 
 .top-0 {
   top: 0px;
+}
+
+.top-10 {
+  top: 2.5rem;
 }
 
 .top-11 {
@@ -1628,12 +1640,12 @@ video {
   transition-duration: 300ms;
 }
 
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .ease-\[cubic-bezier\(\.4\2c 0\2c \.6\2c 1\)\] {
   transition-timing-function: cubic-bezier(.4,0,.6,1);
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

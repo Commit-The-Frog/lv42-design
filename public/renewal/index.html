@@ -11,7 +11,7 @@
 </head>
 <body>
 	<!-- 전체 컨테이너 -->	
-	<div class="w-[calc(100dvw)] h-[calc(100dvh)] flex flex-col items-center justify-center bg-basic bg-cover bg-default">
+	<div class="relative w-[calc(100dvw)] h-[calc(100dvh)] flex flex-col items-center justify-center bg-basic bg-cover bg-default">
 		<!-- 헤더 -->
 		<header class="w-full h-12 fixed flex flex-row items-center justify-between p-4 top-0 bg-white">
 			<!-- 사이드바 열기 버튼 -->
@@ -125,15 +125,15 @@
 						<p>-</p>
 					</div>
 				</div>
-				<!-- 슬롯(빈 슬롯인 경우) -->
-				<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-empty">
+				<!-- 슬롯(경고용) -->
+				<div onclick="warningPopup()" class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-empty">
 					<!-- 시간 섹션 -->
 					<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
 						<p>00:30~</p>
 					</div>
 					<!-- 인트라 id 섹션 -->
 					<div class="grow h-full flex items-center justify-center">
-						<p>-</p>
+						<p>warning</p>
 					</div>
 				</div>
 				<!-- 슬롯(빈 슬롯인 경우) -->
@@ -206,7 +206,7 @@
 		</div>
 
 		<!-- 사이드바 -->
-		<div id="sidebar-menu" class="w-72 h-full side-hidden peer flex flex-col items-center justify-center bg-gray-100 rounded-r-xl transition-all ease-in-out z-50">
+		<div id="sidebar-menu" class="w-72 h-full side-hidden peer flex flex-col items-center justify-center bg-gray-100 rounded-r-xl transition-all ease-[cubic-bezier(.4,0,.6,1)] z-50">
 			<!-- 사이드바 내부 헤더 -->
 			<header class="absolute w-full h-12 flex flex-row items-center justify-between p-4 top-0 left-0">
 				<!-- 사이드바 닫기 버튼 -->
@@ -294,6 +294,12 @@
 				</li>
 			</ul>
 		</div>
+
+		<!-- 경고 팝업 -->
+		<div id="warning" class="popup-hidden fixed w-72 h-14 top-10 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center bg-color-switch rounded-2xl text-white font-bold z-40 transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300">
+			<p>예약은 한번에 최대</p>
+			<p>2시간까지만 가능합니다</p>
+		</div>
 	</div>
 
 	<script>
@@ -313,6 +319,12 @@
 		}
 		function closeSearch() {
 			document.getElementById('search').classList.replace('search-shown', 'search-hidden');
+		}
+		function warningPopup() {
+			document.getElementById('warning').classList.replace('popup-hidden', 'popup-shown');
+			setTimeout(function() {
+				document.getElementById('warning').classList.replace('popup-shown', 'popup-hidden')
+			}, 800);
 		}
 		window.onclick = function(event) {
 			if (event.target == sidebarBg)
