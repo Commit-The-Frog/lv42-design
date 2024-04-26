@@ -14,12 +14,17 @@
   - 선택 안한 경우 보이지 않고, 1개 이상의 슬롯을 선택하면 하단에 나타남
     - booking-btn-inactive-xbox / booking-btn-inactive-switch / booking-btn-inactive-ps5
 
-* 사이드바
- - 프로필
-   - 로그인 후 : ``` bg-[url('이미지 링크')] ``` 로 이미지 삽입
-   - 로그인 전 : 빈 프로필 이미지
-   - flex / hidden 로 둘 중 하나를 보이게 할 수 있음
- - 로그인 버튼
-   - onclick 으로 로그인 리다이렉트
+- 사이드바
+  - 프로필
+    - 로그인 후 : ``` bg-[url('이미지 링크')] ``` 로 이미지 삽입
+    - 로그인 전 : 빈 프로필 이미지
+    - flex / hidden 로 둘 중 하나를 보이게 할 수 있음
+  - 로그인 버튼
+    - onclick 으로 로그인 리다이렉트
 
-
+- 경고 팝업
+  - 팝업 전 : popup-hidden / 팝업 후 : popup-shown
+  - popup-shown으로 변경해 팝업 띄우고, setTimeout으로 800ms 뒤에 다시 popup-hidden으로 숨기기
+ 
+- 예약 모달
+  - 메세지 섹션의 시간 p태그에 font-color-xbox / font-color-switch / font-color-ps5 중 하나 선택 (예약 타입에 따라)
