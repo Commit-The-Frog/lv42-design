@@ -93,4 +93,19 @@
 	.popup-shown {
 		@apply opacity-100
 	}
+	.modal-hidden {
+		@apply invisible
+	}
+	.modal-shown {
+		@apply visible
+	}
+	.font-color-xbox {
+		@apply text-[#00C83B]
+	}
+	.font-color-switch {
+		@apply text-[#EA2A36]
+	}
+	.font-color-ps5 {
+		@apply text-[#527FD8]
+	}
 }

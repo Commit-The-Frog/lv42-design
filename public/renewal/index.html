@@ -55,7 +55,7 @@
 			<!-- 슬롯 컨테이너 -->
 			<div class="relative w-full max-h-full overflow-y-scroll bg-white">
 				<!-- 예약하기 버튼 -->
-				<div class="booking-btn-inactive-ps5 fixed w-[16rem] h-20 top-[calc(100%-8rem)] left-1/2 -translate-x-1/2 flex flex-col items-center justify-center rounded-[2rem] shadow-not-selected z-30">
+				<div onclick="showModal('booking')" class="booking-btn-inactive-ps5 fixed w-[16rem] h-20 top-[calc(100%-8rem)] left-1/2 -translate-x-1/2 flex flex-col items-center justify-center rounded-[2rem] shadow-not-selected z-30">
 					<p class="text-white text-sm font-Bolwby-One">18:30 ~ 20:30</p>
 					<p class="text-white text-2xl font-semibold text-start">예약하기</p>
 				</div>
@@ -114,15 +114,15 @@
 						<p>selected</p>
 					</div>
 				</div>
-				<!-- 슬롯(빈 슬롯인 경우) -->
-				<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-empty">
+				<!-- 슬롯(로그인 필요한 경우) -->
+				<div onclick="showModal('login')" class="w-full h-[4.5rem] flex flex-row items-center justify-around px-7 border-b border-[#C1C1C1] slot-empty">
 					<!-- 시간 섹션 -->
 					<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
 						<p>00:30~</p>
 					</div>
 					<!-- 인트라 id 섹션 -->
 					<div class="grow h-full flex items-center justify-center">
-						<p>-</p>
+						<p>login</p>
 					</div>
 				</div>
 				<!-- 슬롯(경고용) -->
@@ -256,7 +256,7 @@
 			</footer>
 		</div>
 		<!-- 사이드바 아래의 어두운 레이어 -->
-		<div id="sidebar-bg" class="invisible peer-[.side-shown]:visible backdrop-brightness-50 w-full h-full absolute top-0 left-0 z-40"></div>
+		<div id="sidebar-bg" class="invisible peer-[.side-shown]:visible backdrop-brightness-50 w-full h-full fixed top-0 left-0 z-40"></div>
 
 		<!-- 검색화면 아코디언 -->
 		<div id="search" class="fixed search-hidden w-full top-0 left-0 flex flex-col items-center justify-start bg-white z-40 transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300 overflow-hidden">
@@ -300,10 +300,56 @@
 			<p>예약은 한번에 최대</p>
 			<p>2시간까지만 가능합니다</p>
 		</div>
+
+		<!-- 예약 모달 -->
+		<div id="booking-modal" class="modal-hidden fixed w-full h-full top-0 left-0 flex items-center justify-center backdrop-brightness-50 z-40">
+			<!-- 안내창 -->
+			<div class="w-80 h-36 bg-white shadow-modal rounded-xl">
+				<!-- 메세지 섹션 -->
+				<div class="w-full h-2/3 flex flex-col items-center justify-center border-b border-[#818181]">
+					<p class="font-Bolwby-One text-lg font-color-ps5">18:30~20:30</p>
+					<p class="font-semibold text-2xl">예약하시겠습니까?</p>
+				</div>
+				<!-- 선택 섹션 -->
+				<div class="w-full h-1/3 flex flex-row items-center justify-center">
+					<div onclick="hideModal('booking')" class="w-1/2 h-full flex items-center justify-center border-r border-[#818181]">
+						<p>예</p>
+					</div>
+					<div onclick="hideModal('booking')" class="w-1/2 h-full flex items-center justify-center">
+						<p>아니오</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 로그인 모달 -->
+		<div id="login-modal" class="modal-hidden fixed w-full h-full top-0 left-0 flex items-center justify-center backdrop-brightness-50 z-40">
+			<!-- 안내창 -->
+			<div class="w-80 h-36 bg-white shadow-modal rounded-xl">
+				<!-- 메세지 섹션 -->
+				<div class="w-full h-2/3 flex flex-col items-center justify-center border-b border-[#818181]">
+					<p class="font-Bolwby-One text-lg font-color-switch">!</p>
+					<p class="font-semibold text-2xl">로그인이 필요합니다</p>
+				</div>
+				<!-- 선택 섹션 -->
+				<div class="w-full h-1/3 flex flex-row items-center justify-center">
+					<div onclick="hideModal('login')" class="w-1/2 h-full flex items-center justify-center border-r border-[#818181]">
+						<p>42 로그인</p>
+					</div>
+					<div onclick="hideModal('login')" class="w-1/2 h-full flex items-center justify-center">
+						<p>닫기</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--  -->
 	</div>
 
 	<script>
 		const sidebarBg = document.getElementById('sidebar-bg');
+		const bookingModal = document.getElementById('booking-modal');
+		const loginModal = document.getElementById('login-modal');
 		function openMenu() {
 			document.getElementById('menu-button').className="hidden";
 			document.getElementById('menu-close-button').className="flex";
@@ -321,14 +367,30 @@
 			document.getElementById('search').classList.replace('search-shown', 'search-hidden');
 		}
 		function warningPopup() {
-			document.getElementById('warning').classList.replace('popup-hidden', 'popup-shown');
+			bookingModal.classList.replace('popup-hidden', 'popup-shown');
 			setTimeout(function() {
-				document.getElementById('warning').classList.replace('popup-shown', 'popup-hidden')
+				bookingModal.classList.replace('popup-shown', 'popup-hidden')
 			}, 800);
+		}
+		function showModal(modal) {
+			if (modal === 'booking')
+				bookingModal.classList.replace('modal-hidden', 'modal-shown');
+			else if (modal === 'login')
+				loginModal.classList.replace('modal-hidden', 'modal-shown');
+		}
+		function hideModal(modal) {
+			if (modal === 'booking')
+				bookingModal.classList.replace('modal-shown', 'modal-hidden');
+			else if (modal === 'login')
+				loginModal.classList.replace('modal-shown', 'modal-hidden');
 		}
 		window.onclick = function(event) {
 			if (event.target == sidebarBg)
 				closeMenu();
+			else if (event.target == bookingModal)
+				hideModal('booking');
+			else if (event.target == loginModal)
+				hideModal('login');
 		}
 	</script>
 </body>

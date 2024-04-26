@@ -11,7 +11,8 @@ module.exports = {
       boxShadow: {
         'basic': 'inset 0px -4px rgba(0, 0, 0, 0.1)',
         'selected' : 'inset 0px 4px 1px rgba(0, 0, 0, 0.4)',
-        'not-selected' : 'inset 0px -4px 1px rgba(0, 0, 0, 0.4)'
+        'not-selected' : 'inset 0px -4px 1px rgba(0, 0, 0, 0.4)',
+        'modal': '4px 4px 4px 1px rgba(0, 0, 0, 0.25)'
       },
       animation: {
         shake: 'shake .5s ease-in-out'
