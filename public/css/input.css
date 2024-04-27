@@ -58,19 +58,19 @@
 		@apply shadow-not-selected opacity-35
 	}
 	.slot-empty {
-		@apply bg-[#F4F6F8] text-xl font-extrabold
+		@apply bg-[#F4F6F8] text-xl font-extrabold pointerhover:hover:brightness-75 cursor-pointer
 	}
 	.slot-full {
-		@apply bg-white text-xl font-extrabold
+		@apply bg-white text-xl font-extrabold pointerhover:hover:brightness-75 cursor-alias
 	}
 	.slot-selected-xbox {
-		@apply text-[#00C83B] font-Bolwby-One text-2xl font-normal
+		@apply text-[#00C83B] font-Bolwby-One text-2xl font-normal pointerhover:hover:brightness-75 cursor-pointer
 	}
 	.slot-selected-switch {
-		@apply text-[#EA2A36] font-Bolwby-One text-2xl font-normal
+		@apply text-[#EA2A36] font-Bolwby-One text-2xl font-normal pointerhover:hover:brightness-75 cursor-pointer
 	}
 	.slot-selected-ps5 {
-		@apply text-[#527FD8] font-Bolwby-One text-2xl font-normal
+		@apply text-[#527FD8] font-Bolwby-One text-2xl font-normal pointerhover:hover:brightness-75 cursor-pointer
 	}
 	.booking-btn-inactive-xbox {
 		@apply bg-[#00C83B] visible

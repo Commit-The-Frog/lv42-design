@@ -41,15 +41,15 @@
 				<!-- 탭 컨테이너 -->
 				<div class="w-full min-h-24 top-0 flex flex-row items-center justify-around px-5">
 					<!-- xbox 탭 -->
-					<div class="grow h-10 flex items-center justify-center mx-2 rounded-3xl bg-color-xbox tab-not-selected">
+					<div class="grow h-10 flex items-center justify-center mx-2 rounded-3xl bg-color-xbox cursor-pointer pointerhover:hover:brightness-75 tab-not-selected">
 						<p class="font-Bolwby-One text-white w-20 text-center">XBOX</p>
 					</div>
 					<!-- switch 탭 -->
-					<div class="grow h-10 flex items-center justify-center mx-2 rounded-3xl bg-color-switch tab-not-selected">
+					<div class="grow h-10 flex items-center justify-center mx-2 rounded-3xl bg-color-switch cursor-pointer pointerhover:hover:brightness-75 tab-not-selected">
 						<p class="font-Bolwby-One text-white w-20 text-center">Switch</p>
 					</div>
 					<!-- ps5 탭 -->
-					<div class="grow h-10 flex items-center justify-center mx-2 rounded-3xl bg-color-ps5 tab-selected">
+					<div class="grow h-10 flex items-center justify-center mx-2 rounded-3xl bg-color-ps5 cursor-pointer pointerhover:hover:brightness-75 tab-selected">
 						<p class="font-Bolwby-One text-white w-20 text-center">PS5</p>
 					</div>
 				</div>
@@ -57,7 +57,7 @@
 				<!-- 슬롯 컨테이너 -->
 				<div class="relative w-full max-h-full overflow-y-scroll bg-white">
 					<!-- 예약하기 버튼 -->
-					<div onclick="showModal('booking')" class="booking-btn-inactive-ps5 fixed w-[16rem] h-20 top-[calc(100%-8rem)] left-1/2 -translate-x-1/2 flex flex-col items-center justify-center rounded-[2rem] shadow-not-selected z-30">
+					<div onclick="showModal('booking')" class="booking-btn-inactive-ps5 fixed w-[16rem] h-20 top-[calc(100%-8rem)] left-1/2 -translate-x-1/2 flex flex-col items-center justify-center rounded-[2rem] active:shadow-selected cursor-pointer shadow-not-selected z-30">
 						<p class="text-white text-sm font-Bolwby-One">18:30 ~ 20:30</p>
 						<p class="text-white text-2xl font-semibold text-start">예약하기</p>
 					</div>

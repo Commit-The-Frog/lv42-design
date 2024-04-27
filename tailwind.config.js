@@ -29,6 +29,9 @@ module.exports = {
       screens: {
         'pointerhover': {
           'raw': "(hover:hover) and (pointer:fine)"
+        },
+        'mobile' : {
+          'raw': "(hover:none)"
         }
       },
       backgroundImage: {
