@@ -11,7 +11,7 @@
 </head>
 <body>
 	<!-- 전체 컨테이너 -->	
-	<div class="relative w-[calc(100dvw)] h-[calc(100dvh)] flex flex-col items-center justify-center bg-basic bg-cover bg-default">
+	<div class="relative w-[calc(100dvw)] h-[calc(100dvh)] flex flex-col items-center justify-center bg-basic bg-cover bg-default md:bg-default-desktop">
 		<!-- 헤더 -->
 		<header class="w-full h-12 fixed flex flex-row items-center justify-between p-4 top-0 bg-white">
 			<!-- 사이드바 열기 버튼 -->
@@ -29,7 +29,7 @@
 		</header>
 
 		<!-- 상단 정보(예약하기) -->
-		<div class="w-full md:h-44 min-h-40 flex flex-row items-end justify-between md:p-10 md:px-12 px-9 py-5 pt-10">
+		<div class="w-full md:h-60 min-h-40 flex flex-row items-end justify-between md:px-12 px-9 pb-5 pt-10">
 			<p class="md:text-3xl text-2xl font-bold">예약하기</p>
 			<span class="md:w-32 md:h-20 w-24 h-14 bg-basic bg-logo cursor-pointer" onclick="location.href='./renewal.html'"></span>
 		</div>
@@ -39,23 +39,23 @@
 			<!-- 탭 컨테이너 -->
 			<div class="w-full min-h-24 top-0 flex flex-row items-center justify-around px-5">
 				<!-- xbox 탭 -->
-				<div class="w-28 h-10 flex items-center justify-center rounded-3xl bg-color-xbox tab-not-selected">
-					<p class="font-Bolwby-One text-white">XBOX</p>
+				<div class="grow h-10 flex items-center justify-center mx-2 md:mx-5 rounded-3xl bg-color-xbox tab-not-selected">
+					<p class="font-Bolwby-One text-white w-20 text-center">XBOX</p>
 				</div>
 				<!-- switch 탭 -->
-				<div class="w-28 h-10 flex items-center justify-center rounded-3xl bg-color-switch tab-not-selected">
-					<p class="font-Bolwby-One text-white">Switch</p>
+				<div class="grow h-10 flex items-center justify-center mx-2 md:mx-5 rounded-3xl bg-color-switch tab-not-selected">
+					<p class="font-Bolwby-One text-white w-20 text-center">Switch</p>
 				</div>
 				<!-- ps5 탭 -->
-				<div class="w-28 h-10 flex items-center justify-center rounded-3xl bg-color-ps5 tab-selected">
-					<p class="font-Bolwby-One text-white">PS5</p>
+				<div class="grow h-10 flex items-center justify-center mx-2 md:mx-5 rounded-3xl bg-color-ps5 tab-selected">
+					<p class="font-Bolwby-One text-white w-20 text-center">PS5</p>
 				</div>
 			</div>
 
 			<!-- 슬롯 컨테이너 -->
 			<div class="relative w-full max-h-full overflow-y-scroll bg-white">
 				<!-- 예약하기 버튼 -->
-				<div onclick="showModal('booking')" class="booking-btn-inactive-ps5 fixed w-[16rem] h-20 top-[calc(100%-8rem)] left-1/2 -translate-x-1/2 flex flex-col items-center justify-center rounded-[2rem] shadow-not-selected z-30">
+				<div onclick="showModal('booking')" class="booking-btn-inactive-ps5 fixed w-[16rem] md:w-[20rem] h-20 top-[calc(100%-8rem)] left-1/2 -translate-x-1/2 flex flex-col items-center justify-center rounded-[2rem] shadow-not-selected z-30">
 					<p class="text-white text-sm font-Bolwby-One">18:30 ~ 20:30</p>
 					<p class="text-white text-2xl font-semibold text-start">예약하기</p>
 				</div>
