@@ -9,6 +9,8 @@
   - 예약이 차있는 경우: slot-full / 예약 가능한 경우: slot-empty
   - 선택한 경우
     - slot-selected-xbox / slot-selected-switch / slot-selected-ps5
+  - 비활성화된 슬롯 리스트(테스트 기간 중 xbox, switch)
+    - fixed / hidden 으로 켜고 끔
 
 - 예약하기 버튼
   - 선택 안한 경우 보이지 않고, 1개 이상의 슬롯을 선택하면 하단에 나타남
