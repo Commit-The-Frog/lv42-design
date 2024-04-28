@@ -108,4 +108,13 @@
 	.font-color-ps5 {
 		@apply text-[#527FD8]
 	}
+	.booking-xbox {
+		@apply text-[#00C83B] font-Bolwby-One text-lg
+	}
+	.booking-switch {
+		@apply text-[#EA2A36] font-Bolwby-One text-lg
+	}
+	.booking-ps5 {
+		@apply text-[#527FD8] font-Bolwby-One text-lg
+	}
 }
