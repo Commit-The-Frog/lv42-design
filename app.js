@@ -55,6 +55,9 @@ app.get('/renewal', function(req, res) {
 	res.sendFile(__dirname + '/public/renewal/index.html')
 })
 
+app.get('/renewal/mypage', function(req, res) {
+	res.sendFile(__dirname + '/public/renewal/mypage.html')
+})
 
 // 3000 포트로 서버 오픈
 app.listen(3000, function() {
