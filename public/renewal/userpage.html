@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RENEWAL</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/output.css">
+</head>
+<body>
+	<!-- 화면 컨테이너 -->
+	<div class="w-[calc(100dvw)] h-[calc(100dvh)] flex items-center justify-center">
+		<!-- 전체 컨테이너 -->
+		<div class="relative max-w-[450px] w-full h-full shadow-md flex flex-col items-center justify-center bg-basic bg-cover bg-default">
+			<!-- 헤더 -->
+			<header class="w-full h-12 fixed flex flex-row items-center justify-between p-4 top-0 bg-white">
+				<!-- 사이드바 열기 버튼 -->
+				<button id="menu-button" class="flex" onclick="openMenu()">
+					<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+					</svg>
+				</button>
+				<!-- 검색 버튼 -->
+				<button id="search-buttom" class="flex" onclick="openSearch()">
+					<svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+					  </svg>			  
+				</button>
+			</header>
+	
+			<!-- 상단 정보(유저정보) -->
+			<div class="w-full min-h-40 flex flex-row items-end justify-between px-9 pb-5 pt-10">
+				<div>
+					<p class="text-2xl font-bold">유저 정보</p>
+				</div>
+				<span class="w-24 h-14 bg-basic bg-logo cursor-pointer" onclick="location.href='./renewal.html'"></span>
+			</div>
+	
+			<!-- 내용 컨테이너 -->
+			<div class="w-full grow flex flex-col items-center justify-start overflow-hidden z-10 rounded-t-3xl bg-white">
+				<!-- 프로필 컨테이너 -->
+				<div class="w-full min-h-36 flex flex-row items-center justify-around px-8 border-b border-gray-500">
+					<!-- 프로필 이미지 -->
+					<span class="w-[4.5rem] h-[4.5rem] rounded-full bg-basic bg-cover bg-[url('https://cdn.intra.42.fr/users/0154e7622e9aed55ecbc3c1a1ca71b84/minjchoi.jpg')]"></span>
+					<!-- 인트라 id & 이름 -->
+					<div class="h-[4.5rem] flex flex-col items-start justify-center px-5">
+						<p class="text-2xl font-bold">minjacho</p>
+						<p class="font-medium text-[#9E9F9F]">minjae choi</p>
+					</div>
+					<!-- 상태(playing) -->
+					<div class="w-24 h-12 hidden flex-row items-center justify-center rounded-3xl border border-gray-400">
+						<!-- 상태표시용 원 -->
+						<svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00C83B">
+							<path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" />
+						  </svg>
+						<!-- 상태 설명 -->
+						<span class="w-14 h-10 flex flex-col items-start justify-center text-xs ml-[0.35rem] text-[#00C838]">
+							<p class="text-center">NOW</p>
+							<p class="text-center">PLAYING</p>
+						</span>
+					</div>
+					<!-- 상태(not playing) -->
+					<div class="w-24 h-12 flex flex-row items-center justify-center rounded-3xl border border-gray-400">
+						<!-- 상태표시용 원 -->
+						<svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#C8D2DD">
+							<path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12ZM9 8.25a.75.75 0 0 0-.75.75v6c0 .414.336.75.75.75h.75a.75.75 0 0 0 .75-.75V9a.75.75 0 0 0-.75-.75H9Zm5.25 0a.75.75 0 0 0-.75.75v6c0 .414.336.75.75.75H15a.75.75 0 0 0 .75-.75V9a.75.75 0 0 0-.75-.75h-.75Z" clip-rule="evenodd" />
+						  </svg>						  
+						<!-- 상태 설명 -->
+						<span class="w-14 h-10 flex flex-col items-start justify-center text-xs ml-[0.35rem] text-[#C8D2DD]">
+							<p class="text-center">NOT</p>
+							<p class="text-center">PLAYING</p>
+						</span>
+					</div>
+				</div>
+
+				<!-- 예약현황/기록 컨테이너 -->
+				<div class="w-full grow flex flex-col items-center justify-start overflow-scroll py-4 px-6">
+					<!-- 예약현황 아코디언 -->
+					<div class="w-full flex flex-col items-center justify-center mb-10">
+						<!-- 예약현황 아코디언 체크박스 -->
+						<input id="booking-list-accordion" checked="checked" type="checkbox" class="peer hidden">
+						<!-- 예약현황 아코디언 제목 -->
+						<label for="booking-list-accordion" class="w-full h-16 flex flex-row items-center justify-between cursor-pointer peer-checked:[&>svg]:[transform-style-preserve-3d] peer-checked:[&>svg]:[transform:rotateX(180deg)]">
+							<!-- 왼쪽 섹션 -->
+							<div class="flex flex-row items-center justify-center">
+								<svg class="w-6 h-6 mx-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+								  </svg>
+								  <span class="text-xl font-semibold text-[#4A4A4A]">예약현황</span>				  
+							</div>
+							<!-- 오른쪽 섹션(열림/닫힘) -->
+							<svg class="w-7 h-7 transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+							  </svg>				  
+						</label>
+						<!-- 예약현황 아코디언 내용 -->
+						<div id="booking-list" class="w-full peer-checked:h-48 h-0 flex items-center justify-center transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300 overflow-hidden">
+							<!-- 스피너 -->
+							<div id="booking-list-spinner" class="block" role="status">
+								<svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+									<path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+								</svg>
+								<span class="sr-only">Loading...</span>
+							</div>
+							<!-- 예약 없는경우 -->
+							<div id="booking-list-empty" class="w-full h-full hidden flex-col items-center justify-center">
+								<p class="font-semibold text-xl text-[#4A4A4A]">예약이 없습니다</p>
+								<a class="text-xs text-[#2997FF] hover:underline" href="./index.html">지금 예약하러 가기 ></a>
+							</div>
+							<!-- 예약 1개 이상인경우 예약 리스트 -->
+							<div id="booking-list-exist" class="w-[92%] h-full hidden flex-col items-center justify-start list-none border-b border-[#C1C1C1]">
+								<li class="w-full h-16 flex flex-row items-center justify-center border-t border-[#C1C1C1]">
+									<!-- 시간 섹션 -->
+									<div class="w-36 h-full flex items-center justify-center font-bold px-2 font-outfit">
+										<p>00:00 ~ 00:30</p>
+									</div>
+									<!-- 인트라 id 섹션 -->
+									<div class="grow h-full flex flex-row items-center justify-start pl-12 booking-xbox">
+										<p>XBOX</p>
+									</div>
+								</li>
+								<li class="w-full h-16 flex flex-row items-center justify-center border-t border-[#C1C1C1]">
+									<!-- 시간 섹션 -->
+									<div class="w-36 h-full flex items-center justify-center font-bold px-2 font-outfit">
+										<p>00:00 ~ 00:30</p>
+									</div>
+									<!-- 인트라 id 섹션 -->
+									<div class="grow h-full flex flex-row items-center justify-start pl-12 booking-switch">
+										<p>SWITCH</p>
+									</div>
+								</li>
+								<li class="w-full h-16 flex flex-row items-center justify-center border-t border-[#C1C1C1]">
+									<!-- 시간 섹션 -->
+									<div class="w-36 h-full flex items-center justify-center font-bold px-2 font-outfit">
+										<p>00:00 ~ 00:30</p>
+									</div>
+									<!-- 인트라 id 섹션 -->
+									<div class="grow h-full flex flex-row items-center justify-start pl-12 booking-ps5">
+										<p>PS5</p>
+									</div>
+								</li>
+							</div>
+						</div>
+					</div>
+					<!-- 예약기록 아코디언 -->
+					<div class="w-full hidden flex-col items-center justify-center mb-10">
+						<!-- 예약기록 아코디언 체크박스 -->
+						<input id="booking-history-accordion" checked="checked" type="checkbox" class="peer hidden">
+						<!-- 예약기록 아코디언 제목 -->
+						<label for="booking-history-accordion" class="w-full h-16 flex flex-row items-center justify-between cursor-pointer peer-checked:[&>svg]:[transform-style-preserve-3d] peer-checked:[&>svg]:[transform:rotateX(180deg)]">
+							<!-- 왼쪽 섹션 -->
+							<div class="flex flex-row items-center justify-center">
+								<svg class="w-6 h-6 mx-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+								  </svg>
+								  
+								  <span class="text-xl font-semibold text-[#4A4A4A]">예약기록</span>				  
+							</div>
+							<!-- 오른쪽 섹션(열림/닫힘) -->
+							<svg class="w-7 h-7 transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+							  </svg>				  
+						</label>
+						<!-- 예약기록 아코디언 내용 -->
+						<div id="booking-history" class="w-full peer-checked:h-48 h-0 flex items-center justify-center transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300 overflow-hidden">
+							<!-- 스피너 -->
+							<div id="booking-history-spinner" class="block" role="status">
+								<svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+									<path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+								</svg>
+								<span class="sr-only">Loading...</span>
+							</div>
+							<!-- 예약 없는경우 -->
+							<div id="booking-list-empty" class="w-full h-full hidden flex-col items-center justify-center">
+								<p class="font-semibold text-xl text-[#4A4A4A]">예약이 없습니다</p>
+								<a class="text-xs text-[#2997FF] hover:underline" href="./index.html">지금 예약하러 가기 ></a>
+							</div>
+							<!-- 예약 1개 이상인경우 예약 리스트 -->
+							<div id="booking-history-exist" class="w-[92%] h-full flex flex-col items-center justify-start list-none border-b border-[#C1C1C1]">
+								<li class="w-full h-16 flex flex-row items-center justify-center border-t border-[#C1C1C1]">
+									<!-- 시간 섹션 -->
+									<div class="w-36 h-full flex items-center justify-center font-bold px-2 font-outfit">
+										<p>00:00 ~ 00:30</p>
+									</div>
+									<!-- 인트라 id 섹션 -->
+									<div class="grow h-full flex flex-row items-center justify-start pl-12 booking-xbox">
+										<p>XBOX</p>
+									</div>
+								</li>
+								<li class="w-full h-16 flex flex-row items-center justify-center border-t border-[#C1C1C1]">
+									<!-- 시간 섹션 -->
+									<div class="w-36 h-full flex items-center justify-center font-bold px-2 font-outfit">
+										<p>00:00 ~ 00:30</p>
+									</div>
+									<!-- 인트라 id 섹션 -->
+									<div class="grow h-full flex flex-row items-center justify-start pl-12 booking-switch">
+										<p>SWITCH</p>
+									</div>
+								</li>
+								<li class="w-full h-16 flex flex-row items-center justify-center border-t border-[#C1C1C1]">
+									<!-- 시간 섹션 -->
+									<div class="w-36 h-full flex items-center justify-center font-bold px-2 font-outfit">
+										<p>00:00 ~ 00:30</p>
+									</div>
+									<!-- 인트라 id 섹션 -->
+									<div class="grow h-full flex flex-row items-center justify-start pl-12 booking-ps5">
+										<p>PS5</p>
+									</div>
+								</li>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<!-- 사이드바 -->
+			<div id="sidebar-menu" class="w-72 h-full side-hidden peer flex flex-col items-center justify-center bg-white rounded-r-xl transition-all ease-[cubic-bezier(.4,0,.6,1)] z-50">
+				<!-- 사이드바 내부 헤더 -->
+				<header class="absolute w-full h-12 flex flex-row items-center justify-between p-4 top-0 left-0">
+					<!-- 사이드바 닫기 버튼 -->
+					<button id="menu-close-button" class="hidden z-40" onclick="closeMenu()">
+						<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+				</header>
+				<!-- 사이드바 상단 정보(로그인 전) -->
+				<div class="w-full h-52 hidden flex-col items-center justify-center pt-8">
+					<!-- 빈 프로필 이미지 -->
+					<span class="w-[4rem] h-[4rem] rounded-full bg-[#C8D2DD]"></span>
+					<!-- 로그인 버튼 -->
+					<button class="w-[5.5rem] h-9 flex items-center justify-center rounded-2xl border border-[#C8D2DD] my-3">
+						<p class="text-xl text-[#C8D2DD] font-bold">로그인</p>
+					</button>
+				</div>
+				<!-- 사이드바 상단 정보(로그인 후) -->
+				<div class="w-full h-52 flex flex-col items-center justify-center pt-8">
+					<!-- 프로필 이미지 -->
+					<span class="w-[4rem] h-[4rem] rounded-full cursor-pointer bg-basic bg-cover bg-[url('https://cdn.intra.42.fr/users/0154e7622e9aed55ecbc3c1a1ca71b84/minjchoi.jpg')]"></span>
+					<!-- 인트라 id -->
+					<p class="text-2xl font-bold cursor-pointer">minjacho</p>
+					<p class="text-sm text-[#C8D2DD] font-medium cursor-pointer">minjae choi</p>
+				</div>
+				<!-- 사이드바 리스트 -->
+				<ul class="flex flex-col items-start justify-start w-full h-[calc(100%-5rem)] font-bold text-xl">
+					<li onclick="location.href='./'" class="w-full h-14 flex flex-row items-center justify-start my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
+						<button>마이페이지</button>
+					</li>
+					<li onclick="location.href='/renewal'" class="w-full h-14 flex flex-row items-center justify-start my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
+						<button>예약하기</button>
+					</li>
+					<li onclick="location.href='./report'" class="w-full h-14 flex flex-row items-center justify-start my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
+						<button>고장 신고하기</button>
+					</li>
+					<li onclick="location.href='./'" class="w-full h-14 flex flex-row items-center justify-start my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
+						<button>사용법 알아보기</button>
+					</li>
+					<li class="flex flex-row items-center justify-start w-full h-14 my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
+						<button>문의하기</button>
+					</li>
+				</ul>
+				<!-- 사이드바 내부 푸터 -->
+				<footer class="absolute w-full h-32 top-[calc(100%-8rem)] left-0 flex flex-col items-center justify-center">
+					<p class="font-medium text-sm text-[#C8D2DD]">contact us</p>
+					<p class="fomt-medium text-sm text-bold">teamlv42@gmail.com</p>
+					<span onclick="location.href='//github.com/orgs/Team-LV42/repositories'" class="w-8 h-8 rounded-full bg-basic bg-cover bg-[url('../img/logo/github-mark.svg')] my-3 cursor-pointer"></span>
+				</footer>
+			</div>
+			<!-- 사이드바 아래의 어두운 레이어 -->
+			<div id="sidebar-bg" class="invisible peer-[.side-shown]:visible backdrop-brightness-50 w-full h-full fixed top-0 left-0 z-40"></div>
+	
+			<!-- 검색화면 아코디언 -->
+			<div id="search" class="fixed search-hidden w-full top-0 left-0 flex flex-col items-center justify-start bg-white z-40 transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300 overflow-hidden">
+				<!-- 검색화면 내부 헤더 -->
+				<header class="w-full h-12 flex flex-row items-center justify-end p-4 top-0 left-0">
+					<!-- 검색화면 닫기 버튼 -->
+					<button id="search-close-button" class="z-40" onclick="closeSearch()">
+						<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+				</header>
+				<!-- 검색창 -->
+				<div class="w-80 h-14 flex items-center justify-between border border-[#848586] mt-10 mb-3 px-4 rounded-2xl">
+					<input class="w-4/5 h-10 focus:outline-none text-lg font-semibold text-[#6E6E73]" type="text" maxlength="15" placeholder="유저 검색">
+					<svg class="w-7 h-7 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#848586">
+						<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+					  </svg>
+				</div>
+				<!-- 검색 결과 목록 -->
+				<ul class="w-72">
+					<!-- 검색결과 -->
+					<li class="w-full h-14 flex flex-row items-center justify-between text-[#6E6E73] cursor-pointer hover:brightness-50">
+						<p class="font-semibold text-lg">minjacho</p>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+						  </svg>
+					</li>
+					<!-- 검색결과 -->
+					<li class="w-full h-14 flex flex-row items-center justify-between text-[#6E6E73] cursor-pointer hover:brightness-50">
+						<p class="font-semibold text-lg">minjcho</p>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+						  </svg>
+					</li>
+				</ul>
+			</div>
+	
+			<!-- 로그인 모달 -->
+			<div id="login-modal" class="modal-hidden fixed w-full h-full top-0 left-0 flex items-center justify-center backdrop-brightness-50 z-40">
+				<!-- 안내창 -->
+				<div class="w-80 h-36 bg-white shadow-modal rounded-xl">
+					<!-- 메세지 섹션 -->
+					<div class="w-full h-2/3 flex flex-col items-center justify-center border-b border-[#818181]">
+						<p class="font-Bolwby-One text-lg font-color-switch">!</p>
+						<p class="font-semibold text-2xl">로그인이 필요합니다</p>
+					</div>
+					<!-- 선택 섹션 -->
+					<div class="w-full h-1/3 flex flex-row items-center justify-center">
+						<div onclick="hideModal('login')" class="w-1/2 h-full flex items-center justify-center border-r border-[#818181]">
+							<p>42 로그인</p>
+						</div>
+						<div onclick="hideModal('login')" class="w-1/2 h-full flex items-center justify-center">
+							<p>닫기</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const sidebarBg = document.getElementById('sidebar-bg');
+		const bookingModal = document.getElementById('booking-modal');
+		const loginModal = document.getElementById('login-modal');
+		function openMenu() {
+			document.getElementById('menu-button').className="hidden";
+			document.getElementById('menu-close-button').className="flex";
+			document.getElementById('sidebar-menu').classList.replace('side-hidden', 'side-shown');
+		}
+		function closeMenu() {
+			document.getElementById('menu-button').className="flex";
+			document.getElementById('menu-close-button').className="hidden";
+			document.getElementById('sidebar-menu').classList.replace('side-shown', 'side-hidden');
+		}
+		function openSearch() {
+			document.getElementById('search').classList.replace('search-hidden', 'search-shown');
+		}
+		function closeSearch() {
+			document.getElementById('search').classList.replace('search-shown', 'search-hidden');
+		}
+		function warningPopup() {
+			document.getElementById('warning').classList.replace('popup-hidden', 'popup-shown');
+			setTimeout(function() {
+				document.getElementById('warning').classList.replace('popup-shown', 'popup-hidden')
+			}, 800);
+		}
+		function showModal(modal) {
+			if (modal === 'booking')
+				bookingModal.classList.replace('modal-hidden', 'modal-shown');
+			else if (modal === 'login')
+				loginModal.classList.replace('modal-hidden', 'modal-shown');
+		}
+		function hideModal(modal) {
+			if (modal === 'booking')
+				bookingModal.classList.replace('modal-shown', 'modal-hidden');
+			else if (modal === 'login')
+				loginModal.classList.replace('modal-shown', 'modal-hidden');
+		}
+		/* 예약현황 보여주기 프로세스 */
+		window.onload = function() {
+			const bookingList = document.getElementById('booking-list')
+			const bookingListEmpty = document.getElementById('booking-list-empty');
+			const bookingListExist = document.getElementById('booking-list-exist');
+			const bookingListSpinner = document.getElementById('booking-list-spinner');
+			let isEmpty = 1;
+			const random = Math.floor(Math.random() * 10);
+			
+			if (random % 2 == 0)
+				isEmpty = 0;
+			
+			if (!isEmpty)
+				bookingList.classList.replace('peer-checked:h-auto', 'peer-checked:h-[12rem]')
+			else
+				bookingList.classList.replace('peer-checked:h-auto', 'peer-checked:h-48')
+
+        	setTimeout(() => {
+				bookingListSpinner.classList.replace('block', 'hidden');
+        	    if (isEmpty)
+        	        bookingListEmpty.classList.replace('hidden', 'flex');
+        	    else {
+        	        bookingListExist.classList.replace('hidden', 'flex');
+				}
+        	}, 700);
+
+
+		}
+		window.onclick = function(event) {
+			if (event.target == sidebarBg)
+				closeMenu();
+			else if (event.target == bookingModal)
+				hideModal('booking');
+			else if (event.target == loginModal)
+				hideModal('login');
+		}
+	</script>
+</body>
+</html>
