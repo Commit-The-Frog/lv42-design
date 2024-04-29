@@ -815,6 +815,18 @@ video {
   color: rgb(82 127 216 / var(--tw-text-opacity));
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .visible {
   visibility: visible;
 }
@@ -976,6 +988,10 @@ video {
 
 .mt-7 {
   margin-top: 1.75rem;
+}
+
+.block {
+  display: block;
 }
 
 .inline {
@@ -1254,6 +1270,14 @@ video {
   max-width: 400px;
 }
 
+.max-w-\[500px\] {
+  max-width: 500px;
+}
+
+.max-w-\[450px\] {
+  max-width: 450px;
+}
+
 .grow {
   flex-grow: 1;
 }
@@ -1287,6 +1311,16 @@ video {
 
 .animate-shake {
   animation: shake .5s ease-in-out;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
 
 .cursor-pointer {
@@ -1575,6 +1609,10 @@ video {
   background-size: cover;
 }
 
+.fill-blue-600 {
+  fill: #2563eb;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1766,6 +1804,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
 .opacity-30 {
   opacity: 0.3;
 }
@@ -1903,6 +1946,10 @@ video {
 }
 
 .peer:checked ~ .peer-checked\:h-\[12rem\] {
+  height: 12rem;
+}
+
+.peer:checked ~ .peer-checked\:h-48 {
   height: 12rem;
 }
 
@@ -2088,6 +2135,13 @@ video {
   .pointerhover\:hover\:brightness-75:hover {
     --tw-brightness: brightness(.75);
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark\:text-gray-600 {
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity));
   }
 }
 

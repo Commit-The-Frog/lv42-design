@@ -13,7 +13,7 @@
 	<!-- 화면 컨테이너 -->
 	<div class="w-[calc(100dvw)] h-[calc(100dvh)] flex items-center justify-center">
 		<!-- 전체 컨테이너 -->
-		<div class="relative max-w-[400px] w-full h-full flex flex-col items-center justify-center bg-basic bg-cover bg-default">
+		<div class="relative max-w-[450px] w-full h-full shadow-md flex flex-col items-center justify-center bg-basic bg-cover bg-default">
 			<!-- 헤더 -->
 			<header class="w-full h-12 fixed flex flex-row items-center justify-between p-4 top-0 bg-white">
 				<!-- 사이드바 열기 버튼 -->
@@ -97,14 +97,22 @@
 							  </svg>				  
 						</label>
 						<!-- 예약현황 아코디언 내용 -->
-						<div id="booking-list" class="w-full peer-checked:h-auto h-0 flex items-center justify-center transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300 overflow-hidden">
+						<div id="booking-list" class="w-full peer-checked:h-48 h-0 flex items-center justify-center transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300 overflow-hidden">
+							<!-- 스피너 -->
+							<div id="booking-list-spinner" class="block" role="status">
+								<svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+									<path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+								</svg>
+								<span class="sr-only">Loading...</span>
+							</div>
 							<!-- 예약 없는경우 -->
 							<div id="booking-list-empty" class="w-full h-full hidden flex-col items-center justify-center">
 								<p class="font-semibold text-xl text-[#4A4A4A]">예약이 없습니다</p>
 								<a class="text-xs text-[#2997FF] hover:underline" href="./index.html">지금 예약하러 가기 ></a>
 							</div>
 							<!-- 예약 1개 이상인경우 예약 리스트 -->
-							<div id="booking-list-exist" class="w-[92%] h-full flex flex-col items-center justify-start list-none border-b border-[#C1C1C1]">
+							<div id="booking-list-exist" class="w-[92%] h-full hidden flex-col items-center justify-start list-none border-b border-[#C1C1C1]">
 								<li class="w-full h-16 flex flex-row items-center justify-center border-t border-[#C1C1C1]">
 									<!-- 시간 섹션 -->
 									<div class="w-36 h-full flex items-center justify-center font-bold px-2 font-outfit">
@@ -158,7 +166,15 @@
 							  </svg>				  
 						</label>
 						<!-- 예약기록 아코디언 내용 -->
-						<div id="booking-history" class="w-full peer-checked:h-auto h-0 flex items-center justify-center transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300 overflow-hidden">
+						<div id="booking-history" class="w-full peer-checked:h-48 h-0 flex items-center justify-center transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300 overflow-hidden">
+							<!-- 스피너 -->
+							<div id="booking-history-spinner" class="block" role="status">
+								<svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+									<path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+								</svg>
+								<span class="sr-only">Loading...</span>
+							</div>
 							<!-- 예약 없는경우 -->
 							<div id="booking-list-empty" class="w-full h-full hidden flex-col items-center justify-center">
 								<p class="font-semibold text-xl text-[#4A4A4A]">예약이 없습니다</p>
@@ -356,20 +372,33 @@
 			else if (modal === 'login')
 				loginModal.classList.replace('modal-shown', 'modal-hidden');
 		}
-		function showBookingList(isEmpty) {
-			const listLength = bookingListExist.childElementCount * 16 + 'rem';
-			console.log(listLength)
+		/* 예약현황 보여주기 프로세스 */
+		window.onload = function() {
+			const bookingList = document.getElementById('booking-list')
+			const bookingListEmpty = document.getElementById('booking-list-empty');
+			const bookingListExist = document.getElementById('booking-list-exist');
+			const bookingListSpinner = document.getElementById('booking-list-spinner');
+			let isEmpty = 1;
+			const random = Math.floor(Math.random() * 10);
 			
-			if (isEmpty !== 'empty')
-				bookingList.classList.remove('peer-checked:h-64', 'peer-checked:h-[' + listLength + ']')
+			if (random % 2 == 0)
+				isEmpty = 0;
+			
+			if (!isEmpty)
+				bookingList.classList.replace('peer-checked:h-auto', 'peer-checked:h-[12rem]')
+			else
+				bookingList.classList.replace('peer-checked:h-auto', 'peer-checked:h-48')
 
         	setTimeout(() => {
-        	    if (isEmpty === 'empty')
+				bookingListSpinner.classList.replace('block', 'hidden');
+        	    if (isEmpty)
         	        bookingListEmpty.classList.replace('hidden', 'flex');
         	    else {
         	        bookingListExist.classList.replace('hidden', 'flex');
 				}
-        	}, 300);
+        	}, 700);
+
+
 		}
 		window.onclick = function(event) {
 			if (event.target == sidebarBg)
