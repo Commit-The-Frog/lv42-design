@@ -1162,6 +1162,10 @@ video {
   min-height: 100dvh;
 }
 
+.min-h-full {
+  min-height: 100%;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1871,6 +1875,22 @@ video {
   visibility: visible;
 }
 
+@media (min-width: 640px) {
+  .sm\:bg-basic {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:bg-basic {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -1927,6 +1947,16 @@ video {
 
 .peer.side-shown ~ .peer-\[\.side-shown\]\:visible {
   visibility: visible;
+}
+
+@media (min-width: 640px) {
+  .sm\:bg-default-desktop {
+    background-image: url('../img/background-desktop.svg');
+  }
+
+  .sm\:bg-cover {
+    background-size: cover;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2028,6 +2058,14 @@ video {
 
   .md\:bg-default-desktop {
     background-image: url('../img/background-desktop.svg');
+  }
+
+  .md\:bg-none {
+    background-image: none;
+  }
+
+  .md\:bg-cover {
+    background-size: cover;
   }
 
   .md\:p-10 {

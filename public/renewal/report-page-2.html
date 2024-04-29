@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Selection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="../css/output.css" rel="stylesheet">
+</head>
+<body>
+	<!-- 화면 컨테이너 -->
+	<div class="w-[calc(100dvw)] h-[calc(100dvh)] flex items-center justify-center">
+	  <!-- 전체 컨테이너 -->
+		<div class="w-full h-full overflow-auto font-outfit flex flex-col items-center justify-center relative">
+			<!-- 헤더 -->
+			<header class="fixed flex flex-row items-center justify-start p-4 top-0 left-0 w-full h-12 z-30 bg-white">
+				<!-- 사이드바 열기 버튼 -->
+				<button id="menu-button" class="flex" onclick="openMenu()">
+					<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+					</svg>
+				</button>
+			</header>
+			<!-- 상단 정보 : (XBOX/Swtich/PS5) / (본체/컨트롤러/기타) -->
+			<div class="w-full md:h-44 h-32 flex flex-row items-end justify-between md:p-10 md:px-12 px-9 py-5 pt-10 border-b border-black">
+				<div>
+					<a class="text-[#2997ff] lg:text-sm text-xs hover:underline" href="./report-page.html">변경 ></a>
+					<p class="md:text-3xl text-2xl font-bold cursor-pointer">Switch / 컨트롤러</p>
+				</div>
+				<span class="md:w-32 md:h-20 w-24 h-14 bg-basic bg-logo cursor-pointer" onclick="location.href='./coming-soon.html'"></span>
+			</div>
+			<!-- 내용 컨테이너 -->
+			<div class="overflow-hidden flex flex-col items-center justify-start px-6 w-full grow relative z-10">
+				<!-- 배경 그라디언트 -->
+				<div class="absolute left-0 top-0 w-full h-1/3 bg-gradient-to-b from-gray-200 z-20"></div>
+				<!-- [상태 선택] 컨테이너 -->
+				<div id="malf-type" class="flex flex-col items-center my-5 justify-around lg:w-[800px] w-full min-h-16 z-20">
+					<!-- 상태 선택 텍스트 -->
+					<p class="is-required md:text-2xl text-start text-lg font-semibold w-full my-2 px-2">
+						어떤 상태인가요?
+					</p>
+					<!-- 버튼 리스트 -->
+					<div class="w-full flex flex-wrap flex-row items-around justify-around text-sm">
+						<!-- 충전 문제 버튼 -->
+						<button class="flex flex-row items-center justify-around text-center my-1 md:h-14 grow mx-2 md:text-lg h-9 button-active pointerhover:hover:bg-gray-300 rounded p-2">
+							<p class="inline">충전 문제</p>
+						</button>
+						<!-- 버튼 문제 버튼 -->
+						<button class="flex flex-row items-center justify-around text-center my-1 md:h-14 grow mx-2 md:text-lg h-9 button-inactive pointerhover:hover:bg-gray-300 rounded p-2">
+							<p class="inline">버튼 문제</p>
+						</button>
+						<!-- 연결 문제 버튼 -->
+						<button class="flex flex-row items-center justify-around text-center my-1 md:h-14 grow mx-2 md:text-lg h-9 button-inactive pointerhover:hover:bg-gray-300 rounded p-2">
+							<p class="inline">연결 문제</p>
+						</button>
+						<!-- 기타 버튼 -->
+						<button class="flex flex-row items-center justify-around text-center my-1 md:h-14 grow mx-2 md:text-lg h-9 button-inactive pointerhover:hover:bg-gray-300 rounded p-2">
+							<p class="inline">기타</p>
+						</button>
+					</div>
+				</div>
+				<!-- [버튼 선택] 컨테이너 -->
+				<div id="btn-malf-list-container" class="flex flex-col items-center my-5 justify-around lg:w-[800px] w-full min-h-16 z-30">
+					<!-- 버튼 선택 텍스트 -->
+					<p class="is-required md:text-2xl text-start text-lg font-semibold w-full my-2 px-2">
+						고장 위치와 문제를 선택해주세요
+					</p>
+					<!-- 컨트롤러 버튼 설명 이미지 -->
+					<span onclick="openModal('bigImgModal')" class="cursor-zoom-in relative bg-basic bg-xbox-btn-info bg-white md:w-96 md:h-80 w-72 h-44 border border-black rounded-md shadow-md mt-2 mb-3">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="absolute top-3 left-3 w-4 h-4">
+							<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM10.5 7.5v6m3-3h-6" />
+						</svg>
+					</span>
+					<!-- 버튼 리스트 -->
+					<div id="btn-malf-list" class="w-full flex flex-col items-around justify-around text-sm">
+						<!-- 버튼 세트 (이미 입력된 경우) -->
+						<div class="relative flex flex-row items-center justify-center w-full p-2">
+							<!-- 부위 선택 버튼 -->
+							<button class="group md:text-lg flex flex-row items-center justify-around text-center md:w-44 w-20 mx-1 md:h-12 h-9 border border-black pointerhover:hover:bg-gray-300 rounded p-2">
+								<p class="inline">터치패드</p>
+								<!-- 버튼목록 모달 -->
+								<div class="invisible group-hover:visible grid gap-2 grid-rows-4 grid-cols-5 p-4 absolute md:top-[3.3rem] top-11 left-0 w-full md:h-60 h-44 bg-gray-200 border border-black rounded-md z-50 shadow-md">
+									<span class="md:w-full md:h-12 w-14 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">L1</span>
+									<span class="md:w-full md:h-12 w-14 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">R1/L1</span>
+									<span class="md:w-full md:h-12 w-14 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">H</span>
+									<span class="md:w-full md:h-12 w-14 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">L2</span>
+									<span class="md:w-full md:h-12 w-14 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">R2</span>
+									<span class="md:w-full md:h-12 w-14 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">X</span>
+									<span class="md:w-full md:h-12 w-14 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">터치패드</span>
+									<span class="md:w-full md:h-12 w-14 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">Y</span>
+									<span class="md:w-full md:h-12 w-14 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">A</span>
+									<span class="md:w-full md:h-12 w-14 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">B</span>
+									<span class="md:w-full md:h-12 w-14 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">L1</span>
+									<span class="md:w-full md:h-12 w-14 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">L1</span>
+									<span class="md:w-full md:h-12 w-14 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">L1</span>
+									<span class="md:w-full md:h-12 w-14 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">L1</span>
+								</div>
+							</button>
+							<!-- 증상 선택 버튼 -->
+							<button class="group md:text-lg flex flex-row items-center justify-around grow mx-1 md:h-12 h-9 border border-black pointerhover:hover:bg-gray-300 rounded p-2">
+								<p class="inline">의도하지 않은 방향으로 이동</p>
+								<!-- 증상목록 모달 -->
+								<div class="hidden group-hover:flex flex-col items-center justify-center p-4 absolute md:top-[3.6rem] top-11 left-0 w-full bg-gray-200 border border-black rounded-md z-50 shadow-md">
+									<span class="w-full my-1 md:h-12 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-start px-2">버튼 안눌림</span>
+									<span class="w-full my-1 md:h-12 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-start px-2">더블클릭</span>
+									<span class="w-full my-1 md:h-12 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-start px-2">이물감</span>
+									<span class="w-full my-1 md:h-12 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-start px-2">의도하지 않은 방향으로 이동</span>
+									<span class="w-full my-1 md:h-12 h-8 rounded-md border bg-white pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-start px-2">뻑뻑함</span>
+									<input class="w-full my-1 md:h-12 h-8 rounded-md border bg-white border-gray-500 flex items-center justify-start px-2" maxlength="15" placeholder="직접입력"></input>
+								</div>
+							</button>
+							<!-- 삭제 버튼 -->
+							<button class="flex items-center justify-center p-2">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer w-6 h-6">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+								  </svg>							  
+							</button>
+						</div>
+						<!-- 버튼 세트 (새로 추가하기) -->
+						<div id="add-malf" class="flex flex-row items-center justify-center w-full p-2">
+							<button onclick="addMalf()" class="flex flex-row items-center justify-around text-center w-full mx-1 md:h-12 h-9 border border-black button-inactive pointerhover:hover:bg-gray-300 rounded p-2">
+								<p class="text-lg inline">+</p>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- [상세설명] 컨테이너 -->
+				<div class="flex flex-col items-center my-5 justify-around lg:w-[800px] w-full min-h-16 z-20">
+					<!-- 상태설명 텍스트 -->
+					<p class="md:text-2xl text-start text-lg font-semibold w-full my-2 px-2">어떤 문제가 발생했는지 알려주세요</p>
+					<!-- 상세설명 입력창 -->
+					<textarea class="md:text-lg text-sm w-full h-48 rounded-md border border-gray-500 p-4 resize-y" maxlength="150" placeholder="ex) 본체의 전원이 켜지지 않아요"></textarea>
+				</div>
+				<!-- submit 버튼 -->
+				<div class="flex flex-row items-end justify-end lg:w-[800px] w-full min-h-32 z-30 py-6">
+					<button onclick="moveFocus('malf-type')" class="button-unavailable group relative flex items-center justify-start p-3 rounded-3xl w-32 h-12 bg-gray-300 pointerhover:hover:bg-gray-400">
+						<p class="ml-2 text-lg">Submit</p>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="absolute top-3 left-[5rem] transition-all group-hover:ml-4 w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+						  </svg>
+					</button>
+				</div>
+			</div>
+			<!-- 사이드바 -->
+			<div id="sidebar-menu" class="side-hidden peer flex items-center justify-center w-72 h-full bg-white rounded-r-md transition-all ease-in-out z-50">
+				<!-- 사이드바 내부 헤더 -->
+				<header class="absolute flex flex-row items-center justify-between p-4 top-0 left-0 w-full h-12">
+					<!-- 사이드바 닫기 버튼 -->
+					<button id="menu-close-button" class="hidden z-40" onclick="closeMenu()">
+						<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+				</header>
+				<!-- 사이드바 리스트 -->
+				<ul class="flex flex-col items-start justify-start w-full h-4/5 font-bold text-xl">
+					<!-- <li class="flex flex-row items-center justify-start w-full h-14 my-1 p-5 hover:backdrop-brightness-50 cursor-pointer">
+						<button></button>
+					</li> -->
+					<li onclick="location.href='./report-page.html'" class="flex flex-row items-center justify-start w-full h-14 my-1 p-5 hover:backdrop-brightness-50 cursor-pointer">
+						<button>고장수리 신고하기</button>
+					</li>
+					<li class="flex flex-row items-center justify-start w-full h-14 my-1 p-5 hover:backdrop-brightness-50 cursor-pointer">
+						<button>문의하기</button>
+					</li>
+				</ul>
+			</div>
+			<!-- 사이드바 아래의 어두운 레이어 -->
+			<div id="sidebar-bg" class="invisible peer-[.side-shown]:visible backdrop-brightness-50 w-full h-full absolute top-0 left-0 z-40"></div>
+	
+			<!-- 큰 이미지 모달 -->
+			<div id="big-img-modal" class="invisible absolute top-0 left-0 flex items-center justify-center pb-24 w-full h-full backdrop-brightness-50 z-50">
+				<!-- 이미지 확대 시 나오는 큰 이미지 -->
+				<span class="bg-basic bg-xbox-btn-info bg-white md:h-[600px] md:w-[700px] w-full h-80 border border-black rounded-md shadow-md mt-2 mb-3 z-50">
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- script -->
+	<script>
+		const sidebarBg = document.getElementById('sidebar-bg');
+		const btnMalfList = document.getElementById('btn-malf-list');
+		const addMalfBtn = document.getElementById('add-malf');
+		const bigImgModal = document.getElementById('big-img-modal');
+		const btnList = document.getElementById('button-modal');
+
+		function openMenu() {
+			document.getElementById('menu-button').className="hidden";
+			document.getElementById('menu-close-button').className="flex";
+			document.getElementById('sidebar-menu').classList.replace('side-hidden', 'side-shown');
+		}
+		function closeMenu() {
+			document.getElementById('menu-button').className="flex";
+			document.getElementById('menu-close-button').className="hidden";
+			document.getElementById('sidebar-menu').classList.replace('side-shown', 'side-hidden');
+		}
+		function openModal(modal) {
+			if (modal === 'bigImgModal')
+				bigImgModal.classList.replace('invisible', 'visible');
+		}
+		function closeModal(modal) {
+			if (modal === 'bigImgModal')
+				bigImgModal.classList.replace('visible', 'invisible');
+		}
+		function moveFocus(elementId) {
+			const target = document.getElementById(elementId);
+			if (target) {
+				const offset = 0;
+				const targetOffsetTop = target.offsetTop + offset;
+
+				// scroll
+				window.scrollTo({
+					top: targetOffsetTop,
+					behavior: "smooth"
+				});
+
+				setTimeout(function() {
+					target.classList.add('animate-shake');
+				}, 600);
+
+				setTimeout(function() {
+            		target.classList.remove('animate-shake');
+        		}, 1100);
+			}
+		}
+
+		window.onclick = function(event) {
+			if (event.target == sidebarBg)
+				closeMenu();
+			if (event.target == bigImgModal)
+				closeModal('bigImgModal');
+		}
+		async function addMalf() {
+			const newMalf = await document.createElement('div');
+			newMalf.innerHTML = `
+					<div class="transition-all relative flex flex-row items-center justify-center w-full p-2 button-active">
+						<button class="group md:text-lg flex flex-row items-center justify-around text-center md:w-20 w-12 mx-1 md:h-12 h-9 border border-black pointerhover:hover:bg-gray-300 rounded p-2">
+							<p class="inline"></p>
+							<!-- 버튼목록 모달 -->
+							<div class="invisible group-hover:visible grid gap-2 grid-rows-3 grid-cols-8 p-4 absolute md:top-[3.6rem] top-11 left-0 w-full md:h-52 h-36 bg-white border border-black rounded-md z-50 shadow-md">
+								<span class="md:w-12 md:h-12 w-8 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">L1</span>
+								<span class="md:w-12 md:h-12 w-8 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">R1</span>
+								<span class="md:w-12 md:h-12 w-8 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">H</span>
+								<span class="md:w-12 md:h-12 w-8 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">L2</span>
+								<span class="md:w-12 md:h-12 w-8 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">R2</span>
+								<span class="md:w-12 md:h-12 w-8 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">X</span>
+								<span class="md:w-12 md:h-12 w-8 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">터치패드</span>
+								<span class="md:w-12 md:h-12 w-8 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">Y</span>
+								<span class="md:w-12 md:h-12 w-8 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">A</span>
+								<span class="md:w-12 md:h-12 w-8 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">B</span>
+								<span class="md:w-12 md:h-12 w-8 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">L1</span>
+								<span class="md:w-12 md:h-12 w-8 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">L1</span>
+								<span class="md:w-12 md:h-12 w-8 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">L1</span>
+								<span class="md:w-12 md:h-12 w-8 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-center">L1</span>
+							</div>
+						</button>
+						<!-- 증상 선택 버튼 -->
+						<button class="group md:text-lg flex flex-row items-center justify-around grow mx-1 md:h-12 h-9 border border-black pointerhover:hover:bg-gray-300 rounded p-2">
+							<p class="inline"></p>
+							<!-- 증상목록 모달 -->
+							<div class="hidden group-hover:flex flex-col items-center justify-center p-4 absolute md:top-[3.6rem] top-11 left-0 w-full bg-white border border-black rounded-md z-50 shadow-md">
+								<span class="w-full my-1 md:h-12 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-start px-2">버튼 안눌림</span>
+								<span class="w-full my-1 md:h-12 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-start px-2">더블클릭</span>
+								<span class="w-full my-1 md:h-12 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-start px-2">이물감</span>
+								<span class="w-full my-1 md:h-12 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-start px-2">의도하지 않은 방향으로 이동</span>
+								<span class="w-full my-1 md:h-12 h-8 rounded-md border pointerhover:hover:bg-gray-300 border-gray-500 flex items-center justify-start px-2">뻑뻑함</span>
+								<input class="w-full my-1 md:h-12 h-8 rounded-md border border-gray-500 flex items-center justify-start px-2" maxlength="35" placeholder="직접입력"></input>
+							</div>
+						</button>
+						<button class="flex items-center justify-center p-2">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer w-6 h-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+							  </svg>							  
+						</button>
+					</div>`;
+			btnMalfList.insertBefore(newMalf, addMalfBtn);
+		}
+	</script>
+</body>
+</html>

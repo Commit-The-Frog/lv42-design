@@ -67,6 +67,10 @@ app.get('/renewal/report', function(req, res) {
 	res.sendFile(__dirname + '/public/renewal/report-page.html')
 })
 
+app.get('/renewal/report2', function(req, res) {
+	res.sendFile(__dirname + '/public/renewal/report-page-2.html')
+})
+
 app.get('/renewal/report3', function(req, res) {
 	res.sendFile(__dirname + '/public/renewal/report-page-3.html')
 })
