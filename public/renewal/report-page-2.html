@@ -188,13 +188,11 @@
 		const btnList = document.getElementById('button-modal');
 
 		function openMenu() {
-			document.getElementById('menu-button').className="hidden";
 			document.getElementById('menu-close-button').className="flex";
 			document.getElementById('sidebar-menu').classList.replace('side-hidden', 'side-shown');
 		}
 		function closeMenu() {
 			document.getElementById('menu-button').className="flex";
-			document.getElementById('menu-close-button').className="hidden";
 			document.getElementById('sidebar-menu').classList.replace('side-shown', 'side-hidden');
 		}
 		function openModal(modal) {
