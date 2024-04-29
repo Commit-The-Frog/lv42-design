@@ -92,19 +92,19 @@
 								  <span class="text-xl font-semibold text-[#4A4A4A]">예약현황</span>				  
 							</div>
 							<!-- 오른쪽 섹션(열림/닫힘) -->
-							<svg class="w-7 h-7 transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-150" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<svg class="w-7 h-7 transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
 							  </svg>				  
 						</label>
 						<!-- 예약현황 아코디언 내용 -->
-						<div id="booking-list" class="w-full flex items-center justify-center peer-checked:h-auto h-0 overflow-hidden">
+						<div id="booking-list" class="w-full peer-checked:h-auto h-0 flex items-center justify-center transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300 overflow-hidden">
 							<!-- 예약 없는경우 -->
 							<div id="booking-list-empty" class="w-full h-full hidden flex-col items-center justify-center">
 								<p class="font-semibold text-xl text-[#4A4A4A]">예약이 없습니다</p>
 								<a class="text-xs text-[#2997FF] hover:underline" href="./index.html">지금 예약하러 가기 ></a>
 							</div>
 							<!-- 예약 1개 이상인경우 예약 리스트 -->
-							<div id="booking-list-exist" class="w-[92%] h-full flex flex-col items-center justify-start overflow-scroll list-none border-b border-[#C1C1C1]">
+							<div id="booking-list-exist" class="w-[92%] h-full flex flex-col items-center justify-start list-none border-b border-[#C1C1C1]">
 								<li class="w-full h-16 flex flex-row items-center justify-center border-t border-[#C1C1C1]">
 									<!-- 시간 섹션 -->
 									<div class="w-36 h-full flex items-center justify-center font-bold px-2 font-outfit">
@@ -141,7 +141,7 @@
 					<!-- 예약기록 아코디언 -->
 					<div class="w-full hidden flex-col items-center justify-center mb-10">
 						<!-- 예약기록 아코디언 체크박스 -->
-						<input id="booking-history-accordion" type="checkbox" class="peer hidden">
+						<input id="booking-history-accordion" checked="checked" type="checkbox" class="peer hidden">
 						<!-- 예약기록 아코디언 제목 -->
 						<label for="booking-history-accordion" class="w-full h-16 flex flex-row items-center justify-between cursor-pointer peer-checked:[&>svg]:[transform-style-preserve-3d] peer-checked:[&>svg]:[transform:rotateX(180deg)]">
 							<!-- 왼쪽 섹션 -->
@@ -149,22 +149,23 @@
 								<svg class="w-6 h-6 mx-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 									<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
 								  </svg>
+								  
 								  <span class="text-xl font-semibold text-[#4A4A4A]">예약기록</span>				  
 							</div>
 							<!-- 오른쪽 섹션(열림/닫힘) -->
-							<svg class="w-7 h-7 transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-150" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<svg class="w-7 h-7 transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
-							  </svg>			
+							  </svg>				  
 						</label>
 						<!-- 예약기록 아코디언 내용 -->
-						<div id="booking-history" class="w-full flex items-center justify-center peer-checked:h-auto h-0 overflow-hidden">
+						<div id="booking-history" class="w-full peer-checked:h-auto h-0 flex items-center justify-center transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300 overflow-hidden">
 							<!-- 예약 없는경우 -->
 							<div id="booking-list-empty" class="w-full h-full hidden flex-col items-center justify-center">
 								<p class="font-semibold text-xl text-[#4A4A4A]">예약이 없습니다</p>
 								<a class="text-xs text-[#2997FF] hover:underline" href="./index.html">지금 예약하러 가기 ></a>
 							</div>
 							<!-- 예약 1개 이상인경우 예약 리스트 -->
-							<div id="booking-history-exist" class="w-[92%] h-full flex flex-col items-center justify-start overflow-scroll list-none border-b border-[#C1C1C1]">
+							<div id="booking-history-exist" class="w-[92%] h-full flex flex-col items-center justify-start list-none border-b border-[#C1C1C1]">
 								<li class="w-full h-16 flex flex-row items-center justify-center border-t border-[#C1C1C1]">
 									<!-- 시간 섹션 -->
 									<div class="w-36 h-full flex items-center justify-center font-bold px-2 font-outfit">
@@ -202,7 +203,7 @@
 			</div>
 	
 			<!-- 사이드바 -->
-			<div id="sidebar-menu" class="w-72 h-full side-hidden peer flex flex-col items-center justify-center bg-white rounded-r-xl ,0,.6,1)] z-50">
+			<div id="sidebar-menu" class="w-72 h-full side-hidden peer flex flex-col items-center justify-center bg-white rounded-r-xl transition-all ease-[cubic-bezier(.4,0,.6,1)] z-50">
 				<!-- 사이드바 내부 헤더 -->
 				<header class="absolute w-full h-12 flex flex-row items-center justify-between p-4 top-0 left-0">
 					<!-- 사이드바 닫기 버튼 -->
@@ -251,7 +252,9 @@
 				<footer class="absolute w-full h-32 top-[calc(100%-8rem)] left-0 flex flex-col items-center justify-center">
 					<p class="font-medium text-sm text-[#C8D2DD]">contact us</p>
 					<p class="fomt-medium text-sm text-bold">teamlv42@gmail.com</p>
-					<span onclick="location.href='//github.com/orgs/Team-LV42/repositories'" class="w-8 h-8 rounded-full bg-basic bg-cover bg-[url('../img/logo/github-mark.svg')] my-3 cursor-pointer"></spdiv>
+					<span onclick="location.href='//github.com/orgs/Team-LV42/repositories'" class="w-8 h-8 rounded-full bg-basic bg-cover bg-[url('../img/logo/github-mark.svg')] my-3 cursor-pointer"></span>
+				</footer>
+			</div>
 			<!-- 사이드바 아래의 어두운 레이어 -->
 			<div id="sidebar-bg" class="invisible peer-[.side-shown]:visible backdrop-brightness-50 w-full h-full fixed top-0 left-0 z-40"></div>
 	
@@ -346,9 +349,6 @@
 		const sidebarBg = document.getElementById('sidebar-bg');
 		const bookingModal = document.getElementById('booking-modal');
 		const loginModal = document.getElementById('login-modal');
-		const bookingList = document.getElementById('booking-list');
-		const bookingListEmpty = document.getElementById('booking-list-empty');
-		const bookingListExist = document.getElementById('booking-list-exist');
 		function openMenu() {
 			document.getElementById('menu-button').className="hidden";
 			document.getElementById('menu-close-button').className="flex";
@@ -383,13 +383,12 @@
 			else if (modal === 'login')
 				loginModal.classList.replace('modal-shown', 'modal-hidden');
 		}
-		async function showBookingList(isEmpty) {
-			
+		function showBookingList(isEmpty) {
 			const listLength = bookingListExist.childElementCount * 16 + 'rem';
 			console.log(listLength)
 			
 			if (isEmpty !== 'empty')
-			bookingList.classList.remove('peer-checked:h-64', 'peer-checked:h-[' + '112rem' + ']')
+				bookingList.classList.remove('peer-checked:h-64', 'peer-checked:h-[' + listLength + ']')
 
         	setTimeout(() => {
         	    if (isEmpty === 'empty')
@@ -397,7 +396,7 @@
         	    else {
         	        bookingListExist.classList.replace('hidden', 'flex');
 				}
-        	}, 100);
+        	}, 300);
 		}
 		window.onclick = function(event) {
 			if (event.target == sidebarBg)
