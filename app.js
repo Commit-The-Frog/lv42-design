@@ -75,6 +75,10 @@ app.get('/renewal/report3', function(req, res) {
 	res.sendFile(__dirname + '/public/renewal/report-page-3.html')
 })
 
+app.get('/renewal/admin', function(req, res) {
+	res.sendFile(__dirname + '/public/renewal/admin-page.html')
+})
+
 // 3000 포트로 서버 오픈
 app.listen(3000, function() {
     console.log("start! express server on port 3000")

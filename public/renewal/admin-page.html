@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RENEWAL</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/output.css">
+</head>
+<body>
+	<!-- 화면 컨테이너 -->
+	<div class="w-[calc(100dvw)] h-[calc(100dvh)] flex items-center justify-center">
+		<!-- 전체 컨테이너 -->
+		<div class="relative w-full h-full flex flex-col items-center justify-center">
+			<!-- 헤더 -->
+			<header class="max-w-[1024px] w-full md:h-11 h-12 fixed flex flex-row items-center justify-between p-4 top-0 bg-white">
+				<!-- 사이드바 열기 버튼(모바일 전용) -->
+				<button id="menu-button" class="md:hidden flex" onclick="openMenu()">
+					<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+					</svg>
+				</button>
+				<!-- 로고(데스크탑 전용) -->
+				<span class="md:block hidden w-8 h-8 bg-basic bg-logo cursor-pointer"></span>
+				<!-- 메뉴 리스트(데스크탑 전용) -->
+				<div class="w-4/5 md:flex hidden flex-row justify-around items-center">
+					<button>마이페이지</button>
+					<button>예약하기</button>
+					<button>고장 신고하기</button>
+					<button>사용법 알아보기</button>
+					<button>문의하기</button>
+				</div>
+				<!-- 검색 버튼 -->
+				<button id="search-buttom" class="flex" onclick="openSearch()">
+					<svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+					  </svg>			  
+				</button>
+			</header>
+	
+			<!-- 상단 정보(관리자 모드) -->
+			<div class="w-full min-h-40 flex flex-row items-center justify-center gap-14 px-9 pt-12 bg-[#F4F4F6]">
+				<!-- 예약관리 모드 -->
+				<div class="w-32 h-24 py-2 flex flex-col items-center justify-center cursor-pointer pointerhover:hover:bg-slate-400 rounded-xl">
+					<svg class="w-14 h-14" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.0" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+					  </svg>
+					<p class="font-semibold text-lg">예약 관리</p>	  
+				</div>
+				<!-- 고장신고관리 모드 -->
+				<div class="w-32 h-24 py-2 flex flex-col items-center justify-center cursor-pointer pointerhover:hover:bg-slate-400 rounded-xl">
+					<svg class="w-14 h-14" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.0" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+					  </svg>
+					<p class="font-semibold text-lg">고장신고 관리</p>	  
+				</div>
+				<!-- 대회관리 모드 -->
+				<div class="w-32 h-24 py-2 flex flex-col items-center justify-center cursor-pointer pointerhover:hover:bg-slate-400 rounded-xl">
+					<svg class="w-14 h-14" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.0" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0" />
+					  </svg>
+					<p class="font-semibold text-lg">대회 관리</p>	  
+				</div>
+			</div>
+
+			<!-- 관리자 환영 멘트 -->
+			<div class="w-full h-10 flex items-center justify-center bg-[#EDEDED]">
+				<p>관리자 minjacho 님, 반갑습니다</p>
+			</div>
+	
+			<!-- 내용 컨테이너 -->
+			<div class="w-full grow">
+
+			</div>
+	
+			<!-- 사이드바 -->
+			<div id="sidebar-menu" class="w-72 h-full side-hidden peer flex flex-col items-center justify-center bg-white rounded-r-xl transition-all ease-[cubic-bezier(.4,0,.6,1)] z-50">
+				<!-- 사이드바 내부 헤더 -->
+				<header class="absolute w-full h-12 flex flex-row items-center justify-between p-4 top-0 left-0">
+					<!-- 사이드바 닫기 버튼 -->
+					<button id="menu-close-button" class="hidden z-40" onclick="closeMenu()">
+						<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+				</header>
+				<!-- 사이드바 상단 정보(로그인 전) -->
+				<div class="w-full h-52 hidden flex-col items-center justify-center pt-8">
+					<!-- 빈 프로필 이미지 -->
+					<span class="w-[4rem] h-[4rem] rounded-full bg-[#C8D2DD]"></span>
+					<!-- 로그인 버튼 -->
+					<button class="w-[5.5rem] h-9 flex items-center justify-center rounded-2xl border border-[#C8D2DD] my-3">
+						<p class="text-xl text-[#C8D2DD] font-bold">로그인</p>
+					</button>
+				</div>
+				<!-- 사이드바 상단 정보(로그인 후) -->
+				<div class="w-full h-52 flex flex-col items-center justify-center pt-8">
+					<!-- 프로필 이미지 -->
+					<span class="w-[4rem] h-[4rem] rounded-full cursor-pointer bg-basic bg-cover bg-[url('https://cdn.intra.42.fr/users/0154e7622e9aed55ecbc3c1a1ca71b84/minjchoi.jpg')]"></span>
+					<!-- 인트라 id -->
+					<p class="text-2xl font-bold cursor-pointer">minjacho</p>
+					<p class="text-sm text-[#C8D2DD] font-medium cursor-pointer">minjae choi</p>
+				</div>
+				<!-- 사이드바 리스트 -->
+				<ul class="flex flex-col items-start justify-start w-full h-[calc(100%-5rem)] font-bold text-xl">
+					<li onclick="location.href='./mypage'" class="w-full h-14 flex flex-row items-center justify-start my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
+						<button>마이페이지</button>
+					</li>
+					<li onclick="location.href='/renewal'" class="w-full h-14 flex flex-row items-center justify-start my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
+						<button>예약하기</button>
+					</li>
+					<li onclick="location.href='./report'" class="w-full h-14 flex flex-row items-center justify-start my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
+						<button>고장 신고하기</button>
+					</li>
+					<li onclick="location.href='https://valiant-gerbera-c26.notion.site/LV42-d84bd84cac65455384335ef1db7a9702'" class="w-full h-14 flex flex-row items-center justify-start my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
+						<button>사용법 알아보기</button>
+					</li>
+					<li class="flex flex-row items-center justify-start w-full h-14 my-1 p-5 px-8 hover:backdrop-brightness-50 cursor-pointer">
+						<button>문의하기</button>
+					</li>
+				</ul>
+				<!-- 사이드바 내부 푸터 -->
+				<footer class="absolute w-full h-32 top-[calc(100%-8rem)] left-0 flex flex-col items-center justify-center">
+					<p class="font-medium text-sm text-[#C8D2DD]">contact us</p>
+					<p class="fomt-medium text-sm text-bold">teamlv42@gmail.com</p>
+					<span onclick="location.href='//github.com/orgs/Team-LV42/repositories'" class="w-8 h-8 rounded-full bg-basic bg-cover bg-[url('../img/logo/github-mark.svg')] my-3 cursor-pointer"></span>
+				</footer>
+			</div>
+			<!-- 사이드바 아래의 어두운 레이어 -->
+			<div id="sidebar-bg" class="invisible peer-[.side-shown]:visible backdrop-brightness-50 w-full h-full fixed top-0 left-0 z-40"></div>
+
+			<!-- 검색화면 아코디언 -->
+			<div id="search" class="fixed search-hidden w-full top-0 left-0 flex flex-col items-center justify-start bg-white z-40 transition-all ease-[cubic-bezier(.4,0,.6,1)] duration-300 overflow-hidden">
+				<!-- 검색화면 내부 헤더 -->
+				<header class="w-full h-12 flex flex-row items-center justify-end p-4 top-0 left-0">
+					<!-- 검색화면 닫기 버튼 -->
+					<button id="search-close-button" class="z-40" onclick="closeSearch()">
+						<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+				</header>
+				<!-- 검색창 -->
+				<div class="w-80 h-14 flex items-center justify-between border border-[#848586] mt-10 mb-3 px-4 rounded-2xl">
+					<input class="w-4/5 h-10 focus:outline-none text-lg font-semibold text-[#6E6E73]" type="text" maxlength="15" placeholder="유저 검색">
+					<svg class="w-7 h-7 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#848586">
+						<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+					  </svg>
+				</div>
+				<!-- 검색 결과 목록 -->
+				<ul class="w-72">
+					<!-- 검색결과 -->
+					<li onclick="location.href='./userpage'" class="w-full h-14 flex flex-row items-center justify-between text-[#6E6E73] cursor-pointer hover:brightness-50">
+						<p class="font-semibold text-lg">minjacho</p>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+						  </svg>
+					</li>
+					<!-- 검색결과 -->
+					<li class="w-full h-14 flex flex-row items-center justify-between text-[#6E6E73] cursor-pointer hover:brightness-50">
+						<p class="font-semibold text-lg">minjcho</p>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+						  </svg>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const sidebarBg = document.getElementById('sidebar-bg');
+		const bookingModal = document.getElementById('booking-modal');
+		const loginModal = document.getElementById('login-modal');
+		function openMenu() {
+			document.getElementById('menu-close-button').className="flex";
+			document.getElementById('sidebar-menu').classList.replace('side-hidden', 'side-shown');
+		}
+		function closeMenu() {
+			document.getElementById('menu-button').className="flex";
+			document.getElementById('sidebar-menu').classList.replace('side-shown', 'side-hidden');
+		}
+		function openSearch() {
+			document.getElementById('search').classList.replace('search-hidden', 'search-shown');
+		}
+		function closeSearch() {
+			document.getElementById('search').classList.replace('search-shown', 'search-hidden');
+		}
+		function warningPopup() {
+			document.getElementById('warning').classList.replace('popup-hidden', 'popup-shown');
+			setTimeout(function() {
+				document.getElementById('warning').classList.replace('popup-shown', 'popup-hidden')
+			}, 800);
+		}
+		function showModal(modal) {
+			if (modal === 'booking')
+				bookingModal.classList.replace('modal-hidden', 'modal-shown');
+			else if (modal === 'login')
+				loginModal.classList.replace('modal-hidden', 'modal-shown');
+		}
+		function hideModal(modal) {
+			if (modal === 'booking')
+				bookingModal.classList.replace('modal-shown', 'modal-hidden');
+			else if (modal === 'login')
+				loginModal.classList.replace('modal-shown', 'modal-hidden');
+		}
+		window.onclick = function(event) {
+			if (event.target == sidebarBg)
+				closeMenu();
+			else if (event.target == bookingModal)
+				hideModal('booking');
+			else if (event.target == loginModal)
+				hideModal('login');
+		}
+	</script>
+</body>
+</html>
