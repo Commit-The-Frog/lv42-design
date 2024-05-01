@@ -15,29 +15,32 @@
 		<!-- 전체 컨테이너 -->
 		<div class="relative w-full h-full flex flex-col items-center justify-center">
 			<!-- 헤더 -->
-			<header class="max-w-[1024px] w-full md:h-11 h-12 fixed flex flex-row items-center justify-between p-4 top-0 bg-white">
-				<!-- 사이드바 열기 버튼(모바일 전용) -->
-				<button id="menu-button" class="md:hidden flex" onclick="openMenu()">
-					<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-					</svg>
-				</button>
-				<!-- 로고(데스크탑 전용) -->
-				<span class="md:block hidden w-8 h-8 bg-basic bg-logo cursor-pointer"></span>
-				<!-- 메뉴 리스트(데스크탑 전용) -->
-				<div class="w-4/5 md:flex hidden flex-row justify-around items-center">
-					<button>마이페이지</button>
-					<button>예약하기</button>
-					<button>고장 신고하기</button>
-					<button>사용법 알아보기</button>
-					<button>문의하기</button>
+			<header class="w-full md:h-11 h-12 fixed flex flex-row items-center justify-center p-4 top-0 bg-white">
+				<!-- 헤더 내용 컨테이너 -->
+				<div class="max-w-[1024px] w-full h-full flex flex-row items-center justify-between p-4">
+					<!-- 사이드바 열기 버튼(모바일 전용) -->
+					<button id="menu-button" class="md:hidden flex" onclick="openMenu()">
+						<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+						</svg>
+					</button>
+					<!-- 로고(데스크탑 전용) -->
+					<span class="md:block hidden w-8 h-8 bg-basic bg-logo cursor-pointer"></span>
+					<!-- 메뉴 리스트(데스크탑 전용) -->
+					<div class="w-4/5 md:flex hidden flex-row justify-around items-center">
+						<button>마이페이지</button>
+						<button>예약하기</button>
+						<button>고장 신고하기</button>
+						<button>사용법 알아보기</button>
+						<button>문의하기</button>
+					</div>
+					<!-- 검색 버튼 -->
+					<button id="search-buttom" class="flex" onclick="openSearch()">
+						<svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+						  </svg>			  
+					</button>
 				</div>
-				<!-- 검색 버튼 -->
-				<button id="search-buttom" class="flex" onclick="openSearch()">
-					<svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-					  </svg>			  
-				</button>
 			</header>
 	
 			<!-- 상단 정보(관리자 모드) -->
@@ -72,7 +75,7 @@
 	
 			<!-- 내용 컨테이너 -->
 			<div class="w-full grow">
-
+				
 			</div>
 	
 			<!-- 사이드바 -->
