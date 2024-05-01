@@ -73,8 +73,8 @@
 				<p>관리자 minjacho 님, 반갑습니다</p>
 			</div>
 	
-			<!-- 내용 컨테이너 -->
-			<div class="w-full grow overflow-hidden flex flex-col items-center justify-start">
+			<!-- 내용 컨테이너(예약관리 모드) -->
+			<div class="w-full grow overflow-hidden hidden flex-col items-center justify-start">
 				<!-- 탭 컨테이너 -->
 				<div class="w-64 min-h-10 flex flex-row items-center justify-center rounded-3xl bg-[#F4F4F6] my-9">
 					<!-- xbox 탭 -->
@@ -196,6 +196,152 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+
+			<!-- 내용 컨테이너(고장신고관리 모드) -->
+			<div class="w-full grow overflow-y-scroll">
+				<!-- 신고관리 컨테이너 -->
+				<div class="w-full h-full overflow-hidden flex flex-row items-center justify-center p-5 lg:p-10">
+					<!-- 신고현황 컨테이너 -->
+					<div class="w-full md:w-[40%] lg:w-1/3 h-full flex flex-col items-start justify-center gap-3 px-4 lg:px-7 pb-7">
+						<!-- 신고현황 제목 -->
+						<p class="ml-3 text-2xl font-bold">신고현황</p>
+						<!-- 신고현황 내용(신고 리스트) -->
+						<div class="w-full max-h-full h-full overflow-y-scroll rounded-3xl bg-[#F4F4F6]">
+							<!-- 신고 -->
+							<li class="w-full h-14 flex flex-row items-center justify-between px-4 border-b border-[#A7A7A7] cursor-pointer pointerhover:hover:bg-slate-400">
+								<div class="flex flex-row items-center justify-center gap-4">
+									<p>#1</p>
+									<span class="w-5 h-5 bg-basic bg-switch"></span>
+									<p>컨트롤러 1</p>
+								</div>
+								<p>접수됨</p>
+							</li>
+							<!-- 신고 -->
+							<li class="w-full h-14 flex flex-row items-center justify-between px-4 border-b border-[#A7A7A7] cursor-pointer pointerhover:hover:bg-slate-400">
+								<div class="flex flex-row items-center justify-center gap-4">
+									<p>#2</p>
+									<span class="w-5 h-5 bg-basic bg-switch"></span>
+									<p>컨트롤러 2</p>
+								</div>
+								<p>수리중</p>
+							</li>
+							<!-- 신고 -->
+							<li class="w-full h-14 flex flex-row items-center justify-between px-4 border-b border-[#A7A7A7] cursor-pointer pointerhover:hover:bg-slate-400">
+								<div class="flex flex-row items-center justify-center gap-4">
+									<p>#3</p>
+									<span class="w-5 h-5 bg-basic bg-switch"></span>
+									<p>본체</p>
+								</div>
+								<p>수리중</p>
+							</li>
+							<!-- 신고 -->
+							<li class="w-full h-14 flex flex-row items-center justify-between px-4 border-b border-[#A7A7A7] cursor-pointer pointerhover:hover:bg-slate-400">
+								<div class="flex flex-row items-center justify-center gap-4">
+									<p>#4</p>
+									<span class="w-5 h-5 bg-basic bg-switch"></span>
+									<p>컨트롤러 1</p>
+								</div>
+								<p>완료</p>
+							</li>
+							<!-- 신고 -->
+							<li class="w-full h-14 flex flex-row items-center justify-between px-4 border-b border-[#A7A7A7] cursor-pointer pointerhover:hover:bg-slate-400">
+								<div class="flex flex-row items-center justify-center gap-4">
+									<p>#1</p>
+									<span class="w-5 h-5 bg-basic bg-switch"></span>
+									<p>컨트롤러 1</p>
+								</div>
+								<p>접수됨</p>
+							</li>
+							<!-- 신고 -->
+							<li class="w-full h-14 flex flex-row items-center justify-between px-4 border-b border-[#A7A7A7] cursor-pointer pointerhover:hover:bg-slate-400">
+								<div class="flex flex-row items-center justify-center gap-4">
+									<p>#1</p>
+									<span class="w-5 h-5 bg-basic bg-switch"></span>
+									<p>컨트롤러 1</p>
+								</div>
+								<p>접수됨</p>
+							</li>
+							<!-- 신고 -->
+							<li class="w-full h-14 flex flex-row items-center justify-between px-4 border-b border-[#A7A7A7] cursor-pointer pointerhover:hover:bg-slate-400">
+								<div class="flex flex-row items-center justify-center gap-4">
+									<p>#1</p>
+									<span class="w-5 h-5 bg-basic bg-switch"></span>
+									<p>컨트롤러 1</p>
+								</div>
+								<p>접수됨</p>
+							</li>
+						</div>
+					</div>
+					<!-- 신고상세 컨테이너 -->
+					<div class="hidden md:w-[60%] lg:w-2/3 h-full md:flex flex-col items-start justify-center gap-3 px-4 lg:px-7 pb-7">
+						<!-- 신고상세 제목 -->
+						<p class="ml-3 text-2xl font-bold">신고 상세정보</p>
+						<!-- 신고상세 내용 -->
+						<div class="w-full h-full overflow-hidden rounded-3xl grid grid-cols-2 grid-rows-[1fr 2fr 2fr 1fr] bg-[#F4F4F6] p-5 gap-5">
+							<!-- 신고정보(순번,콘솔,기기 : #1 ps5 pc1) 컨테이너 -->
+							<div class="w-full 1fr flex flex-row items-start justify-start gap-4 p-4 text-xl font-bold">
+								<p>#1</p>
+								<span class="w-7 h-7 bg-basic bg-switch"></span>
+								<p>컨트롤러 1</p>
+							</div>
+							<!-- 상태정보 컨테이너 -->
+							<div class="w-full h-full row-span-2 bg-gray-800 text-white">
+
+							</div>
+							<!-- 고장정보(버튼문제, 연결문제, 충전문제) 컨테이너 -->
+							<div class="w-full 2fr flex flex-col items-start justify-start px-4 gap-2">
+								<!-- 고장유형 텍스트 -->
+								<div class="w-24 h-9 flex items-center justify-center rounded-2xl border border-black">
+									<p>버튼 문제</p>
+								</div>
+								<!-- 버튼고장 리스트 (버튼문제인 경우)-->
+								<div class="w-full grow overflow-y-scroll">
+									<!-- 버튼고장 -->
+									<li class="w-full h-8 flex flex-row items-center justify-center gap-5">
+										<p>L</p>
+										<p>의도하지 않은 방향으로 이동</p>
+									</li>
+									<!-- 버튼고장 -->
+									<li class="w-full h-8 flex flex-row items-center justify-center gap-5">
+										<p>R</p>
+										<p>의도하지 않은 방향으로 이동</p>
+									</li>
+								</div>
+							</div>
+							<!-- 기타의견 컨테이너 -->
+							<div class="w-full h-full col-span-2 flex flex-col items-start justify-start px-4 gap-2">
+								<!-- 기타의견 텍스트 -->
+								<div class="w-24 min-h-9 flex items-center justify-center rounded-2xl border border-black">
+									<p>기타 의견</p>
+								</div>
+								<!-- 기타의견 내용 -->
+								<p class="w-full grow overflow-auto">
+									꽁꽁 얼어붙은 한강 위로 고양이가 어쩌구 꽁꽁 얼어붙은 한강 위로 고양이가 어쩌구 꽁꽁 얼어붙은 한강 위로 고양이가 어쩌구 꽁꽁 얼어붙은 한강 위로 고양이가 어쩌구 꽁꽁 얼어붙은 한강 위로
+								</p>
+							</div>
+							<!-- 버튼 컨테이너 -->
+							<div class="w-full h-full col-span-2 flex flex-row items-end justify-end px-4 gap-4">
+								<!-- 수리시작 버튼 -->
+								<button class="w-28 h-10 rounded-3xl bg-[#0071E3] text-white hover:brightness-110 admin-btn-unavailable">
+									수리 시작
+								</button>
+								<!-- 완료처리 버튼 -->
+								<button class="w-28 h-10 rounded-3xl bg-[#0071E3] text-white hover:brightness-110">
+									완료 처리
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 기기 컨테이너 -->
+				<div class="w-full h-full border border-black">
+
+				</div>
+				<!-- 고장 컨테이너 -->
+				<div class="w-full h-full border border-black">
+
 				</div>
 			</div>
 

@@ -126,4 +126,7 @@
 	.admin-mode-selected {
 		@apply bg-gray-600 text-white
 	}
+	.admin-btn-unavailable {
+		@apply opacity-30 cursor-not-allowed
+	}
 }
