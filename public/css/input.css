@@ -117,4 +117,13 @@
 	.booking-ps5 {
 		@apply text-[#527FD8] font-Bolwby-One text-lg
 	}
+	.admin-tab-selected {
+		@apply text-white bg-black
+	}
+	.admin-slot-selected {
+		@apply text-white bg-gray-600
+	}
+	.admin-mode-selected {
+		@apply bg-gray-600 text-white
+	}
 }
