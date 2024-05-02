@@ -129,4 +129,10 @@
 	.admin-btn-unavailable {
 		@apply opacity-30 cursor-not-allowed
 	}
+	.admin-report-status-active {
+		@apply border-[#00C83B] bg-[#00C83B]
+	}
+	.admin-report-status-inactive {
+		@apply border-[#D2D2D2] bg-white
+	}
 }
