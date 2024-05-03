@@ -58,7 +58,7 @@
 		@apply shadow-not-selected opacity-35
 	}
 	.slot-empty {
-		@apply bg-[#F4F6F8] text-xl font-extrabold pointerhover:hover:brightness-75 cursor-pointer
+		@apply bg-[#F4F6F8] text-xl font-semibold text-gray-400 pointerhover:hover:brightness-75 cursor-pointer
 	}
 	.slot-full {
 		@apply bg-white text-xl font-extrabold pointerhover:hover:brightness-75 cursor-alias

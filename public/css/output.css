@@ -674,7 +674,9 @@ video {
   background-color: rgb(244 246 248 / var(--tw-bg-opacity));
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-weight: 800;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 @media (hover:hover) and (pointer:fine) {
@@ -1297,6 +1299,10 @@ video {
 
 .w-4\/5 {
   width: 80%;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .w-5 {
@@ -1988,6 +1994,11 @@ video {
 .text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .text-white {
