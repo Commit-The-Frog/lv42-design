@@ -57,6 +57,9 @@
 	.tab-not-selected {
 		@apply shadow-not-selected opacity-35
 	}
+	.slot-elapsed {
+		@apply bg-[#C6C6C6] text-xl font-semibold text-gray-500 cursor-not-allowed
+	}
 	.slot-empty {
 		@apply bg-[#F4F6F8] text-xl font-semibold text-gray-400 pointerhover:hover:brightness-75 cursor-pointer
 	}

@@ -55,7 +55,7 @@
 				</div>
 	
 				<!-- 슬롯 컨테이너 -->
-				<div class="relative w-full hidden max-h-full overflow-y-scroll bg-white">
+				<div class="relative w-full max-h-full overflow-y-scroll bg-white">
 					<!-- 테스트기간 안내문(xbox, switch) -->
 					<div class="absolute w-full h-full hidden flex-col items-center justify-center top-0 left-0 pb-24 backdrop-blur-sm text-2xl font-bold z-50">
 						<p>현재 테스트 기간으로</p>
@@ -67,8 +67,8 @@
 						<p class="text-white text-sm font-Bolwby-One">18:30 ~ 20:30</p>
 						<p class="text-white text-2xl font-semibold text-start">예약하기</p>
 					</div>
-					<!-- 슬롯 (이미 예약된 경우: slot-full) -->
-					<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-4 border-b border-[#C1C1C1] slot-full">
+					<!-- 슬롯 (지난 시간인 경우) -->
+					<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-4 border-b border-[#C1C1C1] slot-elapsed">
 						<!-- 시간 섹션 -->
 						<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
 							<p>00:00~</p>
@@ -212,7 +212,7 @@
 					</div>
 				</div>
 				<!-- 슬롯 컨테이너(스켈레톤) -->
-				<div class="relative w-full max-h-full overflow-y-scroll bg-white animate-pulse">
+				<div class="relative w-full hidden max-h-full overflow-y-scroll bg-white animate-pulse">
 					<!-- 슬롯 (스켈레톤)-->
 					<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-4 border-b border-[#C1C1C1] slot-full">
 						<!-- 시간 섹션 -->
