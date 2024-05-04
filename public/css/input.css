@@ -94,10 +94,10 @@
 		@apply opacity-100
 	}
 	.modal-hidden {
-		@apply invisible
+		@apply hidden
 	}
 	.modal-shown {
-		@apply visible
+		@apply flex
 	}
 	.font-color-xbox {
 		@apply text-[#00C83B]
