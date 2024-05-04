@@ -135,4 +135,10 @@
 	.admin-report-status-inactive {
 		@apply border-[#D2D2D2] bg-white
 	}
+	.page-dot-now {
+		@apply bg-black
+	}
+	.page-dot {
+		@apply bg-[#D9D9D9]
+	}
 }

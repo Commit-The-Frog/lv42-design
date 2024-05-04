@@ -46,7 +46,11 @@ module.exports = {
         'ps5-btn-info': "url('../img/ps5-button-info3.png')",
         'switch-btn-info': "url('../img/switch-button-info2.png')",
         'switch-pro-btn-info': "url('../img/switch-pro-button-info.png')",
-        'xbox-btn-info': "url('../img/xbox-button-info2.png')"
+        'xbox-btn-info': "url('../img/xbox-button-info2.png')",
+        'user-onboarding-1': "url('../img/user-onboarding-1.png')",
+        'user-onboarding-2': "url('../img/user-onboarding-2.png')",
+        'user-onboarding-3': "url('../img/user-onboarding-3.png')",
+        'user-onboarding-4': "url('../img/user-onboarding-4.png')"
       }
     },
   },
