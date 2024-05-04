@@ -50,7 +50,11 @@ module.exports = {
         'user-onboarding-1': "url('../img/user-onboarding-1.png')",
         'user-onboarding-2': "url('../img/user-onboarding-2.png')",
         'user-onboarding-3': "url('../img/user-onboarding-3.png')",
-        'user-onboarding-4': "url('../img/user-onboarding-4.png')"
+        'user-onboarding-4': "url('../img/user-onboarding-4.png')",
+        'error-404': "url('../img/error-background-404.svg')",
+        'error-404-desktop': "url('../img/error-background-404-desktop.svg')",
+        'error-500': "url('../img/error-background-500.svg')",
+        'error-500-desktop': "url('../img/error-background-500-desktop.svg')",
       }
     },
   },
