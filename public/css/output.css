@@ -1262,6 +1262,10 @@ video {
   height: 100svh;
 }
 
+.h-28 {
+  height: 7rem;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -1713,6 +1717,11 @@ video {
   border-top-right-radius: 1.5rem;
 }
 
+.rounded-t-2xl {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
 .rounded-tl-xl {
   border-top-left-radius: 0.75rem;
 }
@@ -1830,6 +1839,16 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#C1C1C1\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(193 193 193 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#F4F6F8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 246 248 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\/img\/logo\/github-mark\.svg\'\)\] {
@@ -2078,6 +2097,10 @@ video {
   font-weight: 600;
 }
 
+.font-extrabold {
+  font-weight: 800;
+}
+
 .leading-tight {
   line-height: 1.25;
 }
@@ -2130,6 +2153,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\#C1C1C1\] {
+  --tw-text-opacity: 1;
+  color: rgb(193 193 193 / var(--tw-text-opacity));
 }
 
 .opacity-30 {
