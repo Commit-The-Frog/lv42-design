@@ -444,6 +444,43 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- 유저 온보딩 모달(콘솔 사용안내) -->
+			<div id="user-onboarding-modal-console-guide" class="modal-shown fixed w-full h-full top-0 left-0 flex items-center justify-center backdrop-brightness-50 z-40">
+				<!-- 도움말 내용 컨테이너 -->
+				<div class="relative w-80 h-[80%] overflow-hidden bg-white shadow-modal rounded-2xl">					  
+					<!-- 도움말 내용 -->
+					<div class="w-full h-full flex flex-col items-center justify-start p-10 pt-14">
+						<!-- 예약성공 -->
+						<div class="w-full flex flex-col items-center justify-center mb-8">
+							<p class="text-3xl font-bold mb-2">예약 성공</p>
+							<p class="text-sm font-medium">xbox를 예약하셨군요!</p>
+						</div>
+						<!-- 게임시작방법 -->
+						<div class="w-full flex flex-col items-center justify-center mb-10">
+							<p class="text-xl font-bold mb-2">어떻게 게임을 시작하나요?</p>
+							<p class="text-sm font-medium">컨트롤러의 xbox 버튼을 눌러</p>
+							<p class="text-sm font-medium mb-2">콘솔의 전원을 켜주세요.</p>
+							<span class="w-44 h-24 bg-basic bg-xbox-controller"></span>
+						</div>
+						<!-- 게임종료방법 -->
+						<div class="w-full flex flex-col items-center justify-center mb-6">
+							<p class="text-xl font-bold mb-2">어떻게 게임을 종료하나요?</p>
+							<p class="text-sm font-medium">컨트롤러의 xbox 버튼을 3초간 누르고,</p>
+							<p class="text-sm font-medium mb-2">콘솔 종료를 선택해주세요.</p>
+						</div>
+						<!-- 예약 홈 버튼 -->
+						<button class="w-[210px] h-[46px] mb-6 rounded-3xl bg-gray-300 pointerhover:hover:bg-gray-400 font-semibold text-[17px]">
+							<p>예약 홈으로 돌아가기</p>
+						</button>
+						<!-- 내 예약 바로가기 버튼  -->
+						<button class="w-[210px] h-[46px] rounded-3xl bg-gray-300 pointerhover:hover:bg-gray-400 font-semibold text-[17px]">
+							<p>내 예약 바로가기</p>
+						</button>
+					</div>		  
+				</div>
+				  
+			</div>
 		</div>
 	</div>
 

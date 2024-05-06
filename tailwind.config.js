@@ -50,7 +50,10 @@ module.exports = {
         'user-onboarding-1': "url('../img/user-onboarding-1.png')",
         'user-onboarding-2': "url('../img/user-onboarding-2.png')",
         'user-onboarding-3': "url('../img/user-onboarding-3.png')",
-        'user-onboarding-4': "url('../img/user-onboarding-4.png')"
+        'user-onboarding-4': "url('../img/user-onboarding-4.png')",
+        'xbox-controller': "url('../img/xbox-controller.png')",
+        'switch-controller': "url('../img/switch-controller.png')",
+        'ps5-controller': "url('../img/ps5-controller.png')"
       }
     },
   },
