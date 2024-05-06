@@ -668,6 +668,17 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.slot-elapsed {
+  cursor: not-allowed;
+  --tw-bg-opacity: 1;
+  background-color: rgb(198 198 198 / var(--tw-bg-opacity));
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
 .slot-empty {
   cursor: pointer;
   --tw-bg-opacity: 1;
@@ -776,11 +787,11 @@ video {
 }
 
 .modal-hidden {
-  visibility: hidden;
+  display: none;
 }
 
 .modal-shown {
-  visibility: visible;
+  display: flex;
 }
 
 .font-color-switch {
@@ -1157,6 +1168,10 @@ video {
 
 .h-24 {
   height: 6rem;
+}
+
+.h-28 {
+  height: 7rem;
 }
 
 .h-32 {
@@ -1808,6 +1823,11 @@ video {
   background-color: rgb(244 244 246 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#F4F6F8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 246 248 / var(--tw-bg-opacity));
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -1851,6 +1871,14 @@ video {
 
 .bg-default-desktop {
   background-image: url('../img/background-desktop.svg');
+}
+
+.bg-error-404 {
+  background-image: url('../img/error-background-404.svg');
+}
+
+.bg-error-500 {
+  background-image: url('../img/error-background-500.svg');
 }
 
 .bg-gradient-to-b {
@@ -2092,6 +2120,10 @@ video {
   font-weight: 700;
 }
 
+.font-extrabold {
+  font-weight: 800;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -2141,6 +2173,11 @@ video {
 .text-\[\#A8A8A8\] {
   --tw-text-opacity: 1;
   color: rgb(168 168 168 / var(--tw-text-opacity));
+}
+
+.text-\[\#C1C1C1\] {
+  --tw-text-opacity: 1;
+  color: rgb(193 193 193 / var(--tw-text-opacity));
 }
 
 .text-\[\#C8D2DD\] {
@@ -2418,6 +2455,14 @@ video {
 
   .md\:bg-default-desktop {
     background-image: url('../img/background-desktop.svg');
+  }
+
+  .md\:bg-error-404-desktop {
+    background-image: url('../img/error-background-404-desktop.svg');
+  }
+
+  .md\:bg-error-500-desktop {
+    background-image: url('../img/error-background-500-desktop.svg');
   }
 
   .md\:p-10 {

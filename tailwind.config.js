@@ -53,7 +53,11 @@ module.exports = {
         'user-onboarding-4': "url('../img/user-onboarding-4.png')",
         'xbox-controller': "url('../img/xbox-controller.png')",
         'switch-controller': "url('../img/switch-controller.png')",
-        'ps5-controller': "url('../img/ps5-controller.png')"
+        'ps5-controller': "url('../img/ps5-controller.png')",
+        'error-404': "url('../img/error-background-404.svg')",
+        'error-404-desktop': "url('../img/error-background-404-desktop.svg')",
+        'error-500': "url('../img/error-background-500.svg')",
+        'error-500-desktop': "url('../img/error-background-500-desktop.svg')",
       }
     },
   },

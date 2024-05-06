@@ -55,7 +55,7 @@
 				</div>
 	
 				<!-- 슬롯 컨테이너 -->
-				<div class="relative w-full hidden max-h-full overflow-y-scroll bg-white">
+				<div class="relative w-full overflow-y-scroll bg-white">
 					<!-- 테스트기간 안내문(xbox, switch) -->
 					<div class="absolute w-full h-full hidden flex-col items-center justify-center top-0 left-0 pb-24 backdrop-blur-sm text-2xl font-bold z-50">
 						<p>현재 테스트 기간으로</p>
@@ -67,8 +67,8 @@
 						<p class="text-white text-sm font-Bolwby-One">18:30 ~ 20:30</p>
 						<p class="text-white text-2xl font-semibold text-start">예약하기</p>
 					</div>
-					<!-- 슬롯 (이미 예약된 경우: slot-full) -->
-					<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-4 border-b border-[#C1C1C1] slot-full">
+					<!-- 슬롯 (지난 시간인 경우) -->
+					<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-4 border-b border-[#C1C1C1] slot-elapsed">
 						<!-- 시간 섹션 -->
 						<div class="w-36 h-full flex items-center justify-center text-lg font-bold px-2 font-outfit">
 							<p>00:00~</p>
@@ -210,9 +210,16 @@
 							<p>슬롯 선택하기</p>
 						</div>
 					</div>
+					<!-- 여백용 빈공간 -->
+					<div class="w-full h-28 bg-[#F4F6F8] flex flex-col items-center justify-center p-5">
+						<svg class="w-14 h-14" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#C1C1C1">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+						  </svg>
+						<p class="text-xl font-extrabold text-[#C1C1C1]">END OF DAY</p>
+					</div>
 				</div>
 				<!-- 슬롯 컨테이너(스켈레톤) -->
-				<div class="relative w-full max-h-full overflow-y-scroll bg-white animate-pulse">
+				<div class="relative w-full hidden max-h-full overflow-y-scroll bg-white animate-pulse">
 					<!-- 슬롯 (스켈레톤)-->
 					<div class="w-full h-[4.5rem] flex flex-row items-center justify-around px-4 border-b border-[#C1C1C1] slot-full">
 						<!-- 시간 섹션 -->
@@ -316,7 +323,7 @@
 					</button>
 				</header>
 				<!-- 사이드바 상단 정보(로그인 전) -->
-				<div class="w-full h-52 hidden flex-col items-center justify-center pt-8">
+				<div class="w-full h-52 flex flex-col items-center justify-center pt-8">
 					<!-- 빈 프로필 이미지 -->
 					<span class="w-[4rem] h-[4rem] rounded-full bg-[#C8D2DD]"></span>
 					<!-- 로그인 버튼 -->
@@ -325,7 +332,7 @@
 					</button>
 				</div>
 				<!-- 사이드바 상단 정보(로그인 후) -->
-				<div class="w-full h-52 flex flex-col items-center justify-center pt-8">
+				<div class="w-full h-52 hidden flex-col items-center justify-center pt-8">
 					<!-- 프로필 이미지 -->
 					<span class="w-[4rem] h-[4rem] rounded-full cursor-pointer bg-basic bg-cover bg-[url('https://cdn.intra.42.fr/users/0154e7622e9aed55ecbc3c1a1ca71b84/minjchoi.jpg')]"></span>
 					<!-- 인트라 id -->
@@ -404,7 +411,7 @@
 			</div>
 	
 			<!-- 예약 모달 -->
-	 		<div id="booking-modal" class="modal-hidden fixed w-full h-full top-0 left-0 flex items-center justify-center backdrop-brightness-50 z-40">
+	 		<div id="booking-modal" class="modal-hidden fixed w-full h-full top-0 left-0 items-center justify-center backdrop-brightness-50 z-40">
 				<!-- 안내창 -->
 				<div class="w-80 h-36 bg-white shadow-modal rounded-xl">
 					<!-- 메세지 섹션 -->
@@ -425,7 +432,7 @@
 			</div>
 	
 			<!-- 로그인 모달 -->
-			<div id="login-modal" class="modal-hidden fixed w-full h-full top-0 left-0 flex items-center justify-center backdrop-brightness-50 z-40">
+			<div id="login-modal" class="modal-hidden fixed w-full h-full top-0 left-0 items-center justify-center backdrop-brightness-50 z-40">
 				<!-- 안내창 -->
 				<div class="w-80 h-36 bg-white shadow-modal rounded-xl">
 					<!-- 메세지 섹션 -->
