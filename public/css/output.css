@@ -1270,6 +1270,18 @@ video {
   height: 100svh;
 }
 
+.h-\[20\%\] {
+  height: 20%;
+}
+
+.h-\[50\%\] {
+  height: 50%;
+}
+
+.h-\[10\%\] {
+  height: 10%;
+}
+
 .max-h-\[42rem\] {
   max-height: 42rem;
 }
@@ -1901,6 +1913,10 @@ video {
   background-image: url('../img/ps5.png');
 }
 
+.bg-ps5-controller {
+  background-image: url('../img/ps5-controller.png');
+}
+
 .bg-switch {
   background-image: url('../img/switch.png');
 }
@@ -1927,10 +1943,6 @@ video {
 
 .bg-xbox-btn-info {
   background-image: url('../img/xbox-button-info2.png');
-}
-
-.bg-xbox-controller {
-  background-image: url('../img/xbox-controller.png');
 }
 
 .from-gray-200 {
