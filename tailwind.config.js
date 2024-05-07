@@ -32,7 +32,8 @@ module.exports = {
         },
         'mobile' : {
           'raw': "(hover:none)"
-        }
+        },
+        'mini': '376px'
       },
       backgroundImage: {
         'logo': "url('../img/logo/logo.svg')",
